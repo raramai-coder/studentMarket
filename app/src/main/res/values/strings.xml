@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Student Market</string>
+
+    <!--the names of the titles displayed on the bottom navigation bar -->
+    <string name="nav_home_title">Home</string>
+    <string name="nav_search_title">Search</string>
+    <string name="nav_saved_title">Saved</string>
+    <string name="nav_cart_title">Bag</string>
+    <string name="nav_account_title">Account</string>
 </resources>

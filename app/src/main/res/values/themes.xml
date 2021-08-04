@@ -19,6 +19,11 @@
         <!-- initializing style for all edit texts-->
         <item name="editTextStyle">@style/editTextStyle</item>
 
+        <!--initializing bottom navigation bar style -->
+        <item name="bottomNavigationStyle">@style/Widget.App.BottomNavigationView</item>
+
+
+
 
     </style>
 
@@ -36,9 +41,22 @@
 
     </style>
 
+    <!--EditText widget style-->
     <style name="editTextStyle" parent="Widget.AppCompat.EditText">
         <item name="backgroundTint">@color/primary_teal</item>
         <!--create background square --> TODO come and fix background color omg
         <item name="background">@drawable/button_border</item>
     </style>
+
+    <!--bottom Navigation bar style-->
+    <style name="Widget.App.BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView.Colored">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.BottomNavigationView</item>
+    </style>
+
+    <style name="ThemeOverlay.App.BottomNavigationView" parent="">
+        <item name="colorPrimary">@color/nav_bar</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="menu">@menu/navigation_bar</item>
+    </style>
+
 </resources>
