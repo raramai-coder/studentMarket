@@ -16,7 +16,7 @@ class SplashScreen : AppCompatActivity() {
 
         //this is the function that handles moving to the main activity after 3 seconds of showing the splash screen
         Handler().postDelayed({
-            val intent = Intent(this@SplashScreen, MainActivity::class.java)
+            val intent = Intent(this@SplashScreen, Welcome::class.java)
             startActivity(intent)
             finish()
         },3000)

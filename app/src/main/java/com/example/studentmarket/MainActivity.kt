@@ -1,7 +1,9 @@
 package com.example.studentmarket
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -19,5 +21,7 @@ class MainActivity : AppCompatActivity() {
         //this sets up the navigation controller so it can actually switch between fragments when clicked
         bottomNavigation.setupWithNavController(navController)
         //endregion
+
+
     }
 }
