@@ -3,7 +3,7 @@
     <color name="primary_teal">#03989E</color>
     <color name="textBar_teal">#ECFAFA</color>
     <color name="grey">#D3D0DC</color>
-    <color name="app_bar">#91B6B7</color>
+    <color name="nav_bar">#91B6B7</color>
     <color name="nav_bar_selected">#AEE5E6</color>
     <color name="cart_total">#489598</color>
     <color name="rating_star">#C8E4E5</color>

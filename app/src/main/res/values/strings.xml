@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">Student Market</string>
+
+    <!--the names of the titles displayed on the bottom navigation bar -->
+    <string name="nav_home_title">Home</string>
+    <string name="nav_search_title">Search</string>
+    <string name="nav_saved_title">Saved</string>
+    <string name="nav_cart_title">Bag</string>
+    <string name="nav_account_title">Account</string>
+    <string name="title_activity_login">Login</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 </resources>
