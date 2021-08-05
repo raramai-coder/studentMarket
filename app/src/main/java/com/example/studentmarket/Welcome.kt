@@ -30,7 +30,7 @@ class Welcome : AppCompatActivity() {
         //these are all the buttons on the screen: the register, login and skip button
 
         //region Get Started Button
-        val getStarted_btn = findViewById<Button>(R.id.getStarted)
+        val getStarted_btn = findViewById<Button>(R.id.getStarted_btn_wl)
 
         //when you click this button it opens up the registration activity
         getStarted_btn.setOnClickListener {
@@ -40,7 +40,7 @@ class Welcome : AppCompatActivity() {
         //endregion
 
         //region Login Button
-        val login_btn = findViewById<Button>(R.id.login)
+        val login_btn = findViewById<Button>(R.id.login_btn_wl)
 
         //when you click this button it opens up the login activity
         login_btn.setOnClickListener {
@@ -51,7 +51,7 @@ class Welcome : AppCompatActivity() {
         //endregion
 
         //region Skip Button
-        val skip_btn = findViewById<Button>(R.id.skip)
+        val skip_btn = findViewById<Button>(R.id.skip_btn_wl)
 
         //when you click this button it goes straight to the home page without logging the user in
         //TODO: write logic that ensures that the user cannot save, buy or open cart without logging in first

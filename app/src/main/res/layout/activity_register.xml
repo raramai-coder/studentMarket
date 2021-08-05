@@ -4,6 +4,66 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".Register">
+
+
+    <Button
+        android:id="@+id/register_btn_rg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="104dp"
+        android:text="Register"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/password_et_rg"
+        android:layout_width="356dp"
+        android:layout_height="57dp"
+        android:layout_marginBottom="72dp"
+        android:hint="Password"
+        app:layout_constraintBottom_toTopOf="@+id/register_btn_rg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/email_et_rg"
+        android:layout_width="356dp"
+        android:layout_height="57dp"
+        android:layout_marginBottom="176dp"
+        android:hint="Student Email Address"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/password_et_rg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/username_et_rg"
+        android:layout_width="356dp"
+        android:layout_height="57dp"
+        android:layout_marginBottom="68dp"
+        android:hint="Username"
+        app:layout_constraintBottom_toTopOf="@+id/email_et_rg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/phone_et_rg"
+        android:layout_width="356dp"
+        android:layout_height="57dp"
+        android:ems="10"
+        android:hint="Phone Number"
+        android:inputType="phone"
+        app:layout_constraintBottom_toTopOf="@+id/password_et_rg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email_et_rg" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

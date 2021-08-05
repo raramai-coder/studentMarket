@@ -43,6 +43,8 @@
     <style name="editTextStyle" parent="Widget.AppCompat.EditText">
         <item name="backgroundTint">@color/primary_teal</item>
         <!--create background square --> TODO come and fix background color omg
+        <item name="background">@drawable/edit_text_background</item>
+        <item name="android:width">356dp</item>
     </style>
 
     <!--bottom Navigation bar style-->
