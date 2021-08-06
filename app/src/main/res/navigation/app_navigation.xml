@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/home2"
-        android:name="com.example.studentmarket.home"
+        android:name="com.example.studentmarket.ui.home"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
     <fragment
@@ -22,12 +22,12 @@
         tools:layout="@layout/fragment_saved" />
     <fragment
         android:id="@+id/cart"
-        android:name="com.example.studentmarket.cart"
+        android:name="com.example.studentmarket.ui.cart"
         android:label="fragment_cart"
         tools:layout="@layout/fragment_cart" />
     <fragment
         android:id="@+id/account"
-        android:name="com.example.studentmarket.account"
+        android:name="com.example.studentmarket.ui.account"
         android:label="fragment_account"
         tools:layout="@layout/fragment_account" />
 </navigation>
