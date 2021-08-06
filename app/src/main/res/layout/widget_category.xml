@@ -3,21 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/card_view_category"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="133dp"
+    android:layout_height="110dp">
 
     <androidx.cardview.widget.CardView
         android:layout_width="120dp"
         android:layout_height="80dp"
-        tools:layout_editor_absoluteX="7dp"
-        tools:layout_editor_absoluteY="16dp" >
+        tools:layout_editor_absoluteX="6dp"
+        tools:layout_editor_absoluteY="15dp" >
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/button_category"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Category"

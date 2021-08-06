@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import com.example.studentmarket.R
 import kotlinx.android.synthetic.main.fragment_home.*
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.studentmarket.adapters.CategoryAdapter
 import com.example.studentmarket.adapters.CardAdapter
 import androidx.lifecycle.ViewModelProvider
 import java.util.*
@@ -28,8 +27,8 @@ class home : Fragment() {
     private lateinit var viewModel: homeViewModel
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_home, container, false)
@@ -42,11 +41,9 @@ class home : Fragment() {
 
         // Recycler_view_items' layout manager component is set to LinearLayoutManager instance. This instance of Main activity is context
         recycler_view_products.layoutManager = LinearLayoutManager(activity)
-        recycler_view_categories.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
 
         //Recycler_view_items' adapter component is set to ContactAdapter. Contact list is sent using func
-        recycler_view_products.adapter = CardAdapter(getProductList())
-        recycler_view_categories.adapter = CategoryAdapter(getProductList())
+        recycler_view_products.adapter = CardAdapter(this, getProductList())
     }
 
 
@@ -59,7 +56,7 @@ class home : Fragment() {
         val productList = ArrayList<String>()
         val itemCount = 15 // Find size of product data
         for (i in 1..itemCount){
-            productList.add("$i")
+            productList.add("This is product number$i")
 
             /** Shagan for Nicolle (?)
              * The code for adding the product objects
