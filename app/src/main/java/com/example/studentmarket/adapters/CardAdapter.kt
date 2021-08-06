@@ -13,6 +13,7 @@ import kotlinx.android.synthetic.main.widget_product_card.view.*
 class CardAdapter( val items: ArrayList<String>) :
     RecyclerView.Adapter<CardAdapter.ViewHolder>() {
 
+
     /**
      * Inflates the item views in the designated xml layout file
      * create a new ViewHolder and initializes some private fields to be used by RecyclerView.
@@ -26,15 +27,16 @@ class CardAdapter( val items: ArrayList<String>) :
      * Binds each item in the ArrayList to a view.
      * Called when RecyclerView needs a new ViewHolder of the given type to represent an item.
      */
+
     override fun onBindViewHolder(holder: CardAdapter.ViewHolder, position: Int) {
         val item_position = items.get(position)
-//
         holder.tvProductName.text = "Product number: $item_position"
     }
 
     override fun getItemCount(): Int {
         return items.size
     }
+
     /**
      * A ViewHolder describes an item view and metadata about it's place within the RecyclerView.
      */
@@ -53,5 +55,4 @@ class CardAdapter( val items: ArrayList<String>) :
 //        val bViewStore = view.button_view_store
 //        val bViewProduct = view.button_view_product
     }
-
 }

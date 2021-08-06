@@ -1,4 +1,4 @@
-package com.example.studentmarket.network
+package com.example.studentmarket.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
