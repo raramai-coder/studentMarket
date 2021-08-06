@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".ui.home">
 
     <LinearLayout
         android:id="@+id/linearLayout1"
@@ -16,14 +16,15 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.recyclerview.widget.RecyclerView
-            tools:itemCount="10"
-            tools:listitem="@layout/widget_category"
             android:id="@+id/recycler_view_categories1"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            tools:itemCount="10"
+            tools:listitem="@layout/widget_category" />
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
@@ -35,10 +36,11 @@
         app:layout_constraintVertical_bias="0.0">
 
         <androidx.recyclerview.widget.RecyclerView
-            tools:itemCount="19"
-            tools:listitem="@layout/widget_product_card"
             android:id="@+id/recycler_view_products1"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="521dp"
+            tools:itemCount="19"
+            tools:listitem="@layout/widget_product_card" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
