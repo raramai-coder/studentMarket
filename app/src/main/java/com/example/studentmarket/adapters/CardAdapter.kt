@@ -33,14 +33,13 @@ class CardAdapter(val context: Context, val items: ArrayList<String>) :
      */
     override fun onBindViewHolder(holder: CardAdapter.ViewHolder, position: Int) {
         val item_position = items.get(position)
-        var prodName = "Product number: $item_position"
-        holder.tvProductName.text = prodName
-        holder.tvProductPrice.text = "R 1$item_position.99"
-        holder.tvRating.text = "4.9 ($item_position)"
-        holder.tvLocation.text = "1.$item_positon km away"
-        holder.tvSaved.text = "Save"
-        holder.bViewStore.OnClick = "Not sure how this section will work"
-        holder.bViewProduct.OnClick = "Not sure how this section will work"
+//        holder.tvProductName.text = "Product number: $item_position"
+//        holder.tvProductPrice.text = "R 1$item_position.99"
+//        holder.tvRating.text = "4.9 ($item_position)"
+//        holder.tvLocation.text = "1.$item_positon km away"
+//        holder.tvSaved.text = "Save"
+//        holder.bViewStore.OnClick = "Not sure how this section will work"
+//        holder.bViewProduct.OnClick = "Not sure how this section will work"
 
     //        //Updating bg color according to odd/even positions in list
 //        if (position %2 ==0){
@@ -62,18 +61,18 @@ class CardAdapter(val context: Context, val items: ArrayList<String>) :
      */
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view){
         //Holds the data needed to add to each item
-        val tvProductName = view.text_view_product_name
-        val ivProductImage = view.text_view_product_price
-        val tvProductPrice = view.text_view_rating
-
-        //        val ivRating = view.image_view_rating
-        val tvRating = view.text_view_rating
-        val tvLocation = view.text_view_location
-        //        val ivSaved = view.image_view_saved
-        val tvSaved = view.text_view_saved
-
-        val bViewStore = view.button_view_store
-        val bViewProduct = view.button_view_product
+//        val tvProductName = view.text_view_product_name
+//        val ivProductImage = view.text_view_product_price
+//        val tvProductPrice = view.text_view_rating
+//
+//        //        val ivRating = view.image_view_rating
+//        val tvRating = view.text_view_rating
+//        val tvLocation = view.text_view_location
+//        //        val ivSaved = view.image_view_saved
+//        val tvSaved = view.text_view_saved
+//
+//        val bViewStore = view.button_view_store
+//        val bViewProduct = view.button_view_product
     }
 
 }
