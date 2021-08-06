@@ -58,6 +58,7 @@
                             android:id="@+id/text_view_product_price"
                             android:layout_width="match_parent"
                             android:layout_height="30dp"
+                            android:textColor="@color/price"
                             android:text="R 49.99" />
                     </LinearLayout>
                 </LinearLayout>
@@ -72,7 +73,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        app:srcCompat="@android:drawable/star_big_on" />
+                        app:srcCompat="@drawable/outline_grade_black_48" />
 
                     <TextView
                         android:id="@+id/text_view_rating"
@@ -86,7 +87,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        app:srcCompat="@android:drawable/ic_menu_mylocation" />
+                        app:srcCompat="@drawable/outline_location_on_black_48" />
 
                     <TextView
                         android:id="@+id/text_view_location"
@@ -102,7 +103,7 @@
                         android:layout_weight="1"
                         android:scaleX="0.75"
                         android:scaleY="0.75"
-                        app:srcCompat="@android:drawable/ic_menu_save" />
+                        app:srcCompat="@drawable/outline_bookmark_border_black_48" />
 
                     <TextView
                         android:id="@+id/text_view_saved"
