@@ -1,3 +1,4 @@
+/*
 
 package com.example.studentmarket.adapters
 
@@ -14,11 +15,13 @@ import kotlinx.android.synthetic.main.fragment_home.view.*
 class CardAdapter(val context: Context, val items: ArrayList<String>) :
     RecyclerView.Adapter<CardAdapter.ViewHolder>() {
 
-    /**
+    */
+/**
      * Inflates the item views in the designated xml layout file
      * create a new
      * {@link ViewHolder} and initializes some private fields to be used by RecyclerView.
-     */
+     *//*
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CardAdapter.ViewHolder {
         return ViewHolder(
             LayoutInflater.from(context).inflate(R.layout.widget_product_card, parent,false)
@@ -26,11 +29,13 @@ class CardAdapter(val context: Context, val items: ArrayList<String>) :
         )
     }
 
-    /**
+    */
+/**
      * Binds each item in the ArrayList to a view.
      *
      * Called when RecyclerView needs a new {@link ViewHolder} of the given type to represent an item.
-     */
+     *//*
+
     override fun onBindViewHolder(holder: CardAdapter.ViewHolder, position: Int) {
         val item_position = items.get(position)
 //        holder.tvProductName.text = "Product number: $item_position"
@@ -56,9 +61,11 @@ class CardAdapter(val context: Context, val items: ArrayList<String>) :
     override fun getItemCount(): Int {
         return items.size
     }
-    /**
+    */
+/**
      * A ViewHolder describes an item view and metadata about it's place within the RecyclerView.
-     */
+     *//*
+
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view){
         //Holds the data needed to add to each item
 //        val tvProductName = view.text_view_product_name
@@ -75,4 +82,4 @@ class CardAdapter(val context: Context, val items: ArrayList<String>) :
 //        val bViewProduct = view.button_view_product
     }
 
-}
+}*/
