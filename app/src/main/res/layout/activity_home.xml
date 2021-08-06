@@ -16,6 +16,8 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.recyclerview.widget.RecyclerView
+            tools:itemCount="10"
+            tools:listitem="@layout/widget_category"
             android:id="@+id/recycler_view_categories"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
@@ -33,6 +35,8 @@
         app:layout_constraintVertical_bias="0.0">
 
         <androidx.recyclerview.widget.RecyclerView
+            tools:itemCount="19"
+            tools:listitem="@layout/widget_product_card"
             android:id="@+id/recycler_view_products"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
