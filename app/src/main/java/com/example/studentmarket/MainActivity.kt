@@ -14,11 +14,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-<<<<<<< HEAD
-        /** Shagan
-         * The Login and Register activity logic should go here.
-         */
-=======
+
         //region Bottom Navigation Bar
         //a reference to the actual navigation bar I created in the main activity xml
         val bottomNavigation = findViewById<BottomNavigationView>(R.id.bottom_nav_bar)
@@ -27,7 +23,6 @@ class MainActivity : AppCompatActivity() {
         //this sets up the navigation controller so it can actually switch between fragments when clicked
         bottomNavigation.setupWithNavController(navController)
         //endregion
->>>>>>> f16d12accd6ea7c1ae14d0784af10c8224cf3652
 
 
     }
