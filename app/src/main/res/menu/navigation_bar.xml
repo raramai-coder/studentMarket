@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 <!-- this is the menu of all the different fragment options we have in our navigation bar-->
     <item
-        android:id="@+id/home2"
+        android:id="@+id/home"
         android:enabled="true"
         android:icon="@drawable/outline_home_black_48"
         android:title="@string/nav_home_title"/>
