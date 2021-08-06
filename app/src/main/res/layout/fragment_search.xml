@@ -1,14 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
     tools:context=".search">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="search" />
 
-</FrameLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#FFFFFFFF"
+        android:orientation="horizontal"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="1dp">
+
+
+        <EditText
+            android:id="@+id/search_et_sr"
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:hint="Search"
+            android:inputType="text" />
+
+        <ImageButton
+            android:id="@+id/search_btn_sr"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:src="@drawable/outline_search_white_48"
+            app:tint="@color/primary_teal"/>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

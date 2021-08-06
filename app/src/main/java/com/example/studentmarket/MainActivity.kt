@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        supportActionBar?.hide()
 
         //region Bottom Navigation Bar
         //a reference to the actual navigation bar I created in the main activity xml

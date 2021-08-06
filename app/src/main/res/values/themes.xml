@@ -29,6 +29,8 @@
         <!-- initializing style for all text-->
         <item name="android:textViewStyle">@style/textStyle</item>
 
+        <item name="android:imageButtonStyle">@style/imageButtonStyle</item>
+
 
 
     </style>
@@ -49,6 +51,11 @@
 
     </style>
     <!--endregion -->
+
+    <style name="imageButtonStyle" parent="Widget.AppCompat.ImageButton">
+        <item name="background">@color/primary_teal</item>
+        <item name="endIconTint">@color/primary_teal</item>
+    </style>
 
     <!--region EditText-->
     <!--EditText widget style-->
