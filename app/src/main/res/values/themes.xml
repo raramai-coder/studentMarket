@@ -22,6 +22,11 @@
         <!--initializing bottom navigation bar style -->
         <item name="bottomNavigationStyle">@style/Widget.App.BottomNavigationView</item>
 
+        <!--initializing style for all cardviews for the products cards -->
+        <item name="materialCardViewStyle">@style/productCard</item>
+        <item name="cardViewStyle">@style/productCard</item>
+
+
 
     </style>
 
@@ -43,6 +48,14 @@
     <style name="editTextStyle" parent="Widget.AppCompat.EditText">
         <item name="backgroundTint">@color/primary_teal</item>
         <!--create background square --> TODO come and fix background color omg
+        <item name="background">@drawable/edit_text_background</item>
+        <item name="android:width">356dp</item>
+    </style>
+
+    <!--Text Input Layout style, still need to figure out how to apply this layout to all-->
+    <style name="textInputLayout" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="boxBackgroundMode">filled</item>
+        <item name="boxBackgroundColor">@color/textBar_teal</item>
     </style>
 
     <!--bottom Navigation bar style-->
@@ -64,5 +77,10 @@
     <style name="Theme.StudentMarket.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.StudentMarket.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!--The theme for the product card -->
+    <style name="productCard" parent="CardView">
+        <item name="cardBackgroundColor">@color/product_bg</item>
+    </style>
 
 </resources>
