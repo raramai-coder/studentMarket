@@ -1,5 +1,5 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
+    <!-- region Base application theme. -->
     <style name="Theme.StudentMarket" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/primary_teal</item>
@@ -26,11 +26,16 @@
         <item name="materialCardViewStyle">@style/productCard</item>
         <item name="cardViewStyle">@style/productCard</item>
 
+        <!-- initializing style for all text-->
+        <item name="android:textViewStyle">@style/textStyle</item>
+
 
 
     </style>
+    <!-- endregion -->
 
 
+    <!--region Button -->
     <!--Button style-->
     <style name="buttonStyle" parent="Widget.MaterialComponents.Button">
         <item name="backgroundColor">@color/primary_teal</item>
@@ -43,7 +48,9 @@
         <!--<stroke android:width="2dp" android:color="@color/black" />-->
 
     </style>
+    <!--endregion -->
 
+    <!--region EditText-->
     <!--EditText widget style-->
     <style name="editTextStyle" parent="Widget.AppCompat.EditText">
         <item name="backgroundTint">@color/primary_teal</item>
@@ -57,7 +64,9 @@
         <item name="boxBackgroundMode">filled</item>
         <item name="boxBackgroundColor">@color/textBar_teal</item>
     </style>
+    <!--endregion-->
 
+    <!--region Navigation Bar-->
     <!--bottom Navigation bar style-->
     <style name="Widget.App.BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView.Colored">
         <item name="materialThemeOverlay">@style/ThemeOverlay.App.BottomNavigationView</item>
@@ -77,10 +86,22 @@
     <style name="Theme.StudentMarket.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.StudentMarket.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <!-- endregion -->
 
+    <!-- region Product Card-->
     <!--The theme for the product card -->
     <style name="productCard" parent="CardView">
         <item name="cardBackgroundColor">@color/product_bg</item>
+        <item name="cardCornerRadius">25dp</item>
+
     </style>
+    <!-- endregion -->
+
+    <!--region Text -->
+    <!--The style for all the text across the application -->
+    <style name="textStyle" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <!--endregion-->
 
 </resources>
