@@ -43,7 +43,7 @@ class saved : Fragment() {
     }
     private fun getSavedList(): ArrayList<String> {
         val SavedList = ArrayList<String>()
-        val itemCount = 15 // Find size of product data
+        val itemCount = 5 // Find size of product data
         for (i in 1..itemCount){
             SavedList.add("$i")
 
