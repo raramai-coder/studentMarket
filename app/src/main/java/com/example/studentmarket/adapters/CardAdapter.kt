@@ -31,6 +31,7 @@ class CardAdapter( val items: ArrayList<String>) :
     override fun onBindViewHolder(holder: CardAdapter.ViewHolder, position: Int) {
         val item_position = items.get(position)
 //        holder.ivProductImage.tools.srcCompat = "@tools:sample/backgrounds/scenic"
+        holder.ivProductImage.setImageResource(R.drawable.icon_student_market)
         holder.tvProductName.text = "Product number: $item_position"
         holder.tvProductPrice.text = "R 1$item_position.99"
         holder.tvRating.text = "4.9 ($item_position)"
@@ -50,7 +51,7 @@ class CardAdapter( val items: ArrayList<String>) :
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view){
         //Holds the data needed for each item
         val tvProductName = view.text_view_product_name
-        //val ivProductImage = view.image_view_product_image //srcCompat="@tools:sample/backgrounds/scenic"
+        val ivProductImage = view.image_view_product_image //srcCompat="@tools:sample/backgrounds/scenic"
         val tvProductPrice = view.text_view_product_price
 
         //        val ivRating = view.image_view_rating

@@ -7,6 +7,8 @@ class MarketItem (name:String, user:Int,price:Float,rangeOfItem:Float,category:S
     /*This function populate the product page*/
     fun ViewProduct(){
         //TODO collect the product information from the database and populate the product page
+
+
     }
 
     /*This function is called by the adapter and feeds it */
