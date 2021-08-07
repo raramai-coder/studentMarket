@@ -14,8 +14,8 @@
         android:id="@+id/register_btn_rg"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
+        android:layout_marginBottom="32dp"
         android:layout_weight="1"
-        android:layout_marginBottom="104dp"
         android:text="Register"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,7 +25,7 @@
         android:id="@+id/password_et_rg"
         android:layout_width="356dp"
         android:layout_height="57dp"
-        android:layout_marginBottom="72dp"
+        android:layout_marginBottom="150dp"
         android:hint="Password"
         app:layout_constraintBottom_toTopOf="@+id/register_btn_rg"
         app:layout_constraintEnd_toEndOf="parent"
@@ -68,5 +68,23 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/email_et_rg" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="66dp"
+        android:text="I accept the terms and conditions."
+        app:layout_constraintTop_toTopOf="@+id/password_et_rg"
+        tools:layout_editor_absoluteX="28dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:text="I accept the POPIA privacy policy."
+        app:layout_constraintTop_toTopOf="@+id/password_et_rg"
+        tools:layout_editor_absoluteX="28dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
