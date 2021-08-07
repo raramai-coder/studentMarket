@@ -108,7 +108,7 @@
 
             </LinearLayout>
 
-<!--
+            <!--
             <TextView
                 android:id="@+id/orderNotesHeading_txt_cart"
                 android:layout_width="match_parent"
@@ -129,7 +129,8 @@
                 android:hint="Order Notes"
                 android:inputType="textMultiLine"
                 android:minHeight="50dp"
-                android:paddingHorizontal="5dp" />
+                android:paddingHorizontal="5dp"
+                android:paddingVertical="10dp" />
 
             <LinearLayout
                 android:id="@+id/delivery_lyt_cart"
@@ -137,6 +138,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
                 android:orientation="vertical"
+                android:paddingVertical="10dp"
                 android:paddingHorizontal="5dp">
 
                 <TextView
