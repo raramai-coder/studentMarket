@@ -30,7 +30,7 @@ class CardAdapter( val items: ArrayList<String>) :
      */
     override fun onBindViewHolder(holder: CardAdapter.ViewHolder, position: Int) {
         val item_position = items.get(position)
-        holder.ivProductImage.tools.srcCompat = "@tools:sample/backgrounds/scenic"
+//        holder.ivProductImage.tools.srcCompat = "@tools:sample/backgrounds/scenic"
         holder.tvProductName.text = "Product number: $item_position"
         holder.tvProductPrice.text = "R 1$item_position.99"
         holder.tvRating.text = "4.9 ($item_position)"
