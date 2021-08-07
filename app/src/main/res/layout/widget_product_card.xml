@@ -52,9 +52,9 @@
                             android:id="@+id/text_view_product_name"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textSize="30sp"
+                            android:textSize="25sp"
                             android:textAlignment="textStart"
-                            android:layout_marginTop="15dp"
+                            android:layout_marginTop="10dp"
                             android:text="Product Name" />
 
                         <TextView
@@ -62,7 +62,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="R 49.99"
-                            android:textSize="25dp"
+                            android:textSize="20dp"
                             android:textAlignment="textStart"
                             android:textColor="@color/price" />
                     </LinearLayout>
