@@ -39,13 +39,15 @@
 
     <!--region Button -->
     <!--Button style-->
-    <style name="buttonStyle" parent="Widget.MaterialComponents.Button">
-        <item name="backgroundColor">@color/primary_teal</item>
+    <style name="buttonStyle" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <!--<item name="backgroundColor">#E6EFEF</item>-->
         <item name="android:colorPressedHighlight">@color/textBar_teal</item>
         <item name="cornerRadius">10dp</item>
         <item name="android:textColor">@color/black</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="strokeColor">@color/primary_teal</item>
         <!-- border --> TODO come and fix border
-        <item name="background">@drawable/border</item>
+        <!--<item name="background">@drawable/edit_text_background</item>-->
 
         <!--<stroke android:width="2dp" android:color="@color/black" />-->
 
@@ -62,7 +64,6 @@
     <style name="editTextStyle" parent="Widget.AppCompat.EditText">
         <item name="backgroundTint">@color/primary_teal</item>
         <!--create background square --> TODO come and fix background color omg
-        <item name="background">@drawable/edit_text_background</item>
         <item name="android:width">356dp</item>
     </style>
 
@@ -97,14 +98,14 @@
 
     <!-- region Product Card-->
     <!--The theme for the product card -->
-    <style name="productCard" parent="CardView">
+    <style name="productCard" parent="Widget.MaterialComponents.CardView">
         <item name="cardBackgroundColor">@color/white</item>
         <item name="cardElevation">10dp</item>
-        <item name="cardForegroundColor">@color/primary_teal</item>
+        <item name="cardForegroundColor">@null</item>
         <item name="cardPreventCornerOverlap">true</item>
         <item name="android:shadowColor">@color/primary_teal</item>
-        <item name="strokeColor">@color/primary_teal</item>
-        <item name="strokeWidth">2dp</item>
+        <item name="strokeColor">@color/product_bg</item>
+        <item name="strokeWidth">1.5dp</item>
         <item name="cardCornerRadius">15dp</item>
         <item name="background">@drawable/stroke_color</item>
 

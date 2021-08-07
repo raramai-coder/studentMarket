@@ -14,12 +14,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.cardview.widget.CardView
+        <com.google.android.material.card.MaterialCardView
             android:id="@+id/card_view_product"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="10dp"
-            android:padding="15dp">
+            android:padding="15dp"
+            android:backgroundTint="@color/white">
 
             <LinearLayout
                 android:id="@+id/layout_product_card"
@@ -97,7 +98,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="1.3 km" />
+                        android:text="1.3 km"
+                        android:textAlignment="textStart"/>
 
                     <ImageView
                         android:id="@+id/image_view_saved"
@@ -124,14 +126,14 @@
                     android:paddingLeft="7dp"
                     android:orientation="horizontal">
 
-                    <Button
+                    <com.google.android.material.button.MaterialButton
                         android:id="@+id/button_view_store"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:textSize="15dp"
                         android:layout_marginLeft="7dp"
-                        android:text="View Store" />
+                        android:layout_weight="1"
+                        android:text="View Store"
+                        android:textSize="15dp" />
 
                     <Button
                         android:id="@+id/button_view_product"
@@ -144,6 +146,6 @@
                 </LinearLayout>
 
             </LinearLayout>
-        </androidx.cardview.widget.CardView>
+        </com.google.android.material.card.MaterialCardView>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
