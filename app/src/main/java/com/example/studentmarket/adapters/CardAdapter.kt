@@ -35,8 +35,8 @@ class CardAdapter( val items: ArrayList<String>) :
         holder.tvProductName.text = "Product number: $item_position"
         holder.tvProductPrice.text = "R 1$item_position.99"
         holder.tvRating.text = "4.9 ($item_position)"
-        holder.tvLocation.text = "1.$item_position km away"
-        holder.tvSaved.text = "Save" //TODO: Check if saved
+        holder.tvLocation.text = "1.$item_position km"
+        holder.tvSaved.text = "Save" //TODO: Function to check if saved to determine text
 //        holder.bViewStore.OnClick = "Not sure how this section will work yet"
 //        holder.bViewProduct.OnClick = "Not sure how this section will work yet"
     }
