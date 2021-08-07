@@ -50,7 +50,7 @@ class CardAdapter( val items: ArrayList<String>) :
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view){
         //Holds the data needed for each item
         val tvProductName = view.text_view_product_name
-        val ivProductImage = view.image_view_product_image //srcCompat="@tools:sample/backgrounds/scenic"
+        //val ivProductImage = view.image_view_product_image //srcCompat="@tools:sample/backgrounds/scenic"
         val tvProductPrice = view.text_view_product_price
 
         //        val ivRating = view.image_view_rating

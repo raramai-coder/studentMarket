@@ -46,7 +46,7 @@ class home : Fragment() {
 
         //Recycler_view_items' adapter component is set to ContactAdapter. Contact list is sent using func
         recycler_view_products.adapter = CardAdapter(getProductList())
-        recycler_view_categories.adapter = CategoryAdapter(getProductList())
+        recycler_view_categories.adapter = CategoryAdapter(getCategoryList())
     }
 
 
@@ -67,6 +67,19 @@ class home : Fragment() {
              */
         }
         return productList
+    }
+    private fun getCategoryList(): ArrayList<String> {
+        val categoryList = ArrayList<String>()
+        val itemCount = 10 // Find size of product data
+        for (i in 1..itemCount){
+            categoryList.add("$i")
+
+            /** Shagan for Nicolle (?)
+             * The code for adding the product objects
+             * Please initialize and add from the dB
+             */
+        }
+        return categoryList
     }
 
 }
