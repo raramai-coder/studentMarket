@@ -8,6 +8,7 @@
     android:layout_height="match_parent">
 
     <LinearLayout
+        android:id="@+id/cart_top_bar"
         android:layout_width="match_parent"
         android:layout_height="83dp"
         android:layout_alignParentStart="true"
@@ -16,19 +17,163 @@
         android:layout_marginStart="0dp"
         android:layout_marginTop="0dp"
         android:layout_marginEnd="0dp"
-        android:orientation="horizontal"></LinearLayout>
+        android:orientation="horizontal"
+        android:paddingVertical="15dp">
+
+        <TextView
+            android:id="@+id/cart_txt_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingHorizontal="10dp"
+            android:text="Cart"
+            android:textAlignment="center"
+            android:textSize="36sp" />
+
+        <TextView
+            android:id="@+id/price_txt_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="R560,99"
+            android:textAlignment="center"
+            android:textColor="@color/cart_total"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/buy_btn_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:text="Buy"
+            android:textSize="25sp"/>
+
+    </LinearLayout>
 
     <ScrollView
+        android:id="@+id/cart_sv"
         android:layout_width="match_parent"
-        android:layout_height="649dp"
+        android:layout_height="645dp"
+        android:layout_below="@+id/cart_top_bar"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginRight="-4dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="3dp"
         android:layout_marginBottom="2dp">
 
         <LinearLayout
+            android:id="@+id/products_lyt_cart"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" />
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/item_lyt_cart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/bagItem_txt_cart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="12 x Product Name"
+                    android:textAlignment="center"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/itemPrice_txt_cart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="R175"
+                    android:textAlignment="center"
+                    android:textSize="21sp"
+                    tools:ignore="RtlCompat" />
+
+                <ImageButton
+                    android:id="@+id/editOrder_btn_cart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:minHeight="48dp"
+                    android:src="@drawable/outline_edit_black_24"
+                    app:tint="@color/primary_teal" />
+
+            </LinearLayout>
+
+<!--
+            <TextView
+                android:id="@+id/orderNotesHeading_txt_cart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:paddingHorizontal="5dp"
+                android:text="Order Notes"
+                android:textSize="25sp" />-->
+
+
+            <EditText
+                android:id="@+id/orderNotes_txt_cart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="Order Notes"
+                android:inputType="textMultiLine"
+                android:minHeight="50dp"
+                android:paddingHorizontal="5dp" />
+
+            <LinearLayout
+                android:id="@+id/delivery_lyt_cart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:orientation="vertical"
+                android:paddingHorizontal="5dp">
+
+                <TextView
+                    android:id="@+id/delivery_txt_cart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Delivery"
+                    android:textSize="25sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/deliverymode_tbtn_cart"
+                        android:layout_width="5dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:checked="false"
+                        android:colorPressedHighlight="@color/primary_teal"
+                        android:text="Collect"
+                        android:textSize="21sp" />
+
+
+                    <TextView
+                        android:id="@+id/deliveryPrice_txt_cart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Free"
+                        android:textAlignment="textEnd"
+                        android:textSize="21sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
     </ScrollView>
 </RelativeLayout>
