@@ -54,9 +54,6 @@ class Review(models.Model):
     reviewDescription = models.CharField(max_length=250, null=True, blank=True)
 
 
-class Category:
-    pass
-
 
 class Product(models.Model):
     prodID = models.IntegerField(primary_key=True)
@@ -80,6 +77,7 @@ class Product(models.Model):
     prodPicture = models.ImageField(upload_to='Photos', null=False, blank=False)
     prodLive = models.BooleanField(null=False)
     servTime = models.DateTimeField(verbose_name="Saved on", auto_now_add=True, null=True, blank=True)
+    
 
 
 class Category(models.Model):
