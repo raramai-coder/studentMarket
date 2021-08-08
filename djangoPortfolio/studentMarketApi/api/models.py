@@ -10,8 +10,8 @@ from django.forms import forms
 
 class Location(models.Model):
     locationID = models.IntegerField(primary_key=True)
-    longitude = models.DecimalField(max_length=19, decimal_places=4, null=False, blank=False)
-    latitude = models.DecimalField(max_length=19, decimal_places=4, null=False, blank=False)
+    longitude = models.DecimalField(max_digits=19, decimal_places=4, null=False, blank=False)
+    latitude = models.DecimalField(max_digits=19, decimal_places=4, null=False, blank=False)
 
 
 class User(models.Model):
@@ -19,13 +19,42 @@ class User(models.Model):
     locationID = models.ForeignKey(Location, on_delete=models.CASCADE)
     userName = models.CharField(max_length=100, blank=False)
     userEmail = models.EmailField(max_length=100, null=False, blank=False)
-    userPhoneNumber = models.IntegerField(max_length=11, null=True, blank=True)
+    userPhoneNumber = models.IntegerField(null=True, blank=True)
     userUniversity = models.CharField(max_length=100, null=False, blank=False)
-    userPassword = models.CharField(max_length=20, widget=forms.PasswordInput)
+    userPassword = models.CharField(max_length=20, null=False, blank=False)
 
 
-class Product:
-    pass
+class Category(models.Model):
+    categoryID = models.IntegerField(primary_key=True)
+    catName = models.CharField(max_length=100, null=False, blank=False)
+    catSumProducts = models.IntegerField(null=True, blank=True)
+
+
+# class Product:
+#   pass
+
+class Product(models.Model):
+    prodID = models.IntegerField(primary_key=True)
+    categoryID = models.ForeignKey(Category, on_delete=models.CASCADE)
+    userID = models.ForeignKey(User, on_delete=models.RESTRICT)
+    prodName = models.CharField(max_length=100, null=False, blank=False)
+    prodDescription = models.CharField(max_length=250, null=True, blank=True)
+    prodPrice = models.DecimalField(max_digits=19, decimal_places=2, null=False, blank=False)
+    prodRange = models.IntegerField(null=True, blank=True)
+    deliveryChoice = "Delivery"
+    dropPinChoice = "Drop Pin"
+    houseCallChoice = "House Call"
+    # collectionChoice = "Collection"
+    DeliveryOptions = [
+        (deliveryChoice, 'Delivery'),
+        (dropPinChoice, 'Drop Pin'),
+        (houseCallChoice, 'House Call'),
+    ]
+    prodDelivery = models.CharField(max_length=10, choices=DeliveryOptions
+                                    , default=dropPinChoice, null=False, blank=False)
+    prodPicture = models.ImageField(upload_to='Photos', null=False, blank=False)
+    prodLive = models.BooleanField(null=False)
+    servTime = models.DateTimeField(verbose_name="Saved on", auto_now_add=True, null=True, blank=True)
 
 
 class Saved(models.Model):
@@ -48,53 +77,23 @@ class Tier(models.Model):
     userID = models.ForeignKey(User, on_delete=models.RESTRICT)
     tierName = models.CharField(max_length=100, null=True, blank=True)
     tierDescription = models.CharField(max_length=250, null=False, blank=False)
-    tierPrice = models.DecimalField(max_length=19, decimal_places=2, null=False, blank=False)
+    tierPrice = models.DecimalField(max_digits=19, decimal_places=2, null=False, blank=False)
 
 
 class Review(models.Model):
     reviewID = models.IntegerField(primary_key=True)
     prodID = models.ForeignKey(Product, on_delete=models.RESTRICT)
     userID = models.ForeignKey(User, on_delete=models.RESTRICT)
-    reviewStars = models.IntegerField(max_length=5, null=True, blank=True)
+    reviewStars = models.IntegerField(null=True, blank=True)
     reviewDescription = models.CharField(max_length=250, null=True, blank=True)
 
 
-class Category:
-    pass
+# class Category:
+#    pass
 
 
-class Product(models.Model):
-    prodID = models.IntegerField(primary_key=True)
-    categoryID = models.ForeignKey(Category, on_delete=models.CASCADE)
-    userID = models.ForeignKey(User, on_delete=models.RESTRICT)
-    prodName = models.CharField(max_length=100, null=False, blank=False)
-    prodDescription = models.CharField(max_length=250, null=True, blank=True)
-    prodPrice = models.DecimalField(max_length=19, decimal_places=2, null=False, blank=False)
-    prodRange = models.IntegerField(max_field=100, null=True, blank=True)
-    deliveryChoice = "Delivery"
-    dropPinChoice = "Drop Pin"
-    houseCallChoice = "House Call"
-    # collectionChoice = "Collection"
-    DeliveryOptions = [
-        (deliveryChoice, 'Delivery'),
-        (dropPinChoice, 'Drop Pin'),
-        (houseCallChoice, 'House Call'),
-    ]
-    prodDelivery = models.CharField(max_length=9, choices=DeliveryOptions
-                                    , default=dropPinChoice, null=False, blank=False)
-    prodPicture = models.ImageField(upload_to='Photos', null=False, blank=False)
-    prodLive = models.BooleanField(null=False)
-    servTime = models.DateTimeField(verbose_name="Saved on", auto_now_add=True, null=True, blank=True)
-
-
-class Category(models.Model):
-    categoryID = models.IntegerField(primary_key=True)
-    catName = models.CharField(max_length=100, null=False, blank=False)
-    catSumProducts = models.IntegerField(max_length=100, null=True, blank=True)
-
-
-class Location:
-    pass
+# class Location:
+#    pass
 
 
 class Order(models.Model):
@@ -104,23 +103,14 @@ class Order(models.Model):
     locationID = models.ForeignKey(Location, on_delete=models.RESTRICT)
     prodName = models.CharField(max_length=100, null=False, blank=False)
     orderNote = models.CharField(max_length=250, null=True, blank=True)
-    orderAmount = models.DecimalField(max_length=19, decimal_places=2, null=False, blank=False)
-    unitPrice = models.DecimalField(max_length=19, decimal_places=2, null=False, blank=False)
-    quantity = models.CharField(max_field=100, null=False, blank=False)
+    orderAmount = models.DecimalField(max_digits=19, decimal_places=2, null=False, blank=False)
+    unitPrice = models.DecimalField(max_digits=19, decimal_places=2, null=False, blank=False)
+    quantity = models.CharField(max_length=100, null=False, blank=False)
     orderDate = models.DateTimeField(verbose_name="Ordered on", auto_now_add=True, null=True, blank=True)
 
 
-class Security:
-    pass
-
-
-class DropPin(models.Model):
-    dropPinID = models.IntegerField(primary_key=True)
-    securityID = models.ForeignKey(Security, on_delete=models.CASCADE)
-    locationID = models.ForeignKey(Location, on_delete=models.RESTRICT)
-    dropPinName = models.CharField(max_length=19, null=False, blank=False)
-    dropPinUniversity = models.CharField(max_length=100, null=False, blank=False)
-
+# class Security:
+#  pass
 
 class Security(models.Model):
     securityID = models.IntegerField(primary_key=True)
@@ -157,5 +147,14 @@ class Security(models.Model):
         (moderateSecurity, 'Moderate Security'),
         (secure, 'Secure'),
     ]
-    userReports = dropPinName = models.CharField(max_length=250, null=False, blank=False)
+    userReports = models.CharField(max_length=250, null=False, blank=False)
+
+
+class DropPin(models.Model):
+    dropPinID = models.IntegerField(primary_key=True)
+    securityID = models.ForeignKey(Security, on_delete=models.CASCADE)
+    locationID = models.ForeignKey(Location, on_delete=models.RESTRICT)
+    dropPinName = models.CharField(max_length=19, null=False, blank=False)
+    dropPinUniversity = models.CharField(max_length=100, null=False, blank=False)
+
     # if bad user reported, disable account
