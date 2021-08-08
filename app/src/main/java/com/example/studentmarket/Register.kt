@@ -7,7 +7,6 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import android.text.method.LinkMovementMethod
-import kotlinx.android.synthetic.main.fragment_privacy_popup.*
 
 class Register : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

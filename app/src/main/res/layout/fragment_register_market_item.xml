@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".registerProduct">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="150dp"
+        android:layout_marginBottom="0dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/edittext_market_item_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Market Item Name" />
+
+        <EditText
+            android:id="@+id/edittext_market_item_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Market Item Description" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Market Item Type SPINNER" />
+
+        <EditText
+            android:id="@+id/edittext_market_item_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Market Item Price" />
+
+        <EditText
+            android:id="@+id/edittext_market_item_delivery_choice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Delivery Or Pickup SPINNER" />
+
+        <EditText
+            android:id="@+id/edittext_market_item_collection_pin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Set  Collection Pin SPINNER" />
+
+        <EditText
+            android:id="@+id/edittext_market_item_duration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enter Service Duration" />
+
+        <Button
+            android:id="@+id/button_market_item_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Register Product/Service" />
+
+
+    </LinearLayout>
+</RelativeLayout>

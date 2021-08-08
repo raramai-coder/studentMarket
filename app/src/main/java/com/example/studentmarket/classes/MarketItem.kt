@@ -3,6 +3,7 @@ package com.example.studentmarket.classes
 /*This class is for products and services*/
 class MarketItem (name:String, user:Int,price:Float,rangeOfItem:Float,category:String){
 
+    val type: ArrayList<String> = arrayListOf("Product","Service")
 
     /*This function populate the product page*/
     fun ViewProduct(){
