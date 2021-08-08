@@ -70,21 +70,41 @@
         app:layout_constraintTop_toBottomOf="@+id/email_et_rg" />
 
     <CheckBox
-        android:id="@+id/checkBox"
+        android:id="@+id/checkbox_terms_conditions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="66dp"
-        android:text="I accept the terms and conditions."
         app:layout_constraintTop_toTopOf="@+id/password_et_rg"
         tools:layout_editor_absoluteX="28dp" />
 
     <CheckBox
-        android:id="@+id/checkBox2"
+        android:id="@+id/checkbox_privacy_policy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="120dp"
-        android:text="I accept the POPIA privacy policy."
+        android:layout_marginBottom="39dp"
+        app:layout_constraintBottom_toTopOf="@+id/register_btn_rg"
         app:layout_constraintTop_toTopOf="@+id/password_et_rg"
         tools:layout_editor_absoluteX="28dp" />
+
+    <TextView
+        android:id="@+id/textview_terms_conditions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="85dp"
+        android:text="@string/hyperlink_terms_conditions"
+        app:layout_constraintStart_toEndOf="@+id/checkbox_terms_conditions"
+        app:layout_constraintTop_toTopOf="@+id/password_et_rg" />
+
+    <TextView
+        android:id="@+id/textview_privacy_policy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="53dp"
+        android:text="@string/hyperlink_privacy_policy"
+        app:layout_constraintBottom_toTopOf="@+id/register_btn_rg"
+        app:layout_constraintStart_toEndOf="@+id/checkbox_privacy_policy"
+        app:layout_constraintTop_toTopOf="@+id/textview_terms_conditions" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
