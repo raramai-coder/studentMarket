@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework import viewsets
 
-from api.serializer import ProductCardSerializer, OrderSerializer
+from api.serializer import ProductCardSerializer, OrderSerializer, UserSerializer, LocationSerializer
 from api.models import User, Location, Category, Product, Saved, Store, Tier, Review, Order, Security, DropPin
 
 
@@ -17,6 +17,13 @@ class ProductCardViewSet(viewsets.ModelViewSet):
     queryset = Product.objects.all().order_by('prodRating')
     serializer_class = ProductCardSerializer
 
+class UserViewSet(viewsets.ModelViewSet):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+
+class LocationViewSet(viewsets.ModelViewSet):
+    queryset = Location.objects.all()
+    serializer_class = LocationSerializer
 
 class OrderViewSet(viewsets.ModelViewSet):
     queryset = Order.objects.all().order_by('orderDate')
