@@ -43,6 +43,7 @@ class Product(models.Model):
     prodRange = models.IntegerField(null=True, blank=True)
     deliveryChoice = "Delivery"
     dropPinChoice = "Drop Pin"
+    prodRating = models.DecimalField(max_digits=2, decimal_places=1, null=True, blank=True)
     houseCallChoice = "House Call"
     # collectionChoice = "Collection"
     DeliveryOptions = [
@@ -105,7 +106,7 @@ class Order(models.Model):
     orderNote = models.CharField(max_length=250, null=True, blank=True)
     orderAmount = models.DecimalField(max_digits=19, decimal_places=2, null=False, blank=False)
     unitPrice = models.DecimalField(max_digits=19, decimal_places=2, null=False, blank=False)
-    quantity = models.CharField(max_length=100, null=False, blank=False)
+    quantity = models.IntegerField(null=False, blank=False)
     orderDate = models.DateTimeField(verbose_name="Ordered on", auto_now_add=True, null=True, blank=True)
 
 
