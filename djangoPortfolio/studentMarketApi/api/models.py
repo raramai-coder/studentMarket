@@ -5,8 +5,13 @@ from django.db import models
 from django.forms import forms
 
 
-class Location:
-    pass
+# class Location:
+#   pass
+
+class Location(models.Model):
+    locationID = models.IntegerField(primary_key=True)
+    longitude = models.DecimalField(max_length=19, decimal_places=4, null=False, blank=False)
+    latitude = models.DecimalField(max_length=19, decimal_places=4, null=False, blank=False)
 
 
 class User(models.Model):
@@ -101,12 +106,6 @@ class Order(models.Model):
     unitPrice = models.DecimalField(max_length=19, decimal_places=2, null=False, blank=False)
     quantity = models.CharField(max_field=100, null=False, blank=False)
     orderDate = models.DateTimeField(verbose_name="Ordered on", auto_now_add=True, null=True, blank=True)
-
-
-class Location(models.Model):
-    locationID = models.IntegerField(primary_key=True)
-    longitude = models.DecimalField(max_length=19, decimal_places=4, null=False, blank=False)
-    latitude = models.DecimalField(max_length=19, decimal_places=4, null=False, blank=False)
 
 
 class Security:
