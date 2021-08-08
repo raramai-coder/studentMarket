@@ -1,2 +1,2 @@
-web: gunicorn djangoPortfolio.wsgi --log-file -
+web: gunicorn studentMarketApi.wsgi
 release: bash release_steps.sh
