@@ -101,7 +101,7 @@ class Order(models.Model):
     orderID = models.IntegerField(primary_key=True)
     prodID = models.ForeignKey(Product, on_delete=models.RESTRICT)
     userID = models.ForeignKey(User, on_delete=models.RESTRICT)
-    locationID = models.ForeignKey(Location, on_delete=models.RESTRICT)
+    #locationID = models.ForeignKey(Location, on_delete=models.RESTRICT)
     prodName = models.CharField(max_length=100, null=False, blank=False)
     orderNote = models.CharField(max_length=250, null=True, blank=True)
     orderAmount = models.DecimalField(max_digits=19, decimal_places=2, null=False, blank=False)

@@ -5,12 +5,12 @@ from api.models import User, Location, Category, Product, Saved, Store, Tier, Re
 
 
 class ProductCardSerializer(serializers.HyperlinkedModelSerializer):
-    class meta:
+    class Meta:
         model = Product
         fields = ('prodPicture', 'prodName', 'prodPrice', 'prodRating', 'prodRange')
 
 
 class OrderSerializer(serializers.HyperlinkedModelSerializer):
-    class meta:
+    class Meta:
         model = Order
-        fields = ('quantity', 'prodName', 'orderAmount')
+        fields = ('quantity', 'prodName', 'orderAmount', 'unitPrice', 'prodID', 'userID')
