@@ -10,18 +10,6 @@ class ProductCardSerializer(serializers.HyperlinkedModelSerializer):
         fields = ('prodPicture', 'prodName', 'prodPrice', 'prodRating', 'prodRange')
 
 
-class UserSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = User
-        fields = ('userID', 'locationID', 'userName', 'userEmail', 'userUniversity', 'userPassword')
-
-
-class LocationSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = Location
-        fields = ('locationID', 'longitude', 'latitude')
-
-
 class OrderSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Order

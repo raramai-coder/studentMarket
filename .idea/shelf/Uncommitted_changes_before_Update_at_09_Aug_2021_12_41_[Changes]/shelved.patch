@@ -1,0 +1,26 @@
+Index: djangoPortfolio/studentMarketApi/Procfile
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/djangoPortfolio/studentMarketApi/Procfile b/djangoPortfolio/studentMarketApi/Procfile
+new file mode 100644
+--- /dev/null	
++++ b/djangoPortfolio/studentMarketApi/Procfile	
+@@ -0,0 +1,2 @@
++web: gunicorn studentMarketApi.wsgi
++release: bash release_steps.sh
+\ No newline at end of file
+Index: djangoPortfolio/studentMarketApi/Procfile
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/djangoPortfolio/studentMarketApi/Procfile b/djangoPortfolio/studentMarketApi/Procfile
+new file mode 100644
+--- /dev/null	
++++ b/djangoPortfolio/studentMarketApi/Procfile	
+@@ -0,0 +1,2 @@
++web: gunicorn studentMarketApi.wsgi
++release: bash release_steps.sh
+\ No newline at end of file
