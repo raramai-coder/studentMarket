@@ -59,19 +59,14 @@ class cart : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        //link RecyclerView
-        orderItemsRecyclerView = view.findViewById(R.id.orderItems_RCV_cart) as RecyclerView
+        //link recyclerview
+        orderItemsRecyclerView = view.findViewById(R.id.orderItems_RCV_cart)
 
         //create a layout manager
         orderItemsRecyclerView.layoutManager = LinearLayoutManager(activity)
 
-        //give recyclerview the adapter
-        //orderItemsRecyclerView.adapter = OrderAdapter()
-        //recycler_view_products.adapter = CardAdapter(getSavedList())
-
         //fetch data from database
         fetchOrders()
-
 
     }
 
