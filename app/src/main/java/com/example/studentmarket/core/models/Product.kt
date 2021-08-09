@@ -4,6 +4,9 @@ import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 import kotlinx.android.parcel.Parcelize
 
+//This is the class for Products, it's serialized variables correspond to the
+//products viewSet in our database models
+
 @Parcelize
 class Product(
     @SerializedName("prodID") val prodID: Int,
@@ -21,4 +24,4 @@ class Product(
     //var prodPicture : String, val prodName:String, val prodPrice:Float, val prodRating: Float?, val prodRange:Int
 ): Parcelable
 
-data class ErrorResponseProduct(val message: String?)
+//data class ErrorResponseProduct(val message: String?)

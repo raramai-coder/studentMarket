@@ -5,7 +5,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitClient {
-    //Base url of server, we will use this with all the network calls that we will make.
+    //Base url of our server, we will use this with all the network calls that we will make.
     private val BASE_URL = "https://studentmarketapp.herokuapp.com/"
 
     private val retrofit: Retrofit = Retrofit.Builder()

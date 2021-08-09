@@ -35,6 +35,8 @@ class CardAdapter( val products: List<Product>) :
      */
     override fun onBindViewHolder(holder: CardAdapter.ViewHolder, position: Int) {
         holder.bindItems(products[position])
+
+        //region old code
         //val item_position = items.get(position)
 //        holder.ivProductImage.tools.srcCompat = "@tools:sample/backgrounds/scenic"
         /*holder.ivProductImage.setImageResource(R.drawable.icon_student_market)
@@ -45,6 +47,7 @@ class CardAdapter( val products: List<Product>) :
         holder.tvSaved.text = "Save" //TODO: Function to check if saved to determine text*/
 //        holder.bViewStore.OnClick = "Not sure how this section will work yet"
 //        holder.bViewProduct.OnClick = "Not sure how this section will work yet"
+        //endregion
     }
 
     override fun getItemCount(): Int {
@@ -55,7 +58,8 @@ class CardAdapter( val products: List<Product>) :
      * A ViewHolder describes an item view and metadata about it's place within the RecyclerView.
      */
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view){
-       /* //Holds the data needed for each item
+       //region old code
+        /* //Holds the data needed for each item
         val tvProductName = view.text_view_product_name
         val ivProductImage = view.image_view_product_image //srcCompat="@tools:sample/backgrounds/scenic"
         val tvProductPrice = view.text_view_product_price
@@ -68,6 +72,7 @@ class CardAdapter( val products: List<Product>) :
 
         val bViewStore = view.button_view_store
         val bViewProduct = view.button_view_product*/
+        //endregion
 
         //bind items functions takes the database given by the database for a specific product and binds to the product card
         fun bindItems(product: Product){

@@ -5,6 +5,9 @@ import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
 import com.google.gson.annotations.SerializedName
 
+//This is the class for Orders, it's serialized variables correspond to the
+//orders viewSet in our database models
+
 @Parcelize
 class Order (
     //var id: Int = 0, //added id

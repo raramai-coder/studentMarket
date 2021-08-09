@@ -7,10 +7,11 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.studentmarket.R
+import com.example.studentmarket.core.models.Category
 import kotlinx.android.synthetic.main.widget_category.view.*
 
 
-class CategoryAdapter( val items: ArrayList<String>) :
+class CategoryAdapter( val categories: List<Category>) :
     RecyclerView.Adapter<CategoryAdapter.ViewHolder>() {
 
     /**
@@ -27,21 +28,27 @@ class CategoryAdapter( val items: ArrayList<String>) :
      * Called when RecyclerView needs a new ViewHolder of the given type to represent an item.
      */
     override fun onBindViewHolder(holder: CategoryAdapter.ViewHolder, position: Int) {
-        val item_position = items.get(position)
-//
-        holder.bCategoryButton.text = "Category $item_position"
+        //val item_position = items.get(position)
+        holder.bindItems(categories[position])
+        //holder.bCategoryButton.text = "Category $item_position"
         // holder.bCategoryButton.onClick
     }
 
     override fun getItemCount(): Int {
-        return items.size
+        return categories.size
     }
     /**
      * A ViewHolder describes an item view and metadata about it's place within the RecyclerView.
      */
-    class ViewHolder(view: View) : RecyclerView.ViewHolder(view){
+    inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view){
         //Holds the data needed for each item
-        val bCategoryButton = view.button_category
+
+
+        fun bindItems(category: Category){
+            val bCategoryButton = itemView.button_category
+
+            bCategoryButton.text = category.categoryName
+        }
     }
 
 }
