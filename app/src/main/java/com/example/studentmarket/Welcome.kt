@@ -62,6 +62,17 @@ class Welcome : AppCompatActivity() {
             finish()
         }
         //endregion
+
+        //region Map Slider
+        //TODO: Write logic to skip to map slider button AND set coordinates
+        val btn_map_slider = findViewById<Button>(R.id.button_map_slider)
+        btn_map_slider.setOnClickListener {
+            val intent = Intent(this, MapSliderActivity::class.java)
+            btn_map_slider.setTextColor(getColor(R.color.primary_teal))
+            startActivity(intent)
+            finish()
+        }
+        //endregion Map Slider
         //endregion
     }
 }

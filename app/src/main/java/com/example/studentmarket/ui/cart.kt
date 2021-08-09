@@ -44,32 +44,32 @@ class cart : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val apiService: APIService by lazy { RetrofitClient.apiService }
-        apiService.getOrders().enqueue(object : Callback<List<Order>!>! {
-
-            override fun onResponse(call: Call<List<Order>>?, response: Response<List<Order>>) {
-                if (response.isSuccessful) {
-                    //Log.i(TAG, "facilitators loaded from API $response")
-
-                    response.body()?.let {
-                        orders = it
-                    }
-
-                    if (orders.isNotEmpty())
-                    //setupRecyclerView(facilitators)
-                    else
-                    //toast("No Items Found")
-
-                } else {
-                    //Log.i(TAG, "error $response")
-                    //showErrorMessage(response.errorBody()!!)
-                }
-            }
-
-            override fun onFailure(call: Call<List<Order>>?, t: Throwable) {
-                //toast(t.message ?: "Error Fetching Results")
-            }
-        })
+//        val apiService: APIService by lazy { RetrofitClient.apiService }
+//        apiService.getOrders().enqueue(object : Callback<List<Order>!>! {
+//
+//            override fun onResponse(call: Call<List<Order>>?, response: Response<List<Order>>) {
+//                if (response.isSuccessful) {
+//                    //Log.i(TAG, "facilitators loaded from API $response")
+//
+//                    response.body()?.let {
+//                        orders = it
+//                    }
+//
+//                    if (orders.isNotEmpty())
+//                    //setupRecyclerView(facilitators)
+//                    else
+//                    //toast("No Items Found")
+//
+//                } else {
+//                    //Log.i(TAG, "error $response")
+//                    //showErrorMessage(response.errorBody()!!)
+//                }
+//            }
+//
+//            override fun onFailure(call: Call<List<Order>>?, t: Throwable) {
+//                //toast(t.message ?: "Error Fetching Results")
+//            }
+//        })
     }
 
 

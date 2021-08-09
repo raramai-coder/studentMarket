@@ -64,5 +64,15 @@
         android:text="Skip"
         android:textColor="@color/grey" />
 
+    <Button
+        android:id="@+id/button_map_slider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="22dp"
+        android:text="Check Location" />
+
 
 </RelativeLayout>
