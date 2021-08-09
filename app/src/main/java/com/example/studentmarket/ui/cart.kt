@@ -44,7 +44,7 @@ class cart : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        //val apiService: APIService by lazy { RetrofitClient.apiService }
+        val apiService: APIService by lazy { RetrofitClient.apiService }
         apiService.getOrders().enqueue(object : Callback<List<Order>!>! {
 
             override fun onResponse(call: Call<List<Order>>?, response: Response<List<Order>>) {

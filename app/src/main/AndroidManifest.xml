@@ -12,6 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.StudentMarket">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDtTPFOkpu0vKs0bAA8rDMRfa693VFSD8k"/>
         <activity
             android:name=".Login"
             android:label="@string/title_activity_login"
