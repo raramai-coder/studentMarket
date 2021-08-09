@@ -4,7 +4,7 @@ class Store (name:String, type:String){
 
     var storeName = name
     val storeType = type
-    var storeItems = ArrayList<MarketItem>()
+    var storeItems = ArrayList<Item>()
 
     init {
         //TODO add the store to the database

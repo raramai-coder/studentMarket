@@ -7,5 +7,9 @@ import retrofit2.http.GET
 interface APIService {
 
     @GET("/order/?format=json")
-    fun getOrders(): Call<List<Order>>
+    fun getOrders() : Call<List<Order>>
+
+    //fun getOrders(): Call<Order>
+
+    //val posts : Call<List<Order?>?>?
 }

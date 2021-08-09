@@ -74,7 +74,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <TextView
+               <!-- <TextView
                     android:id="@+id/bagItem_txt_cart"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -104,8 +104,13 @@
                     android:background="@color/white"
                     android:minHeight="48dp"
                     android:src="@drawable/outline_edit_black_24"
-                    app:tint="@color/primary_teal" />
+                    app:tint="@color/primary_teal" />-->
 
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/orderItems_RCV_cart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:listitem="@layout/order_item_in_cart" />
             </LinearLayout>
 
             <!--
@@ -128,7 +133,7 @@
                 android:gravity="start|top"
                 android:hint="Order Notes"
                 android:inputType="textMultiLine"
-                android:minHeight="50dp"
+                android:minHeight="55dp"
                 android:paddingHorizontal="5dp"
                 android:paddingVertical="10dp" />
 
