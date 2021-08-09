@@ -91,8 +91,8 @@ class cart : Fragment() {
                     if (orders.isNotEmpty())
                     setupRecyclerView(orders)
                     else
-                        Toast.makeText(activity, "No Items Found", Toast.LENGTH_SHORT).show()
-                        Log.i(TAG,"orders is empty")
+                        Toast.makeText(activity, "No Items In Bag", Toast.LENGTH_SHORT).show()
+                        //Log.i(TAG,"orders is empty")
 
                 } else {
                     Log.i(TAG, "error $response")
