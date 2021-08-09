@@ -3,62 +3,66 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".registerProduct">
+    tools:context=".ui.RegisterProduct">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="0dp"
         android:layout_marginBottom="0dp"
+        android:gravity="center"
         android:orientation="vertical">
 
         <EditText
             android:id="@+id/edittext_market_item_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
             android:text="Market Item Name" />
 
         <EditText
             android:id="@+id/edittext_market_item_desc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
             android:text="Market Item Description" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Market Item Type SPINNER" />
 
         <EditText
             android:id="@+id/edittext_market_item_price"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
             android:text="Market Item Price" />
 
-        <EditText
-            android:id="@+id/edittext_market_item_delivery_choice"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Delivery Or Pickup SPINNER" />
+<!--        <EditText-->
+<!--            android:id="@+id/edittext_market_item_duration"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Enter Service Duration"-->
+<!--            android:layout_marginBottom="5dp"/>-->
 
         <EditText
             android:id="@+id/edittext_market_item_collection_pin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
             android:text="Set  Collection Pin SPINNER" />
 
-        <EditText
-            android:id="@+id/edittext_market_item_duration"
+        <Spinner
+            android:id="@+id/spinner_set_collection"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Enter Service Duration" />
-
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/textview_spinner_set_collection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
         <Button
             android:id="@+id/button_market_item_register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:text="Register Product/Service" />
 
 

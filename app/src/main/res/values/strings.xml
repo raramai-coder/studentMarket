@@ -14,15 +14,13 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
-<!--    Strings used for registration hyperlinks-->
+    <!--    Strings used for registration hyperlinks-->
 
     <string name="hyperlink_terms_conditions">I accept the <a href="https://www.michalsons.com/blog/popi-act-summary-in-plain-language/18618">Terms and Conditions.</a>.</string>
     <string name="hyperlink_privacy_policy">I consent to the <a href="https://www.michalsons.com/blog/popi-act-summary-in-plain-language/18618">Privacy Policy.</a>.</string>
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
-
-    <!-- Strings used for the order items in the cart -->
-    <string name="itemNameAmount">12 x Product name</string>
-    <string name="itemTotal">R175</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

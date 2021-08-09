@@ -1,4 +1,4 @@
-package com.example.studentmarket
+package com.example.studentmarket.ui
 
 import androidx.lifecycle.ViewModel
 
