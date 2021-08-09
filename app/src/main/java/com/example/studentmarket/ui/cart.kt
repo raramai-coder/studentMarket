@@ -44,7 +44,7 @@ class cart : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //TODO delete onCreate method if its not being called
+
     }
 
     override fun onCreateView(

@@ -54,7 +54,7 @@ class search : Fragment() {
 //        recycler_view_categories.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
 
         //Recycler_view_items' adapter component is set to ContactAdapter. Contact list is sent using func
-        recycler_view_products.adapter = CardAdapter(getSearchList())
+        //recycler_view_products.adapter = CardAdapter(getSearchList())
 //        recycler_view_categories.adapter = CategoryAdapter(getSearchCategoryList())
     }
     private fun getSearchList(): ArrayList<String> {
