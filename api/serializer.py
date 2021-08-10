@@ -52,7 +52,7 @@ class StoreSerializer(serializers.HyperlinkedModelSerializer):
 class TierSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Tier
-        fields = ('tierID', 'prodID', 'tierName', 'tierDescription', 'tierPrice')
+        fields = ('tierID', 'prodID', 'tierName', 'tierDescription')
 
 
 class ReviewSerializer(serializers.HyperlinkedModelSerializer):
