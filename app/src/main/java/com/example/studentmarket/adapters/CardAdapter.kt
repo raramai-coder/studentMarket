@@ -21,7 +21,7 @@ import kotlinx.android.synthetic.main.widget_product_card.view.*
 class CardAdapter( val products: List<Product>) :
     RecyclerView.Adapter<CardAdapter.ViewHolder>() {
 
-    //a listener for when the Vieww Product Button is pressed
+    //a listener for when the View Product Button is pressed
     private lateinit var mListener: onProductClickListener
 
     //an interface that is called in the home activity, and its functions are implemented there,

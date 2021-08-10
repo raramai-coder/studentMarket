@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.studentmarket.adapters.CardAdapter
 import androidx.lifecycle.ViewModelProvider
 import co.za.mtn.academy.itsgotime.core.api.RetrofitClient
+import com.example.studentmarket.CategoryPage
 import com.example.studentmarket.ProductPage
 import com.example.studentmarket.Store
 import com.example.studentmarket.adapters.CategoryAdapter
@@ -161,6 +162,15 @@ class home : Fragment() {
         catAdapter = CategoryAdapter(categories)
         recycler_view_categories.adapter = catAdapter
 
+        catAdapter.setOnButtonClickListener(object : CategoryAdapter.onCategoryClickListener{
+            override fun viewCategory(position: Int) {
+                val intent = Intent(activity, CategoryPage::class.java)
+                //intent.putExtra("product", products[position])
+                startActivity(intent)
+            }
+
+
+        })
 
         //region code for what could happen if card is clicked (commented out)
         // add on click for elements

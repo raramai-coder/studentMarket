@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.StudentMarket">
         <activity
+            android:name=".CategoryPage"
+            android:exported="true" />
+        <activity
             android:name=".Store"
             android:exported="true" />
         <activity

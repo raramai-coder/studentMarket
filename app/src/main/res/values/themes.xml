@@ -120,7 +120,7 @@
         <item name="cardPreventCornerOverlap">true</item>
         <item name="android:shadowColor">@color/primary_teal</item>
         <item name="strokeColor">@color/product_bg</item>
-        <item name="strokeWidth">1.5dp</item>
+        <item name="strokeWidth">1dp</item>
         <item name="cardCornerRadius">15dp</item>
         <item name="background">@drawable/stroke_color</item>
 
