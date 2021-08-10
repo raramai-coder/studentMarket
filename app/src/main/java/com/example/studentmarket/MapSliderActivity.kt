@@ -49,8 +49,8 @@ class MapSliderActivity : AppCompatActivity(), OnMapReadyCallback {
             }
             override fun onStateChanged(bottomSheet: View, newState: Int){
                 button_bottom_sheet.text = when(newState){
-                    BottomSheetBehavior.STATE_EXPANDED -> "Less"
-                    else -> "More"
+                    BottomSheetBehavior.STATE_EXPANDED -> "Hide"
+                    else -> "Show"
                 }
             }
         })

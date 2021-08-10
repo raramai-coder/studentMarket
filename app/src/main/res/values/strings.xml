@@ -17,7 +17,7 @@
     <!--    Strings used for registration hyperlinks-->
 
     <string name="hyperlink_terms_conditions">I accept the <a href="https://www.michalsons.com/blog/popi-act-summary-in-plain-language/18618">Terms and Conditions.</a>.</string>
-    <string name="hyperlink_privacy_policy">I consent to the <a href="https://www.michalsons.com/blog/popi-act-summary-in-plain-language/18618">Privacy Policy.</a>.</string>
+    <string name="hyperlink_privacy_policy">I consent to the <a href="https://www.gov.za/sites/default/files/gcis_document/201409/3706726-11act4of2013protectionofpersonalinforcorrect.pdf">Privacy Policy.</a>.</string>
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
