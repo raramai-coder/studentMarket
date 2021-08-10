@@ -72,10 +72,11 @@ class MapSliderActivity : AppCompatActivity(), OnMapReadyCallback {
                 .position(sydney)
                 .title("Marker in Sydney")
         )
-        // [START_EXCLUDE silent]
+        //region [START_EXCLUDE silent]
         googleMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))
-        // [END_EXCLUDE]
+        //endregion [END_EXCLUDE]
     }
     // [END maps_marker_on_map_ready_add_marker]
 }
 // [END maps_marker_on_map_ready]
+

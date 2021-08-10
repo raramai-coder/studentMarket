@@ -91,7 +91,7 @@ class CardAdapter( val products: List<Product>) :
 
         val bViewStore = view.button_view_store
         val bViewProduct = view.button_view_product*/
-        //endregion `5
+        //endregion
 
         val intent = Intent(view.context, ProductPage::class.java)
         //bind items functions takes the database given by the database for a specific product and binds to the product card
