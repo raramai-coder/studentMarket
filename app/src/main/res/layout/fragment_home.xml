@@ -16,7 +16,7 @@
         <LinearLayout
             android:id="@+id/linearLayout"
             android:layout_width="match_parent"
-            android:layout_height="110dp"
+            android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -26,9 +26,8 @@
                 android:id="@+id/recycler_view_categories"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                tools:itemCount="10"
-                tools:listitem="@layout/widget_category" />
-                android:orientation="horizontal"
+                tools:listitem="@layout/widget_category"
+                android:orientation="horizontal"/>
         </LinearLayout>
 
 <!--        This is the products recycler view section.-->
@@ -47,7 +46,6 @@
                 android:id="@+id/recycler_view_products"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                tools:itemCount="19"
                 tools:listitem="@layout/widget_product_card" />
 
         </LinearLayout>

@@ -59,7 +59,7 @@ class Welcome : AppCompatActivity() {
             val intent = Intent(this,MainActivity::class.java)
             skip_btn.setTextColor(getColor(R.color.primary_teal))
             startActivity(intent)
-            finish()
+            finish()  //so that the user can't press back to go back to this screen
         }
         //endregion
 

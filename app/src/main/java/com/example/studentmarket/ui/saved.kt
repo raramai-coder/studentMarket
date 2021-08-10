@@ -38,7 +38,7 @@ class saved : Fragment() {
 //        recycler_view_categories.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
 
         //Recycler_view_items' adapter component is set to ContactAdapter. Contact list is sent using func
-        recycler_view_products.adapter = CardAdapter(getSavedList())
+        //recycler_view_products.adapter = CardAdapter(getSavedList())
 //        recycler_view_categories.adapter = CategoryAdapter(getCategoryList())
     }
     private fun getSavedList(): ArrayList<String> {

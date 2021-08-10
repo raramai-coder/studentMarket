@@ -12,24 +12,34 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.StudentMarket">
+        <activity
+            android:name=".CategoryPage"
+            android:exported="true" />
+        <activity
+            android:name=".Store"
+            android:exported="true" />
+        <activity
+            android:name=".ProductPage"
+            android:exported="true" />
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyDtTPFOkpu0vKs0bAA8rDMRfa693VFSD8k"/>
+            android:value="AIzaSyDtTPFOkpu0vKs0bAA8rDMRfa693VFSD8k" />
+
         <activity
             android:name=".Login"
             android:label="@string/title_activity_login"
-            android:theme="@style/Theme.StudentMarket.NoActionBar"></activity>
+            android:theme="@style/Theme.StudentMarket.NoActionBar" />
         <activity android:name=".Register" />
         <activity android:name=".Welcome" />
         <activity android:name=".SplashScreen">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MapSliderActivity"/>
+        <activity android:name=".MapSliderActivity" />
         <activity android:name=".MainActivity" />
     </application>
 

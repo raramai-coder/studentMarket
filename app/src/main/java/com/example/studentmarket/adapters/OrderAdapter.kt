@@ -45,7 +45,7 @@ class OrderAdapter(val order: List<Order>) : RecyclerView.Adapter<OrderAdapter.V
             var orderTotal:Float = order.orderAmount * order.unitPrice
 
             nameAmountText.text = order.orderAmount.toString()+ " x " + order.prodName
-            orderTotalText.text = "R" + orderTotal.toString()
+            orderTotalText.text = "R" + orderTotal.toString() +"0"
         }
     }
 
