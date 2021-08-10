@@ -3,19 +3,20 @@ from django.db import models
 # Create your models here.
 # added this
 from django.forms import forms
+from cloudinary.models import CloudinaryField
 
 
 # class Location:
 #   pass
 
 class Location(models.Model):
-    locationID = models.IntegerField(primary_key=True)
+    locationID = models.AutoField(auto_created=True, primary_key=True)
     longitude = models.DecimalField(max_digits=19, decimal_places=4, null=False, blank=False)
     latitude = models.DecimalField(max_digits=19, decimal_places=4, null=False, blank=False)
 
 
 class User(models.Model):
-    userID = models.IntegerField(primary_key=True)
+    userID = models.AutoField(auto_created=True, primary_key=True)
     locationID = models.ForeignKey(Location, on_delete=models.CASCADE)
     userName = models.CharField(max_length=100, blank=False)
     userEmail = models.EmailField(max_length=100, null=False, blank=False)
@@ -25,7 +26,7 @@ class User(models.Model):
 
 
 class Category(models.Model):
-    categoryID = models.IntegerField(primary_key=True)
+    categoryID = models.AutoField(auto_created=True, primary_key=True)
     catName = models.CharField(max_length=100, null=False, blank=False)
     catSumProducts = models.IntegerField(null=True, blank=True)
 
@@ -34,55 +35,73 @@ class Category(models.Model):
 #   pass
 
 class Product(models.Model):
-    prodID = models.IntegerField(primary_key=True)
+    prodID = models.AutoField(auto_created=True, primary_key=True)
     categoryID = models.ForeignKey(Category, on_delete=models.CASCADE)
     userID = models.ForeignKey(User, on_delete=models.RESTRICT)
     prodName = models.CharField(max_length=100, null=False, blank=False)
     prodDescription = models.CharField(max_length=250, null=True, blank=True)
     prodPrice = models.DecimalField(max_digits=19, decimal_places=2, null=False, blank=False)
-    prodRange = models.IntegerField(null=True, blank=True)
-    deliveryChoice = "Delivery"
-    dropPinChoice = "Drop Pin"
+    # prodRange = models.IntegerField(null=True, blank=True)
+    # deliveryChoice = "Delivery"
+    # dropPinChoice = "Drop Pin"
     prodRating = models.DecimalField(max_digits=2, decimal_places=1, null=True, blank=True)
-    houseCallChoice = "House Call"
+    # houseCallChoice = "House Call"
     # collectionChoice = "Collection"
-    DeliveryOptions = [
-        (deliveryChoice, 'Delivery'),
-        (dropPinChoice, 'Drop Pin'),
-        (houseCallChoice, 'House Call'),
-    ]
-    prodDelivery = models.CharField(max_length=10, choices=DeliveryOptions
-                                    , default=dropPinChoice, null=False, blank=False)
-    prodPicture = models.ImageField(upload_to='Photos', null=False, blank=False)
+    # DeliveryOptions = [
+    #    (deliveryChoice, 'Delivery'),
+    #   (dropPinChoice, 'Drop Pin'),
+    #    (houseCallChoice, 'House Call'),
+    # ]
+    # prodDelivery = models.CharField(max_length=10, choices=DeliveryOptions
+    # , default=dropPinChoice, null=False, blank=False)
+    prodPicture = CloudinaryField("prodPicture", null=False, blank=False)
     prodLive = models.BooleanField(null=False)
-    servTime = models.DateTimeField(verbose_name="Saved on", auto_now_add=True, null=True, blank=True)
+    prodSaved = models.BooleanField(null=False)
+    # servTime = models.DateTimeField(verbose_name="Saved on", auto_now_add=True, null=True, blank=True)
 
 
 class Saved(models.Model):
-    savedID = models.IntegerField(primary_key=True)
+    savedID = models.AutoField(auto_created=True, primary_key=True)
     prodID = models.ForeignKey(Product, on_delete=models.RESTRICT)
     userID = models.ForeignKey(User, on_delete=models.RESTRICT)
     dateSaved = models.DateTimeField(verbose_name="Saved on", auto_now_add=True, null=True)
 
 
 class Store(models.Model):
-    storeID = models.IntegerField(primary_key=True)
-    prodID = models.ForeignKey(Product, on_delete=models.CASCADE)
+    storeID = models.AutoField(auto_created=True, primary_key=True)
+    # prodID = models.ForeignKey(Product, on_delete=models.CASCADE)
     userID = models.ForeignKey(User, on_delete=models.RESTRICT)
     storeName = models.CharField(max_length=100, null=False, blank=False)
+    deliveryChoice = "Delivery"
+    dropPinChoice = "Drop Pin"
+    houseCallChoice = "House Call"
+    DeliveryOptions = [
+        (deliveryChoice, 'Delivery'),
+        (dropPinChoice, 'Drop Pin'),
+        (houseCallChoice, 'House Call'),
+    ]
+    storeDelivery = models.CharField(max_length=10, choices=DeliveryOptions
+                                     , default=dropPinChoice, null=False, blank=False)
 
 
 class Tier(models.Model):
-    tierID = models.IntegerField(primary_key=True)
+    tierID = models.AutoField(auto_created=True, primary_key=True)
     prodID = models.ForeignKey(Product, on_delete=models.RESTRICT)
-    userID = models.ForeignKey(User, on_delete=models.RESTRICT)
-    tierName = models.CharField(max_length=100, null=True, blank=True)
-    tierDescription = models.CharField(max_length=250, null=False, blank=False)
-    tierPrice = models.DecimalField(max_digits=19, decimal_places=2, null=False, blank=False)
+    # userID = models.ForeignKey(User, on_delete=models.RESTRICT)
+    tierName = models.CharField(max_length=100, null=False, blank=False)
+    tierDescription = models.CharField(max_length=250, null=True, blank=True)
+    # tierPrice = models.DecimalField(max_digits=19, decimal_places=2, null=False, blank=False)
+
+
+class Options(models.Model):
+    optionID = models.AutoField(auto_created=True, primary_key=True)
+    tierID = models.ForeignKey(Tier, on_delete=models.RESTRICT)
+    optionName = models.CharField(max_length=100, null=False, blank=False)
+    optionPrice = models.DecimalField(max_digits=20, decimal_places=2, null=False, blank=False)
 
 
 class Review(models.Model):
-    reviewID = models.IntegerField(primary_key=True)
+    reviewID = models.AutoField(auto_created=True, primary_key=True)
     prodID = models.ForeignKey(Product, on_delete=models.RESTRICT)
     userID = models.ForeignKey(User, on_delete=models.RESTRICT)
     reviewStars = models.IntegerField(null=True, blank=True)
@@ -98,15 +117,24 @@ class Review(models.Model):
 
 
 class Order(models.Model):
-    orderID = models.IntegerField(primary_key=True)
+    orderID = models.AutoField(auto_created=True, primary_key=True)
     prodID = models.ForeignKey(Product, on_delete=models.RESTRICT)
     userID = models.ForeignKey(User, on_delete=models.RESTRICT)
-    #locationID = models.ForeignKey(Location, on_delete=models.RESTRICT)
+    # locationID = models.ForeignKey(Location, on_delete=models.RESTRICT)
     prodName = models.CharField(max_length=100, null=False, blank=False)
     orderNote = models.CharField(max_length=250, null=True, blank=True)
     orderAmount = models.DecimalField(max_digits=19, decimal_places=2, null=False, blank=False)
     unitPrice = models.DecimalField(max_digits=19, decimal_places=2, null=False, blank=False)
     quantity = models.IntegerField(null=False, blank=False)
+    # orderDate = models.DateTimeField(verbose_name="Ordered on", auto_now_add=True, null=True, blank=True)
+
+
+class Cart(models.Model):
+    cartID = models.AutoField(auto_created=True, primary_key=True)
+    userID = models.ForeignKey(User, on_delete=models.RESTRICT)
+    orderID = models.ForeignKey(Order, on_delete=models.RESTRICT)
+    locationID = models.ForeignKey(Location, on_delete=models.RESTRICT)
+    purchaseTotal = models.DecimalField(decimal_places=2, max_digits=50, null=False, blank=False)
     orderDate = models.DateTimeField(verbose_name="Ordered on", auto_now_add=True, null=True, blank=True)
 
 
@@ -114,7 +142,7 @@ class Order(models.Model):
 #  pass
 
 class Security(models.Model):
-    securityID = models.IntegerField(primary_key=True)
+    securityID = models.AutoField(auto_created=True, primary_key=True)
     userID = models.ForeignKey(User, on_delete=models.RESTRICT)
     locationID = models.ForeignKey(Location, on_delete=models.RESTRICT)
     securityGuardPresence = models.BooleanField(null=False)
@@ -152,7 +180,7 @@ class Security(models.Model):
 
 
 class DropPin(models.Model):
-    dropPinID = models.IntegerField(primary_key=True)
+    dropPinID = models.AutoField(auto_created=True, primary_key=True)
     securityID = models.ForeignKey(Security, on_delete=models.CASCADE)
     locationID = models.ForeignKey(Location, on_delete=models.RESTRICT)
     dropPinName = models.CharField(max_length=19, null=False, blank=False)
