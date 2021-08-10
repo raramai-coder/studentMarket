@@ -16,4 +16,5 @@ interface APIService {
 
     @GET("/category/?format=json")
     fun getCategories(): Call<List<Category>>
+
 }
