@@ -29,19 +29,10 @@ class MapSliderFragment : Fragment() {
 
         viewModel = ViewModelProvider(this).get(SavedViewModel::class.java)
 
-        recycler_view_location_security.layoutManager = LinearLayoutManager(activity)
-        recycler_view_location_crowd.layoutManager = LinearLayoutManager(activity)
-        recycler_view_location_schedule.layoutManager = LinearLayoutManager(activity)
-        recycler_view_location_list.layoutManager = LinearLayoutManager(activity)
-
-        recycler_view_location_security.adapter = LocationMetaAdapter(getLocationMeta())
-        recycler_view_location_crowd.adapter = LocationMetaAdapter(getLocationMeta())
-        recycler_view_location_schedule.adapter = LocationMetaAdapter(getLocationMeta())
-        recycler_view_location_list.adapter = LocationMetaAdapter(getLocationList())
     }
 
 }
-
+/**
 private fun getLocationList() : ArrayList<String> {
     val locationsList = ArrayList<String>()
     val itemCount = 10
@@ -61,4 +52,4 @@ private fun getLocationMeta() : ArrayList<String>{
         locationsMetaList.add("$i")
     }
     return locationsMetaList
-}
+} */

@@ -28,7 +28,7 @@ class LocationMetaAdapter(val items: ArrayList<String>) :
 
     override fun onBindViewHolder(holder: LocationMetaAdapter.ViewHolder, position: Int) {
         val item_position = items.get(position)
-        holder.ivLocationMeta.setImageResource(R.drawable.welcome_2)
+//        holder.ivLocationMeta.setImageResource(R.drawable.welcome_2)
         holder.tvLocationMeta.text = "Security Level $item_position"
         // holder.cvLocationMeta.setCardBackgroundColor()
     }
