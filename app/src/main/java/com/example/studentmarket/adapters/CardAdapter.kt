@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.studentmarket.ProductPage
 import com.example.studentmarket.R
 import com.example.studentmarket.core.models.Product
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.widget_product_card.view.*
 
 
@@ -52,7 +53,7 @@ class CardAdapter( val products: List<Product>) :
      * Called when RecyclerView needs a new ViewHolder of the given type to represent an item.
      */
     override fun onBindViewHolder(holder: CardAdapter.ViewHolder, position: Int) {
-        holder.bindItems(products[position], mListener,position)
+        holder.bindItems(products[position],mListener,position)
 
 
         //region old code
@@ -115,6 +116,17 @@ class CardAdapter( val products: List<Product>) :
             //productImage.setImageDrawable(product.prodImage) TODO implement displaying images
             productRating.text = product.prodRating.toString()
             productRange.text = product.prodRange.toString()
+
+            //setting the image of the product
+            //Picasso.get().load(product.prodImage).into(productImage) //TODO implement cropping algorithm
+            val imageLocation : String = product.prodImage
+            Picasso.get()
+                .load(product.prodImage)
+                .placeholder(R.drawable.icon_student_market)
+                .error(R.drawable.welcome_2)
+                .into(productImage)
+
+            // test url = "https://timesofindia.indiatimes.com/photo/67586673.cms"
 
 
             //setting the onclick listener for this specific button to implement viewProduuct function
