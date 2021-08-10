@@ -21,7 +21,7 @@ class Product(
     @SerializedName("prodRating") var prodRating: Float,
     @SerializedName("prodRange") var prodRange: Int
 
-    //var prodPicture : String, val prodName:String, val prodPrice:Float, val prodRating: Float?, val prodRange:Int
+
 ): Parcelable
 
-//data class ErrorResponseProduct(val message: String?)
+

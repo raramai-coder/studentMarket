@@ -1,5 +1,6 @@
 package com.example.studentmarket.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -13,6 +14,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.studentmarket.adapters.CardAdapter
 import androidx.lifecycle.ViewModelProvider
 import co.za.mtn.academy.itsgotime.core.api.RetrofitClient
+import com.example.studentmarket.ProductPage
+import com.example.studentmarket.Store
 import com.example.studentmarket.adapters.CategoryAdapter
 import com.example.studentmarket.core.api.APIService
 import com.example.studentmarket.core.models.Category
@@ -104,6 +107,22 @@ class home : Fragment() {
         prodAdapter = CardAdapter(products)
         recycler_view_products.adapter = prodAdapter
 
+        prodAdapter.setOnButtonClickListener(object : CardAdapter.onProductClickListener{
+            override fun viewProduct(position: Int) {
+                val intent = Intent(activity, ProductPage::class.java)
+                //intent.putExtra("product", products[position])
+                startActivity(intent)
+            }
+
+            override fun viewStore(position: Int) {
+                val intent = Intent(activity, Store::class.java)
+                //intent.putExtra("product", products[position])
+                startActivity(intent)
+            }
+
+        })
+
+
     }
 
 
@@ -142,9 +161,10 @@ class home : Fragment() {
         catAdapter = CategoryAdapter(categories)
         recycler_view_categories.adapter = catAdapter
 
+
         //region code for what could happen if card is clicked (commented out)
         // add on click for elements
-        /*adapter.onItemClick = { user ->
+        /*catAdapter.onItemClick = { user ->
 
             val intent = Intent(this, UserDetailsActivity::class.java)
             intent.putExtra("User", user)
