@@ -6,11 +6,19 @@ from rest_framework import routers
 from api import views
 
 router = routers.DefaultRouter()
+
 router.register(r'product', views.ProductViewSet)
 router.register(r'order', views.OrderViewSet)
 router.register(r'location', views.LocationViewSet)
 router.register(r'category', views.CategoryViewSet)
 router.register(r'user', views.UserViewSet)
+router.register(r'saved', views.SavedViewSet)
+router.register(r'store', views.StoreViewSet)
+router.register(r'tier', views.TierViewSet)
+router.register(r'review', views.ReviewViewSet)
+router.register(r'cart', views.CartViewSet)
+router.register(r'options', views.OptionsViewSet)
+
 
 urlpatterns = [
     path('', include(router.urls)),

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from api.models import User, Location, Category, Product, Saved, Store, Tier, Review, Order, Security, DropPin
+from api.models import User, Location, Category, Product, Saved, Store, Tier, Review, Order, Security, DropPin, Cart, Options
 
 # added this
 # from api.models import Facilitator
@@ -19,6 +19,8 @@ admin.site.register(Review)
 admin.site.register(Order)
 admin.site.register(Security)
 admin.site.register(DropPin)
+admin.site.register(Cart)
+admin.site.register(Options)
 
 
 
