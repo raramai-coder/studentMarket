@@ -3,6 +3,7 @@ from django.db import models
 # Create your models here.
 # added this
 from django.forms import forms
+from cloudinary.models import CloudinaryField
 
 
 # class Location:
@@ -53,7 +54,7 @@ class Product(models.Model):
     ]
     prodDelivery = models.CharField(max_length=10, choices=DeliveryOptions
                                     , default=dropPinChoice, null=False, blank=False)
-    prodPicture = models.ImageField(upload_to='Photos', null=False, blank=False)
+    prodPicture = CloudinaryField("prodPicture", null=False, blank=False)
     prodLive = models.BooleanField(null=False)
     servTime = models.DateTimeField(verbose_name="Saved on", auto_now_add=True, null=True, blank=True)
 
