@@ -7,7 +7,7 @@ import com.google.gson.annotations.SerializedName
 
 @Parcelize
 class Order (
-    //var id: Int = 0, //added id
+    // var id: Int = 0, //added id
     @SerializedName("quantity") var quantity: Int,
     @SerializedName("prodName") val prodName:String,
     @SerializedName("orderAmount") var orderAmount: Int,
@@ -17,4 +17,4 @@ class Order (
 
 ): Parcelable
 
-data class ErrorResponseOrder(val message:String?)
+data class ErrorResponse(val message:String?)
