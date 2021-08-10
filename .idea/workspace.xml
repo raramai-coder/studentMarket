@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="76ec0818-1605-410e-a161-92346a1c6c4d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/api/migrations/0004_order_locationid.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djangoPortfolio/ProcFile.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/djangoPortfolio/procFile" beforeDir="false" afterPath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/Procfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djangoPortfolio/release_steps.sh" beforeDir="false" afterPath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/release_steps.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/api/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/api/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/api/serializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/api/serializer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/api/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/api/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/studentMarketApi/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/studentMarketApi/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +20,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
   </component>
   <component name="ProjectId" id="1wR7DSpA6RYONeoFZqEBjlFgw8n" />
   <component name="ProjectLevelVcsManager">
@@ -62,7 +58,8 @@
       <workItem from="1628409429766" duration="23984000" />
       <workItem from="1628443700842" duration="954000" />
       <workItem from="1628444933381" duration="3818000" />
-      <workItem from="1628505627510" duration="2055000" />
+      <workItem from="1628505627510" duration="6186000" />
+      <workItem from="1628589396780" duration="1289000" />
     </task>
     <task id="LOCAL-00001" summary="fixed reference error for foreign key">
       <created>1628412884132</created>
@@ -113,11 +110,29 @@
       <option name="project" value="LOCAL" />
       <updated>1628426048234</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="added serializers for product and cart">
+      <created>1628507804565</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1628507804565</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -172,17 +187,7 @@
     <MESSAGE value="created routers for api with viewsets" />
     <MESSAGE value="created order commands for running db remotely" />
     <MESSAGE value="fixed tail problem" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed tail problem" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/djangoPortfolio/studentMarketApi/api/serializer.py</url>
-          <line>2</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="added serializers for product and cart" />
+    <option name="LAST_COMMIT_MESSAGE" value="added serializers for product and cart" />
   </component>
 </project>
