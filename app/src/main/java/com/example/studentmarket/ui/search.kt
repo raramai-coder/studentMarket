@@ -1,5 +1,6 @@
 package com.example.studentmarket.ui
 
+import android.content.Intent
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import android.util.Log
@@ -10,8 +11,10 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import co.za.mtn.academy.itsgotime.core.api.RetrofitClient
+import com.example.studentmarket.ProductPage
 import com.example.studentmarket.adapters.CardAdapter
 import com.example.studentmarket.R
+import com.example.studentmarket.Store
 import com.example.studentmarket.core.api.APIService
 import com.example.studentmarket.core.models.Product
 import kotlinx.android.synthetic.main.fragment_saved.recycler_view_store_products
@@ -97,6 +100,23 @@ class search : Fragment() {
     private fun setupRecyclerView(products: List<Product>) {
         prodAdapter = CardAdapter(products)
         recycler_view_store_products.adapter = prodAdapter
+
+        prodAdapter.setOnButtonClickListener(object : CardAdapter.onProductClickListener{
+            override fun viewProduct(position: Int) {
+                val intent = Intent(activity, ProductPage::class.java)
+                var bundle = Bundle()
+                bundle.putParcelable("product", products[position])
+                intent.putExtra("productBundle", bundle)
+                startActivity(intent)
+            }
+
+            override fun viewStore(position: Int) {
+                val intent = Intent(activity, Store::class.java)
+                //intent.putExtra("product", products[position])
+                startActivity(intent)
+            }
+
+        })
 
     }
 

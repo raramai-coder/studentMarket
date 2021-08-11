@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -13,6 +14,7 @@ import com.example.studentmarket.core.api.APIService
 import com.example.studentmarket.core.models.Category
 import com.example.studentmarket.core.models.Product
 import com.example.studentmarket.ui.home
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_category_page.*
 import kotlinx.android.synthetic.main.fragment_home.*
 import retrofit2.Call
@@ -43,7 +45,14 @@ class CategoryPage : AppCompatActivity() {
 
         recyclerView.layoutManager = LinearLayoutManager(this)
 
+        val categoryName = findViewById<TextView>(R.id.categoryName_txt_cp)
+        categoryName.text = category.categoryName
+
         fetchProductsInCategory(category.categoryID)
+
+        Snackbar.make(recyclerView,category.categoryID.toString(),Snackbar.LENGTH_LONG)
+            .setAction("Action", null)
+            .show()
     }
 
 

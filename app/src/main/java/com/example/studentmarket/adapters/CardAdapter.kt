@@ -109,7 +109,7 @@ class CardAdapter( val products: List<Product>) :
 
             //set the cardvalues to the data received from the database
             productNameText.text = product.prodName
-            priceText.text = product.prodPrice.toString()
+            priceText.text = "R" + product.prodPrice.toString() + "0"
             //productImage.setImageDrawable(product.prodImage) TODO implement displaying images
             productRating.text = product.prodRating.toString()
 
