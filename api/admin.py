@@ -20,7 +20,7 @@ admin.site.register(Order)
 admin.site.register(Security)
 admin.site.register(DropPin)
 admin.site.register(Cart)
-#admin.site.register(Options)
+admin.site.register(Options)
 
 
 
