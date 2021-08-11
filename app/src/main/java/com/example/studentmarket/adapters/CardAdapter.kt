@@ -6,10 +6,7 @@ import android.media.Image
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.AdapterView
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.TextView
+import android.widget.*
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.studentmarket.ProductPage
@@ -102,7 +99,7 @@ class CardAdapter( val products: List<Product>) :
             val priceText = itemView.findViewById(R.id.text_view_product_price) as TextView
             val productImage = itemView.findViewById(R.id.image_view_product_image) as ImageView
             val productRating = itemView.findViewById(R.id.text_view_rating) as TextView
-            val productRange = itemView.findViewById(R.id.text_view_location) as TextView
+            //val productRange = itemView.findViewById(R.id.text_view_location) as TextView
 
             val viewStore = itemView.findViewById(R.id.button_view_store) as Button
             val viewProduct = itemView.findViewById(R.id.button_view_product) as Button
@@ -115,13 +112,13 @@ class CardAdapter( val products: List<Product>) :
             priceText.text = product.prodPrice.toString()
             //productImage.setImageDrawable(product.prodImage) TODO implement displaying images
             productRating.text = product.prodRating.toString()
-            productRange.text = product.prodRange.toString()
 
             //setting the image of the product
             //Picasso.get().load(product.prodImage).into(productImage) //TODO implement cropping algorithm
-            val imageLocation : String = product.prodImage
+            //val imageLocation : String = "https://res.cloudinary.com/hb9ogjlea/" +product.prodImage
+
             Picasso.get()
-                .load(product.prodImage)
+                .load("https://res.cloudinary.com/hb9ogjlea/" + product.prodImage)
                 .placeholder(R.drawable.icon_student_market)
                 .error(R.drawable.welcome_2)
                 .into(productImage)

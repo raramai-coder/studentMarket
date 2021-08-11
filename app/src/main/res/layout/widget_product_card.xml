@@ -92,7 +92,7 @@
                         android:layout_gravity="bottom"
                         android:text="4.9 (20)" />
 
-                    <ImageView
+                    <!--<ImageView
                         android:id="@+id/image_view_location"
                         android:layout_width="12dp"
                         android:layout_height="25dp"
@@ -107,7 +107,7 @@
                         android:layout_gravity="bottom"
                         android:layout_weight="1"
                         android:text="1.3 km"
-                        android:textSize="15sp" />
+                        android:textSize="15sp" />-->
 
                     <ImageView
                         android:id="@+id/image_view_saved"

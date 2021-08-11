@@ -10,7 +10,7 @@
         <entry key="..\:/Users/user-pc/StudioProjects/studentMarket/app/src/main/res/layout/activity_home.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/user-pc/StudioProjects/studentMarket/app/src/main/res/layout/activity_login.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/user-pc/StudioProjects/studentMarket/app/src/main/res/layout/activity_main.xml" value="0.20520833333333333" />
-        <entry key="..\:/Users/user-pc/StudioProjects/studentMarket/app/src/main/res/layout/activity_product_page.xml" value="0.14601769911504425" />
+        <entry key="..\:/Users/user-pc/StudioProjects/studentMarket/app/src/main/res/layout/activity_product_page.xml" value="0.25" />
         <entry key="..\:/Users/user-pc/StudioProjects/studentMarket/app/src/main/res/layout/activity_register.xml" value="0.34375" />
         <entry key="..\:/Users/user-pc/StudioProjects/studentMarket/app/src/main/res/layout/activity_store.xml" value="0.22" />
         <entry key="..\:/Users/user-pc/StudioProjects/studentMarket/app/src/main/res/layout/activity_welcome.xml" value="0.25" />
@@ -21,12 +21,12 @@
         <entry key="..\:/Users/user-pc/StudioProjects/studentMarket/app/src/main/res/layout/fragment_search.xml" value="0.18" />
         <entry key="..\:/Users/user-pc/StudioProjects/studentMarket/app/src/main/res/layout/order_item_in_cart.xml" value="0.35778985507246375" />
         <entry key="..\:/Users/user-pc/StudioProjects/studentMarket/app/src/main/res/layout/widget_category.xml" value="0.5" />
-        <entry key="..\:/Users/user-pc/StudioProjects/studentMarket/app/src/main/res/layout/widget_product_card.xml" value="0.33" />
+        <entry key="..\:/Users/user-pc/StudioProjects/studentMarket/app/src/main/res/layout/widget_product_card.xml" value="0.18" />
         <entry key="..\:/Users/user-pc/StudioProjects/studentMarket/app/src/main/res/menu/navigation_bar.xml" value="0.20520833333333333" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="11" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

@@ -111,7 +111,9 @@ class home : Fragment() {
         prodAdapter.setOnButtonClickListener(object : CardAdapter.onProductClickListener{
             override fun viewProduct(position: Int) {
                 val intent = Intent(activity, ProductPage::class.java)
-                //intent.putExtra("product", products[position])
+                var bundle = Bundle()
+                bundle.putParcelable("product", products[position])
+                intent.putExtra("productBundle", bundle)
                 startActivity(intent)
             }
 
@@ -165,7 +167,7 @@ class home : Fragment() {
         catAdapter.setOnButtonClickListener(object : CategoryAdapter.onCategoryClickListener{
             override fun viewCategory(position: Int) {
                 val intent = Intent(activity, CategoryPage::class.java)
-                //intent.putExtra("product", products[position])
+                //intent.putExtra("category", category[position])
                 startActivity(intent)
             }
 
