@@ -1,24 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ProductPage">
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/cart_fab_ppg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:src="@drawable/outline_shopping_bag_black_48"
+        android:clickable="true" />
+
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginHorizontal="10dp">
+            android:layout_marginHorizontal="10dp"
+            android:orientation="vertical">
 
             <com.denzcoskun.imageslider.ImageSlider
                 android:id="@+id/product_image_slider_ppg"
@@ -37,15 +44,71 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Product Name"
-                android:textSize="30sp"/>
+                android:textSize="30sp" />
 
             <TextView
                 android:id="@+id/product_price_txt_ppg"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="R175"
-                android:textSize="25sp"/>
+                android:textSize="25sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.ms.square.android.expandabletextview.ExpandableTextView
+                    android:id="@+id/expand_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:animDuration="100"
+                    app:maxCollapsedLines="3">
+
+                    <TextView
+                        android:id="@+id/product_description_txt_ppg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Description"
+                        android:textSize="25sp" />
+
+                    <TextView
+                        android:id="@+id/expandable_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+                        android:text="TextView is right here"
+                        android:textSize="16sp" />
+
+                    <ImageButton
+                        android:id="@+id/expand_collapse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|bottom"
+                        android:layout_weight="1"
+                        android:background="@color/transparent"
+                        android:backgroundTint="@color/primary_teal" />
+
+                </com.ms.square.android.expandabletextview.ExpandableTextView>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/product_rating_txt_ppg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Rating: 4.5/5"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save"
+                android:textSize="15sp"
+                android:drawableLeft="@drawable/outline_bookmark_border_black_48"/>
+
         </LinearLayout>
     </ScrollView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

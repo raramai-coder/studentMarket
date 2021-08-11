@@ -11,15 +11,14 @@ import kotlinx.android.parcel.Parcelize
 class Product(
     @SerializedName("prodID") val prodID: Int,
     @SerializedName("categoryID") val category: String,
-    @SerializedName("userID") val userID: String,
+    @SerializedName("userID") val user: String,
     @SerializedName("prodDescription") var prodDescription: String,
     @SerializedName("prodLive") var prodLive: Boolean,
-    @SerializedName("prodDelivery") var prodDelivery: String,
     @SerializedName("prodPicture") var prodImage: String,
     @SerializedName("prodName") var prodName: String,
     @SerializedName("prodPrice") var prodPrice: Float,
     @SerializedName("prodRating") var prodRating: Float,
-    @SerializedName("prodRange") var prodRange: Int
+    @SerializedName("prodSaved") var prodSaved: Boolean
 
 
 ): Parcelable
