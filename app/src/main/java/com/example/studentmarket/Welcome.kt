@@ -18,8 +18,8 @@ class Welcome : AppCompatActivity() {
 
         //all the images that will be displayed in the welcome slider are added to the array
         imageList.add(SlideModel(R.drawable.feminine_welcome_instagram_post))
-        imageList.add(SlideModel(R.drawable.welcome_2))
-        imageList.add(SlideModel(R.drawable.welcome_3))
+        imageList.add(SlideModel(R.drawable.buy_products))
+        imageList.add(SlideModel(R.drawable.sell_products))
 
         //initialize the slider and set its images
         val welcomeImages = findViewById<ImageSlider>(R.id.welcome_image_slider)
@@ -65,13 +65,13 @@ class Welcome : AppCompatActivity() {
 
         //region Map Slider
         //TODO: Write logic to skip to map slider button AND set coordinates
-        val btn_map_slider = findViewById<Button>(R.id.button_map_slider)
+        /*val btn_map_slider = findViewById<Button>(R.id.button_map_slider)
         btn_map_slider.setOnClickListener {
             val intent = Intent(this, MapSliderActivity::class.java)
             btn_map_slider.setTextColor(getColor(R.color.primary_teal))
             startActivity(intent)
             finish()
-        }
+        }*/
         //endregion Map Slider
         //endregion
     }
