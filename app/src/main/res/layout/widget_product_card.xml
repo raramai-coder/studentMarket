@@ -37,10 +37,10 @@
 
                     <ImageView
                         android:id="@+id/image_view_product_image"
-                        android:layout_width="230dp"
+                        android:layout_width="275dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:layout_margin="5dp" />
+                        android:layout_margin="5dp"
+                        android:layout_weight="1" />
                         tools:srcCompat="@tools:sample/backgrounds/scenic"
 
                     <LinearLayout
@@ -85,15 +85,6 @@
                         app:srcCompat="@drawable/outline_grade_black_48"
                         />
 
-                    <TextView
-                        android:id="@+id/text_view_rating"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:textSize="15sp"
-                        android:layout_gravity="bottom"
-                        android:text="4.9 (20)" />
-
                     <!--<ImageView
                         android:id="@+id/image_view_location"
                         android:layout_width="12dp"
@@ -111,6 +102,15 @@
                         android:text="1.3 km"
                         android:textSize="15sp" />-->
 
+                    <TextView
+                        android:id="@+id/text_view_rating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_weight="1"
+                        android:text="4.9 (20)"
+                        android:textSize="15sp" />
+
                     <ImageButton
                         android:id="@+id/button_saved"
                         style="@style/imageButtonStyle"
@@ -119,18 +119,19 @@
                         android:layout_gravity="bottom"
                         android:layout_weight="1"
                         android:background="@color/transparent"
-                        app:srcCompat="@drawable/outline_bookmark_border_black_48"
-                        app:tint="@color/primary_teal" />
+                        app:srcCompat="@drawable/outline_bookmark_border_black_18"
+                        app:tint="@color/black" />
 
                     <TextView
                         android:id="@+id/text_view_saved"
                         style="@style/buttonStyle"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:textSize="15sp"
+                        android:layout_height="29dp"
                         android:layout_gravity="bottom"
-                        android:text="Save" />
+                        android:layout_weight="1"
+                        android:text="Save"
+                        android:textAlignment="textStart"
+                        android:textSize="15sp" />
 
                 </LinearLayout>
                 <LinearLayout
