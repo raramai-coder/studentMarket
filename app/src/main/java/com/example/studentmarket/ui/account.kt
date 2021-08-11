@@ -36,8 +36,8 @@ class account : Fragment() {
 
         recycler_view_store_products.layoutManager = LinearLayoutManager(activity)
 
-        var product_list = getCategoryList()
-        recycler_view_store_products.adapter = ProductStoreSellerAdapter(getCategoryList())
+//        var product_list = getProductList()
+        recycler_view_store_products.adapter = ProductStoreSellerAdapter(getProductList())
 
     }
 
@@ -78,10 +78,10 @@ private fun getCategoryList() : ArrayList<Int> {
 //
 //}
 
-/**
+
 private fun getProductList() : ArrayList<ArrayList<String>>{
 
-     * var arrayOne = arrayListOf<String>("image/upload/33978045._SX318__xallxf", "Elementary Linear Algebra","900","4.6","Save")
+    var arrayOne = arrayListOf<String>("image/upload/33978045._SX318__xallxf", "Elementary Linear Algebra","900","4.6","Save")
     var arrayProductImages = arrayListOf<String>( "image/upload/33978045._SX318__xallxf", "image/upload/66fb1cd1110bdd98b11260afe799b478_ea4k6f", "image/upload/image_wqz1eu" , "image/upload/MTH603-Numerical-Analysis-Master-of-Computer-Science-VU-University-Past-Papers-2005-Final-Term-Exam-Fall_xlfml8" )
     var arrayProductNames = arrayListOf<String>("Elementary Linear Algebra","Stat2015 Notes","Math2028 Notes","CAM 1015 - Mechanics")
     var arrayProductPrices = arrayListOf<String>("900", "300", "250.00" , "150.00")
@@ -97,6 +97,6 @@ private fun getProductList() : ArrayList<ArrayList<String>>{
     }
 
     return productList
-}**/
+}
 
 //endregion RecyclerView Functions
