@@ -137,6 +137,13 @@
                     android:orientation="horizontal">
 
                     <Button
+                        android:id="@+id/button2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Add to bag" />
+
+                    <Button
                         android:id="@+id/button_view_product"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -144,6 +151,7 @@
                         android:textSize="15sp"
                         android:layout_marginLeft="7dp"
                         android:text="View Product" />
+
                 </LinearLayout>
 
             </LinearLayout>
