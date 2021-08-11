@@ -23,7 +23,7 @@
         app:iss_auto_cycle="false"
         app:iss_corner_radius="5"
         app:iss_delay="0"
-        app:iss_placeholder="@drawable/feminine_welcome_instagram_post">
+        app:iss_placeholder="@drawable/welcome">
 
     </com.denzcoskun.imageslider.ImageSlider>
 
@@ -41,6 +41,8 @@
 
     <Button
         android:id="@+id/login_btn_wl"
+        style="@style/buttonBlankStyle"
+        android:textColor="@color/black"
         android:layout_width="284dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -64,7 +66,7 @@
         android:text="Skip"
         android:textColor="@color/grey" />
 
-    <Button
+    <!--<Button
         android:id="@+id/button_map_slider"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -72,7 +74,7 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="0dp"
         android:layout_marginEnd="22dp"
-        android:text="Check Location" />
+        android:text="Check Location" />-->
 
 
 </RelativeLayout>
