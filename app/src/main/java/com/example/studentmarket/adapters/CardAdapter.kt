@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.studentmarket.ProductPage
 import com.example.studentmarket.R
 import com.example.studentmarket.core.models.Product
+import com.example.studentmarket.ui.saved
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.widget_product_card.view.*
 
@@ -27,6 +28,7 @@ class CardAdapter( val products: List<Product>) :
     interface onProductClickListener{
        fun viewProduct(position: Int)
        fun viewStore(position: Int)
+       fun saveProduct(product: Product)
    }
 
     //this function attaches the buttons to the listener returned when the viewholder is created
@@ -103,6 +105,7 @@ class CardAdapter( val products: List<Product>) :
 
             val viewStore = itemView.findViewById(R.id.button_view_store) as Button
             val viewProduct = itemView.findViewById(R.id.button_view_product) as Button
+            val saveProduct = itemView.findViewById(R.id.button_saved) as ImageButton
             //TODO implement save button
 
 
@@ -134,6 +137,10 @@ class CardAdapter( val products: List<Product>) :
             //setting the onclick listener for this specific button to implement viewStore function
             viewStore.setOnClickListener {
                 listener.viewStore(position)
+            }
+
+            saveProduct.setOnClickListener{
+                listener.saveProduct(product)
             }
 
 

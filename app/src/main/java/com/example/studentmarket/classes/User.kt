@@ -1,14 +1,15 @@
 package com.example.studentmarket.classes
 
+import com.example.studentmarket.core.models.Product
+
 /*this class is for the users
 params: a username, an email adress a phone number and a password.
 Users can be constructed at the registration page, the initialiser will add the user to the database*/
- class User (var username:String,val email: String, var number: Int, var password:String){
+ class User (var username:String, var id: Int){
     private var userName = username
-    private var userPassowrd = password
 //    var userUniversity : String
-    //var UserID: Int
-    var savedItems = ArrayList<String>()
+    //var id: Int
+    var savedItems = ArrayList<Product>()
 
 
 
@@ -27,8 +28,8 @@ Users can be constructed at the registration page, the initialiser will add the 
     //region AddSave
     /*This functions add a product or a service to a user's saved items
     @Params: itemID*/
-    fun AddSave(itemId:String ){
-        savedItems.add(itemId)
+    fun AddSave(product: Product){
+        savedItems.add(product)
 
         //TODO add code to add the saved item to the Database and initalise the saved item Id here
     }
@@ -40,7 +41,7 @@ Users can be constructed at the registration page, the initialiser will add the 
     @Params: none
     @Returns: an array of the saved items
      */
-    fun FetchSavedItems(): ArrayList<String> {
+    fun FetchSavedItems(): ArrayList<Product> {
         return savedItems
         //TODO return the saved ID's from the database and the relevant table information
     }

@@ -111,16 +111,20 @@
                         android:text="1.3 km"
                         android:textSize="15sp" />-->
 
-                    <ImageView
-                        android:id="@+id/image_view_saved"
+                    <ImageButton
+                        android:id="@+id/button_saved"
+                        style="@style/imageButtonStyle"
                         android:layout_width="12dp"
                         android:layout_height="25dp"
-                        android:layout_weight="1"
                         android:layout_gravity="bottom"
-                        app:srcCompat="@drawable/outline_bookmark_border_black_48" />
+                        android:layout_weight="1"
+                        android:background="@color/transparent"
+                        app:srcCompat="@drawable/outline_bookmark_border_black_48"
+                        app:tint="@color/primary_teal" />
 
                     <TextView
                         android:id="@+id/text_view_saved"
+                        style="@style/buttonStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
