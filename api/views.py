@@ -20,7 +20,7 @@ class ProductViewSet(viewsets.ModelViewSet):
 
 
 class LocationViewSet(viewsets.ModelViewSet):
-    queryset = Location.objects.all().filter()
+    queryset = Location.objects.all()
     serializer_class = LocationSerializer
 
 
@@ -30,12 +30,12 @@ class ProductInCategoryViewSet(viewsets.ModelViewSet):
 
 
 class UserViewSet(viewsets.ModelViewSet):
-    queryset = User.objects.all().filter()
+    queryset = User.objects.all()
     serializer_class = UserSerializer
 
 
 class OrderViewSet(viewsets.ModelViewSet):
-    queryset = Order.objects.all().filter()
+    queryset = Order.objects.all()
     serializer_class = OrderSerializer
 
 
