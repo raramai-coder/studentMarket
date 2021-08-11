@@ -49,23 +49,22 @@
                         android:layout_weight="1"
                         android:orientation="vertical">
 
-                        <TextView
-                            android:id="@+id/text_view_product_name"
+                        <EditText
+                            android:id="@+id/edittext_product_name"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textSize="20sp"
                             android:textAlignment="textStart"
                             android:layout_marginTop="10dp"
-                            android:paddingVertical="10dp"
                             android:text="Product Name" />
 
-                        <TextView
-                            android:id="@+id/text_view_product_price"
+                        <EditText
+                            android:id="@+id/edittext_product_price"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="R 49.99"
                             android:textAlignment="textStart"
-                            android:textColor="@color/price"
+                            android:textColor="@color/price_faded"
                             android:textSize="20sp" />
                     </LinearLayout>
                 </LinearLayout>
@@ -137,22 +136,22 @@
                     android:orientation="horizontal">
 
                     <com.google.android.material.button.MaterialButton
-                        android:id="@+id/button_view_store"
+                        android:id="@+id/button_delete_product"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="7dp"
                         android:layout_weight="1"
-                        android:text="View Store"
+                        android:text="Delete"
                         android:textSize="15sp" />
 
                     <Button
-                        android:id="@+id/button_view_product"
+                        android:id="@+id/button_update_info"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
+                        android:layout_weight="3"
                         android:textSize="15sp"
                         android:layout_marginLeft="7dp"
-                        android:text="View Product" />
+                        android:text="Update Info" />
                 </LinearLayout>
 
             </LinearLayout>

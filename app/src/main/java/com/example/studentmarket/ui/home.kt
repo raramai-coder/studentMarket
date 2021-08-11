@@ -24,7 +24,6 @@ import com.example.studentmarket.core.models.Product
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import java.util.*
 
 /**
  * A simple [Fragment] subclass.
@@ -61,7 +60,7 @@ class home : Fragment() {
         // TODO: Use the ViewModel
 
         // Recycler_view_items' layout manager component is set to LinearLayoutManager instance. This instance of Main activity is context
-        recycler_view_products.layoutManager = LinearLayoutManager(activity)
+        recycler_view_store_products.layoutManager = LinearLayoutManager(activity)
         recycler_view_categories.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
 
         //Recycler_view_items' adapter component is set to ContactAdapter. Contact list is sent using func
@@ -106,7 +105,7 @@ class home : Fragment() {
 
     private fun setupRecyclerView(products: List<Product>) {     //this function attaches the adapter to the recyclerview and populates it with the data collected from the database
         prodAdapter = CardAdapter(products)
-        recycler_view_products.adapter = prodAdapter
+        recycler_view_store_products.adapter = prodAdapter
 
         prodAdapter.setOnButtonClickListener(object : CardAdapter.onProductClickListener{
             override fun viewProduct(position: Int) {

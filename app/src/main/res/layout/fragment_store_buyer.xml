@@ -12,22 +12,33 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-<!--        This is the categories recycler view section-->
+<!--        This is the Store Heading section-->
         <LinearLayout
             android:id="@+id/linearlayout_storebuyer_products"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            android:paddingBottom="30dp"
+            android:paddingTop="20dp">
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycler_view_categories"
+            <TextView
+                android:id="@+id/textview_store_name"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                tools:listitem="@layout/widget_category"
-                android:orientation="horizontal"/>
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Kasi Food Vibes"
+                android:textSize="33sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textview_store_location_name"
+                android:gravity="center"
+                android:text="Knockando Residence"
+                android:textColor="@color/gray_faded"
+                android:textSize="22sp"/>
         </LinearLayout>
 
 <!--        This is the products recycler view section.-->
@@ -46,7 +57,7 @@
                 android:id="@+id/recycler_view_store_products"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                tools:listitem="@layout/widget_product_card" />
+                tools:listitem="@layout/widget_product_card_store_buyer" />
 
         </LinearLayout>
     </LinearLayout>

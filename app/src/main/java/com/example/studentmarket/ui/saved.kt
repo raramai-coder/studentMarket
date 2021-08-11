@@ -8,8 +8,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.studentmarket.R
-import com.example.studentmarket.adapters.CardAdapter
-import com.example.studentmarket.adapters.CategoryAdapter
 import kotlinx.android.synthetic.main.fragment_saved.*
 import java.util.*
 
@@ -34,7 +32,7 @@ class saved : Fragment() {
         // TODO: Use the ViewModel
 
         // Recycler_view_items' layout manager component is set to LinearLayoutManager instance. This instance of Main activity is context
-        recycler_view_products.layoutManager = LinearLayoutManager(activity)
+        recycler_view_store_products.layoutManager = LinearLayoutManager(activity)
 //        recycler_view_categories.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
 
         //Recycler_view_items' adapter component is set to ContactAdapter. Contact list is sent using func

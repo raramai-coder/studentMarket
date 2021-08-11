@@ -14,7 +14,9 @@
     <!-- product or service card colors -->
     <color name="service_bg">#ECFAFA</color>
     <color name="price">#055356</color>
+    <color name="price_faded">#BB055356</color>
     <color name="product_bg">#C8E4E5</color>
+    <color name="gray_faded">#BB000000</color>
 
     <!--store owner editor colors-->
     <color name="editable_areas">#4E7D94</color>

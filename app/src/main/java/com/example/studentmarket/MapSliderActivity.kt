@@ -47,6 +47,7 @@ import retrofit2.Response
 var orders: List<Order> = mutableListOf()
 class MapSliderActivity : AppCompatActivity(), OnMapReadyCallback {
     private lateinit var bottomSheetBehavior: BottomSheetBehavior<ConstraintLayout>
+    private lateinit var storeID : com.example.studentmarket.classes.Store
     private lateinit var orderAdapter: OrderAdapter
     public var map_location : DoubleArray = doubleArrayOf(-26.181121, 28.038017)
     // [START_EXCLUDE]

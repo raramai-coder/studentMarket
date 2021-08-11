@@ -7,24 +7,17 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.Toast
-import androidx.navigation.fragment.findNavController
-import kotlinx.android.synthetic.main.fragment_saved.*
 import androidx.recyclerview.widget.LinearLayoutManager
 import co.za.mtn.academy.itsgotime.core.api.RetrofitClient
 import com.example.studentmarket.adapters.CardAdapter
 import com.example.studentmarket.R
-import com.example.studentmarket.adapters.CategoryAdapter
 import com.example.studentmarket.core.api.APIService
-import com.example.studentmarket.core.models.Category
 import com.example.studentmarket.core.models.Product
-import kotlinx.android.synthetic.main.fragment_home.*
-import kotlinx.android.synthetic.main.fragment_saved.recycler_view_products
+import kotlinx.android.synthetic.main.fragment_saved.recycler_view_store_products
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import java.util.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -62,7 +55,7 @@ class search : Fragment() {
         // TODO: Use the ViewModel
 
         // Recycler_view_items' layout manager component is set to LinearLayoutManager instance. This instance of Main activity is context
-        recycler_view_products.layoutManager = LinearLayoutManager(activity)
+        recycler_view_store_products.layoutManager = LinearLayoutManager(activity)
 //        recycler_view_categories.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
 
         fetchProducts()
@@ -103,7 +96,7 @@ class search : Fragment() {
 
     private fun setupRecyclerView(products: List<Product>) {
         prodAdapter = CardAdapter(products)
-        recycler_view_products.adapter = prodAdapter
+        recycler_view_store_products.adapter = prodAdapter
 
     }
 

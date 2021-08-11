@@ -54,9 +54,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textSize="20sp"
+                            android:paddingVertical="10dp"
                             android:textAlignment="textStart"
                             android:layout_marginTop="10dp"
-                            android:paddingVertical="10dp"
                             android:text="Product Name" />
 
                         <TextView
@@ -65,7 +65,7 @@
                             android:layout_height="wrap_content"
                             android:text="R 49.99"
                             android:textAlignment="textStart"
-                            android:textColor="@color/price"
+                            android:textColor="@color/price_faded"
                             android:textSize="20sp" />
                     </LinearLayout>
                 </LinearLayout>
@@ -135,15 +135,6 @@
                     android:paddingRight="7dp"
                     android:paddingLeft="7dp"
                     android:orientation="horizontal">
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/button_view_store"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="7dp"
-                        android:layout_weight="1"
-                        android:text="View Store"
-                        android:textSize="15sp" />
 
                     <Button
                         android:id="@+id/button_view_product"
