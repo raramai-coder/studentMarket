@@ -24,11 +24,6 @@ class LocationViewSet(viewsets.ModelViewSet):
     serializer_class = LocationSerializer
 
 
-class CategoryViewSet(viewsets.ModelViewSet):
-    queryset = Category.objects.all().filter()
-    serializer_class = CategorySerializer
-
-
 class ProductInCategoryViewSet(viewsets.ModelViewSet):
     queryset = Product.objects.all().filter()
     serializer_class = ProductSerializer
