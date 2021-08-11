@@ -104,9 +104,10 @@
                 android:id="@+id/button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/outline_bookmark_border_24"
                 android:text="Save"
-                android:textSize="15sp"
-                android:drawableLeft="@drawable/outline_bookmark_border_black_48"/>
+                android:drawableTint="@color/black"
+                android:textSize="15sp" />
 
         </LinearLayout>
     </ScrollView>

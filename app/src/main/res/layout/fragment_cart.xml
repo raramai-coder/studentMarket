@@ -36,7 +36,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:text="R560,99"
+            android:text="R6070.00"
             android:textAlignment="center"
             android:textColor="@color/cart_total"
             android:textSize="20sp" />

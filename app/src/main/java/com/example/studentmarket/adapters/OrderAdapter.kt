@@ -42,6 +42,8 @@ class OrderAdapter(val order: List<Order>) : RecyclerView.Adapter<OrderAdapter.V
             val nameAmountText = itemView.findViewById(R.id.textview_cartitem_name) as TextView
             val orderTotalText = itemView.findViewById(R.id.textview_cartitem_price) as TextView
 
+            val cartTotal = itemView.findViewById<TextView>(R.id.textview_cart_total)
+
             var orderTotal:Float = order.orderAmount * order.unitPrice
 
             nameAmountText.text = order.orderAmount.toString()+ " x " + order.prodName
