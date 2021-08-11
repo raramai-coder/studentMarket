@@ -45,7 +45,7 @@ class home : Fragment() {
     private var products: List<Product> = mutableListOf()   //the list of products that will be returned by our database is stored in this variable
     private lateinit var prodAdapter: CardAdapter                        //the adapter that works with our product card
     private var categories: List<Category> = mutableListOf()   //the list of categories that will be returned by our database is stored in this variable
-    private lateinit var catAdapter: CategoryAdapter       //the adapter that works with our product card
+    private lateinit var catAdapter: CategoryAdapter       //the adapter that works with our category card
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

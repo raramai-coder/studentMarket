@@ -12,7 +12,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import co.za.mtn.academy.itsgotime.core.api.RetrofitClient
 import com.example.studentmarket.R
-import com.example.studentmarket.adapters.CardAdapter
 import com.example.studentmarket.adapters.OrderAdapter
 import com.example.studentmarket.core.api.APIService
 import com.example.studentmarket.core.models.Order
@@ -60,7 +59,7 @@ class cart : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         //link recyclerview
-        orderItemsRecyclerView = view.findViewById(R.id.orderItems_RCV_cart)
+        orderItemsRecyclerView = view.findViewById(R.id.recycler_view_cart_items)
 
         //create a layout manager
         orderItemsRecyclerView.layoutManager = LinearLayoutManager(activity)

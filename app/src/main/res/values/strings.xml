@@ -26,6 +26,7 @@
 
 
     <!-- Strings for Items in cart-->
-    <string name="itemNameAmount">12 x Product Name</string>
+    <string name="cartitemAmount">3</string>
+    <string name="cartitemName">Cheese Boy Kota</string>
     <string name="itemTotal">R100</string>
 </resources>

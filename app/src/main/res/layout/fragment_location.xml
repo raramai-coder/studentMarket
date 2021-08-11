@@ -13,128 +13,146 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    <TextView
-        android:id="@+id/textview_location_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginVertical="20dp"
-        android:layout_marginTop="16dp"
-        android:text="- Amic Deck -"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textview_location_security"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginVertical="20dp"
-        android:text="Security Presence"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textview_location_name" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view_location_security"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginVertical="10dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textview_location_security"
-        tools:itemCount="2"
-        tools:listitem="@layout/fragment_location_meta"
-        android:maxHeight="100dp"
-        android:minHeight="30dp"
-        android:paddingTop="1dp"
-        android:clipToPadding="false" />
-
-    <TextView
-        android:id="@+id/textview_location_crowd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginVertical="20dp"
-        android:text="Crowd Presence"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recycler_view_location_security" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view_location_crowd"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginVertical="10dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textview_location_crowd"
-        tools:itemCount="2"
-        tools:listitem="@layout/fragment_location_meta"
-        android:clipToPadding="false"
-        android:maxHeight="100dp"
-        android:minHeight="30dp"
-        android:paddingTop="1dp" />
-
-    <TextView
-        android:id="@+id/textview_location_schedule"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginVertical="20dp"
-        android:text="Bus Schedule"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recycler_view_location_crowd" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view_location_schedule"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:maxHeight="100dp"
-        android:minHeight="30dp"
-        android:paddingTop="1dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textview_location_schedule"
-        tools:itemCount="2"
-        tools:listitem="@layout/fragment_location_meta"
-        android:clipToPadding="false" />
-
-    <Button
-        android:id="@+id/button_location_select"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="40dp"
-        android:layout_marginVertical="20dp"
-        android:text="Choose Spot And Pay"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recycler_view_location_schedule" />
-
-        <TextView
-            android:id="@+id/textview_location_list"
-            android:layout_width="188dp"
-            android:layout_height="23dp"
-            android:layout_marginVertical="10dp"
-            android:text="Choose A Different Spot"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button_location_select" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler_view_location_list"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="1dp"
-            android:layout_marginVertical="10dp"
-            android:clipToPadding="false"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textview_location_list"
-            tools:itemCount="20"
-            tools:listitem="@layout/fragment_location_listitem" />
+            android:layout_height="match_parent">
 
-        <Button
-            android:id="@+id/button_bottom_sheet"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:text="Show"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/textview_location_name"
-            app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <Button
+                android:id="@+id/button_bottom_sheet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Show"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textview_location_name"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/textview_location_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="20dp"
+                android:layout_marginTop="16dp"
+                android:text="- Amic Deck -"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textview_location_security"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="20dp"
+                android:layout_marginVertical="20dp"
+                android:text="Security Presence"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textview_location_name" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_location_security"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textview_location_security"
+                tools:itemCount="1"
+                tools:listitem="@layout/fragment_location_meta"
+                android:maxHeight="100dp"
+                android:minHeight="30dp"
+                android:paddingTop="1dp"
+                android:clipToPadding="false" />
+
+            <TextView
+                android:id="@+id/textview_location_crowd"
+                android:layout_width="wrap_content"
+                android:paddingStart="20dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="20dp"
+                android:text="Crowd Presence"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recycler_view_location_security" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_location_crowd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textview_location_crowd"
+                tools:itemCount="1"
+                tools:listitem="@layout/fragment_location_meta"
+                android:clipToPadding="false"
+                android:maxHeight="100dp"
+                android:minHeight="30dp"
+                android:paddingTop="1dp" />
+
+
+            <Button
+                android:id="@+id/button_location_select"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginVertical="20dp"
+                android:text="Choose Spot And Pay"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recycler_view_location_crowd" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/include_location_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_location_select">
+                <include
+                    layout="@layout/fragment_cart"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/textview_location_list"
+                android:layout_width="188dp"
+                android:layout_height="23dp"
+                android:layout_marginVertical="10dp"
+                android:paddingStart="20dp"
+                android:text="Spot"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/include_location_cart" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_location_list"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:paddingTop="1dp"
+                android:maxHeight="100dp"
+                android:minHeight="30dp"
+                android:layout_marginVertical="10dp"
+                android:clipToPadding="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textview_location_list"
+                tools:itemCount="20"
+                tools:listitem="@layout/fragment_location_listitem" />
+
+            <TextView
+                android:id="@+id/textview_location_schedule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="20dp"
+                android:paddingStart="20dp"
+                android:text="Bus Schedule"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recycler_view_location_list" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_location_schedule"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxHeight="100dp"
+                android:minHeight="30dp"
+                android:paddingTop="1dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textview_location_schedule"
+                tools:itemCount="2"
+                tools:listitem="@layout/fragment_location_listitem"
+                android:clipToPadding="false" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-
+    android:orientation="vertical"
+    android:gravity="center"
 
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <LinearLayout
-        android:id="@+id/cart_top_bar"
+        android:id="@+id/linearlayout_cart_topbar"
         android:layout_width="match_parent"
-        android:layout_height="83dp"
+        android:layout_height="60dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
@@ -18,44 +19,44 @@
         android:layout_marginTop="0dp"
         android:layout_marginEnd="0dp"
         android:orientation="horizontal"
-        android:paddingVertical="15dp">
+        android:paddingTop="15dp">
 
         <TextView
-            android:id="@+id/cart_txt_label"
+            android:id="@+id/textview_cart_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:paddingHorizontal="10dp"
-            android:text="Cart"
+            android:text="TOTAL"
             android:textAlignment="center"
-            android:textSize="36sp" />
+            android:textSize="20sp" />
 
         <TextView
-            android:id="@+id/price_txt_cart"
+            android:id="@+id/textview_cart_total"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:text="R560,99"
             android:textAlignment="center"
             android:textColor="@color/cart_total"
-            android:textSize="25sp" />
+            android:textSize="20sp" />
 
-        <Button
-            android:id="@+id/buy_btn_cart"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
-            android:layout_weight="1"
-            android:text="Buy"
-            android:textSize="25sp" />
+        <!--        <Button-->
+        <!--            android:id="@+id/button_cart_buy"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginEnd="10dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:text="Buy"-->
+        <!--            android:textSize="25sp" />-->
 
     </LinearLayout>
 
     <ScrollView
-        android:id="@+id/cart_sv"
+        android:id="@+id/scrollview_cart_items"
         android:layout_width="match_parent"
-        android:layout_height="645dp"
-        android:layout_below="@+id/cart_top_bar"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linearlayout_cart_topbar"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginTop="2dp"
@@ -63,13 +64,13 @@
         android:layout_marginBottom="2dp">
 
         <LinearLayout
-            android:id="@+id/products_lyt_cart"
+            android:id="@+id/linearlayout_cart_products"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <LinearLayout
-                android:id="@+id/item_lyt_cart"
+                android:id="@+id/linearlayout_cart_items"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
@@ -107,10 +108,10 @@
                     app:tint="@color/primary_teal" />-->
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/orderItems_RCV_cart"
+                    android:id="@+id/recycler_view_cart_items"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    tools:listitem="@layout/order_item_in_cart" />
+                    android:layout_height="165dp"
+                    tools:listitem="@layout/fragment_cartitem" />
             </LinearLayout>
 
             <!--
@@ -125,7 +126,7 @@
 
 
             <EditText
-                android:id="@+id/orderNotes_txt_cart"
+                android:id="@+id/edittext_cart_order_notes"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
@@ -137,50 +138,7 @@
                 android:paddingHorizontal="5dp"
                 android:paddingVertical="10dp" />
 
-            <LinearLayout
-                android:id="@+id/delivery_lyt_cart"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
-                android:orientation="vertical"
-                android:paddingVertical="10dp"
-                android:paddingHorizontal="5dp">
-
-                <TextView
-                    android:id="@+id/delivery_txt_cart"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Delivery"
-                    android:textSize="25sp" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-
-                    <CheckBox
-                        android:id="@+id/deliverymode_tbtn_cart"
-                        android:layout_width="5dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:background="@color/white"
-                        android:checked="false"
-                        android:colorPressedHighlight="@color/primary_teal"
-                        android:text="Collect"
-                        android:textSize="21sp" />
-
-
-                    <TextView
-                        android:id="@+id/deliveryPrice_txt_cart"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Free"
-                        android:textAlignment="textEnd"
-                        android:textSize="21sp" />
-                </LinearLayout>
-            </LinearLayout>
 
         </LinearLayout>
     </ScrollView>
-</RelativeLayout>
+</LinearLayout>

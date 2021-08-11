@@ -15,7 +15,7 @@ class OrderAdapter(val order: List<Order>) : RecyclerView.Adapter<OrderAdapter.V
 
     //this method is returning the view for each item in the list
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): OrderAdapter.ViewHolder {
-        val v = LayoutInflater.from(parent.context).inflate(R.layout.order_item_in_cart,parent,false)
+        val v = LayoutInflater.from(parent.context).inflate(R.layout.fragment_cartitem,parent,false)
         return ViewHolder(v)
     }
 
@@ -39,8 +39,8 @@ class OrderAdapter(val order: List<Order>) : RecyclerView.Adapter<OrderAdapter.V
         }
 
         fun bindItems(order: Order){
-            val nameAmountText = itemView.findViewById(R.id.product_txt_order_cart) as TextView
-            val orderTotalText = itemView.findViewById(R.id.order_total) as TextView
+            val nameAmountText = itemView.findViewById(R.id.textview_cartitem_name) as TextView
+            val orderTotalText = itemView.findViewById(R.id.textview_cartitem_price) as TextView
 
             var orderTotal:Float = order.orderAmount * order.unitPrice
 
