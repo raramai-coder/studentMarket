@@ -167,7 +167,9 @@ class home : Fragment() {
         catAdapter.setOnButtonClickListener(object : CategoryAdapter.onCategoryClickListener{
             override fun viewCategory(position: Int) {
                 val intent = Intent(activity, CategoryPage::class.java)
-                //intent.putExtra("category", category[position])
+                var bundle = Bundle()
+                bundle.putParcelable("category", categories[position])
+                intent.putExtra("categoryBundle", bundle)
                 startActivity(intent)
             }
 
