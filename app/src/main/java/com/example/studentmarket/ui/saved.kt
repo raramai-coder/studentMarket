@@ -118,10 +118,10 @@ class saved : Fragment() {
                 //intent.putExtra("product", products[position])
                 startActivity(intent)
             }
-
+/*
             override fun saveProduct(product: Product) {
                 user1.AddSave(product)
-            }
+            }*/
 
         })
 

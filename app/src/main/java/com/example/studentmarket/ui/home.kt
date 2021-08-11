@@ -122,9 +122,9 @@ class home : Fragment() {
                 startActivity(intent)
             }
 
-            override fun saveProduct(product: Product) {
+            /*override fun saveProduct(product: Product) {
                 saved.user1.AddSave(product)
-            }
+            }*/
 
         })
 

@@ -28,7 +28,7 @@ class CardAdapter( val products: List<Product>) :
     interface onProductClickListener{
        fun viewProduct(position: Int)
        fun viewStore(position: Int)
-       fun saveProduct(product: Product)
+       //fun saveProduct(product: Product)
    }
 
     //this function attaches the buttons to the listener returned when the viewholder is created
@@ -139,9 +139,9 @@ class CardAdapter( val products: List<Product>) :
                 listener.viewStore(position)
             }
 
-            saveProduct.setOnClickListener{
+            /*saveProduct.setOnClickListener{
                 listener.saveProduct(product)
-            }
+            }*/
 
 
 
