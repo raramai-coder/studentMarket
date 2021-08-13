@@ -39,12 +39,13 @@ class ProductStoreSellerAdapter(val items: ArrayList<ArrayList<String>>) :
         val product_name = product_list[position][1]
         val product_price = product_list[position][2]
         val product_rating = product_list[position][3]
-//        val product_saved = product_list[position][4]
+        val product_saved = product_list[position][4]
 
 //        holder.ivProductImage.setImageResource("image/upload/33978045._SX318__xallxf")
         holder.etProductName.hint = product_name
         holder.etProductPrice.hint = product_price
         holder.tvProductRating.text = product_rating
+        holder.tvProductSaved.text = product_saved
 //        holder.btnProductUpdate.setOnClickListener()
 //        holder.btnProductDelete.setOnClickListener()
     }
@@ -88,10 +89,10 @@ private fun getProductList() : ArrayList<ArrayList<String>> {
         "CAM 1015 - Mechanics"
     )
     var arrayProductPrices = arrayListOf<String>(
-        "900",
-        "300",
-        "250.00",
-        "150.00"
+        "R900",
+        "R300",
+        "R250.00",
+        "R150.00"
     )
     var arrayProductRatings = arrayListOf<String>(
         "4.6",
