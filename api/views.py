@@ -26,8 +26,9 @@ class LocationViewSet(viewsets.ModelViewSet):
 
 
 class ProductInCategoryViewSet(viewsets.ModelViewSet):
-    queryset = Product.objects.filter()
+    queryset = Product.objects.all()
     serializer_class = ProductSerializer
+    filterset_fields = ['userId', 'category', 'prodLive']
 
 
 class CategoryViewSet(viewsets.ModelViewSet):
