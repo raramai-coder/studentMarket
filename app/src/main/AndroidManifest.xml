@@ -16,7 +16,7 @@
             android:name=".CategoryPage"
             android:exported="true" />
         <activity
-            android:name=".Store"
+            android:name=".StorePage"
             android:exported="true" />
         <activity
             android:name=".ProductPage"

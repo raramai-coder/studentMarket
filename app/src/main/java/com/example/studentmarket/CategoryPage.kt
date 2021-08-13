@@ -13,6 +13,7 @@ import com.example.studentmarket.adapters.CardAdapter
 import com.example.studentmarket.core.api.APIService
 import com.example.studentmarket.core.models.Category
 import com.example.studentmarket.core.models.Product
+import com.example.studentmarket.core.models.Store
 import com.example.studentmarket.ui.home
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_category_page.*
@@ -36,23 +37,23 @@ class CategoryPage : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_category_page)
 
-        supportActionBar?.hide()
+        supportActionBar?.hide()  //hide the action bar on the top for ui purposes
 
         val bundle = intent.getBundleExtra("categoryBundle")
-        val category = bundle!!.getParcelable<Category>("category") as Category
+        val category = bundle!!.getParcelable<Category>("category") as Category   //getting the category from the previous intent, which was home, when the user pressed a specific intent
 
         recyclerView = findViewById<RecyclerView>(R.id.recycler_view_categoryPage)
 
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-        val categoryName = findViewById<TextView>(R.id.categoryName_txt_cp)
+        val categoryName = findViewById<TextView>(R.id.categoryName_txt_cp)  //setting the heading on top of the page to the category name
         categoryName.text = category.categoryName
 
-        fetchProductsInCategory(category.categoryID)
+        fetchProductsInCategory(category.categoryID)   //fetching all the products in that category and then in turn feeding them to the recyclerview
 
-        Snackbar.make(recyclerView,category.categoryID.toString(),Snackbar.LENGTH_LONG)
+        /*Snackbar.make(recyclerView,category.categoryID.toString(),Snackbar.LENGTH_LONG)
             .setAction("Action", null)
-            .show()
+            .show()*/
     }
 
 

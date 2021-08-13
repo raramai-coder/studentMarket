@@ -10,8 +10,8 @@ import kotlinx.android.parcel.Parcelize
 @Parcelize
 class Product(
     @SerializedName("prodID") val prodID: Int,
-    @SerializedName("categoryID") val category: String,
-    @SerializedName("userID") val user: String,
+    @SerializedName("categoryID") val category: Int,
+    @SerializedName("userID") val user: Int,
     @SerializedName("prodDescription") var prodDescription: String,
     @SerializedName("prodLive") var prodLive: Boolean,
     @SerializedName("prodPicture") var prodImage: String,

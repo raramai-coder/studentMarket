@@ -104,7 +104,7 @@ class ProductPage : AppCompatActivity() {
     private fun addToBag(product:Product, addToCart: View){
         val productIDString = "https://studentmarketapp.herokuapp.com/product/" + product.prodID
         val userIDString = "https://studentmarketapp.herokuapp.com/user/1"
-        val newOrder: Order = Order(1, product.prodName,1,product.prodPrice,productIDString,userIDString)
+        val newOrder: Order = Order(1, product.prodName,1,product.prodPrice,product.prodID,product.user)
 
         //Call<Order> call = apiService.addToBag(newOrder)
 

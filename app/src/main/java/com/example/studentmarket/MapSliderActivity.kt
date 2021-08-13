@@ -29,7 +29,7 @@ import androidx.lifecycle.ViewModelProvider
 import co.za.mtn.academy.itsgotime.core.api.RetrofitClient
 import com.example.studentmarket.CategoryPage
 import com.example.studentmarket.ProductPage
-import com.example.studentmarket.Store
+//import com.example.studentmarket.Store
 import com.example.studentmarket.adapters.CategoryAdapter
 import com.example.studentmarket.core.api.APIService
 import com.example.studentmarket.core.models.Category

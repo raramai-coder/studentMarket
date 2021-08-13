@@ -16,8 +16,8 @@ class Order (
     @SerializedName("prodName") val prodName:String,
     @SerializedName("orderAmount") var orderAmount: Int,
     @SerializedName("unitPrice")val unitPrice: Float,
-    @SerializedName("prodID")val prodID: String,
-    @SerializedName("userID")val userID:String
+    @SerializedName("prodID")val prodID: Int,
+    @SerializedName("userID")val userID:Int
 
 ): Parcelable
 

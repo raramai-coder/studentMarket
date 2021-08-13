@@ -16,11 +16,12 @@ import androidx.lifecycle.ViewModelProvider
 import co.za.mtn.academy.itsgotime.core.api.RetrofitClient
 import com.example.studentmarket.CategoryPage
 import com.example.studentmarket.ProductPage
-import com.example.studentmarket.Store
+import com.example.studentmarket.StorePage
 import com.example.studentmarket.adapters.CategoryAdapter
 import com.example.studentmarket.core.api.APIService
 import com.example.studentmarket.core.models.Category
 import com.example.studentmarket.core.models.Product
+import com.example.studentmarket.core.models.Store
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -36,6 +37,7 @@ class home : Fragment() {
     companion object {
         fun newInstance() = home()
         private const val TAG = ""
+        public val userID = 2
     }
 
 
@@ -117,8 +119,10 @@ class home : Fragment() {
             }
 
             override fun viewStore(position: Int) {
-                val intent = Intent(activity, Store::class.java)
-                //intent.putExtra("product", products[position])
+                val intent = Intent(activity, StorePage::class.java)
+                var bundle = Bundle()
+                bundle.putInt("userID", products[position].user)
+                intent.putExtra("userBundle", bundle)
                 startActivity(intent)
             }
 

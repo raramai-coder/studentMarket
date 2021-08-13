@@ -14,7 +14,8 @@ import co.za.mtn.academy.itsgotime.core.api.RetrofitClient
 import com.example.studentmarket.ProductPage
 import com.example.studentmarket.adapters.CardAdapter
 import com.example.studentmarket.R
-import com.example.studentmarket.Store
+import com.example.studentmarket.StorePage
+import com.example.studentmarket.core.models.Store
 import com.example.studentmarket.core.api.APIService
 import com.example.studentmarket.core.models.Product
 import kotlinx.android.synthetic.main.fragment_saved.recycler_view_store_products
@@ -111,7 +112,7 @@ class search : Fragment() {
             }
 
             override fun viewStore(position: Int) {
-                val intent = Intent(activity, Store::class.java)
+                val intent = Intent(activity, StorePage::class.java)
                 //intent.putExtra("product", products[position])
                 startActivity(intent)
             }
