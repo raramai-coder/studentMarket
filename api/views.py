@@ -3,7 +3,8 @@ from rest_framework import viewsets
 
 from api.serializer import ProductSerializer, OrderSerializer, UserSerializer, LocationSerializer, CategorySerializer, \
     SavedSerializer, StoreSerializer, TierSerializer, ReviewSerializer, CartSerializer, OptionsSerializer
-from api.models import User, Location, Category, Product, Saved, Store, Tier, Review, Order, Security, DropPin, Cart,Options
+from api.models import User, Location, Category, Product, Saved, Store, Tier, Review, Order, Security, DropPin, Cart, \
+    Options
 
 
 # create viewset using serializer
@@ -22,6 +23,11 @@ class ProductViewSet(viewsets.ModelViewSet):
 class LocationViewSet(viewsets.ModelViewSet):
     queryset = Location.objects.all()
     serializer_class = LocationSerializer
+
+
+class ProductInCategoryViewSet(viewsets.ModelViewSet):
+    queryset = Product.objects.filter(userID=1)
+    serializer_class = ProductSerializer
 
 
 class CategoryViewSet(viewsets.ModelViewSet):
