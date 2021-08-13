@@ -30,6 +30,9 @@ class Category(models.Model):
     catName = models.CharField(max_length=100, null=False, blank=False)
     catSumProducts = models.IntegerField(null=True, blank=True)
 
+    def __str__(self):
+        return self.catName
+
 
 # class Product:
 #   pass
@@ -59,6 +62,10 @@ class Product(models.Model):
     prodSaved = models.BooleanField(null=False)
     # servTime = models.DateTimeField(verbose_name="Saved on", auto_now_add=True, null=True, blank=True)
 
+    def __str__(self):
+        return self.prodName
+
+
 
 class Saved(models.Model):
     savedID = models.AutoField(auto_created=True, primary_key=True)
@@ -83,6 +90,10 @@ class Store(models.Model):
     storeDelivery = models.CharField(max_length=10, choices=DeliveryOptions
                                      , default=dropPinChoice, null=False, blank=False)
 
+    def __str__(self):
+        return self.storeName
+
+
 
 class Tier(models.Model):
     tierID = models.AutoField(auto_created=True, primary_key=True)
@@ -92,12 +103,20 @@ class Tier(models.Model):
     tierDescription = models.CharField(max_length=250, null=True, blank=True)
     # tierPrice = models.DecimalField(max_digits=19, decimal_places=2, null=False, blank=False)
 
+    def __str__(self):
+        return self.tierName
+
+
 
 class Options(models.Model):
     optionID = models.AutoField(auto_created=True, primary_key=True)
     tierID = models.ForeignKey(Tier, on_delete=models.RESTRICT)
     optionName = models.CharField(max_length=100, null=False, blank=False)
     optionPrice = models.DecimalField(max_digits=20, decimal_places=2, null=False, blank=False)
+
+    def __str__(self):
+        return self.optionName
+
 
 
 class Review(models.Model):
