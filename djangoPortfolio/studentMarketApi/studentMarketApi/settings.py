@@ -11,8 +11,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os
 from pathlib import Path
-import os
-from pathlib import Path
+import django_on_heroku
+import cloudinary
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'cloudinary',
 ]
 
 MIDDLEWARE = [
@@ -125,3 +126,21 @@ MEDIA_URL = '/media/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+DEFAULT_FILE_STORAGE = "cloudinary_storage.storage.MediaCloudinaryStorage"
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'hb9ogjlea',
+    'API_KEY': '953935929942593',
+    'API_SECRET': 'McqSMr6CXiQnTMZi6MPjFTDIpfw',
+}
+
+cloudinary.config(
+cloud_name="hb9ogjlea",
+api_key="953935929942593",
+api_secret="McqSMr6CXiQnTMZi6MPjFTDIpfw"
+)
+
+django_on_heroku.settings(locals())
+
+# django_heroku.settings(locals())

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="76ec0818-1605-410e-a161-92346a1c6c4d" name="Changes" comment="adding cloudinary">
+      <change afterPath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/api/migrations/0005_auto_20210810_2319.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/api/migrations/0006_auto_20210810_2338.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/api/migrations/0007_alter_location_locationid.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/api/migrations/0008_auto_20210810_2344.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/api/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/api/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/api/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/api/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/api/serializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/api/serializer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/api/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/api/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/db.sqlite3" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
+  </component>
+  <component name="ProjectId" id="1wR7DSpA6RYONeoFZqEBjlFgw8n" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="full.screen.before.presentation.mode" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/studentMarket/djangoPortfolio/studentMarketApi/studentMarketApi" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\user-pc\Documents\MTN App Development\studentMarket\Student MArket Database\djangoPortfolio\studentMarketApi" />
+      <recent name="C:\Users\user-pc\Documents\MTN App Development\studentMarket\Student MArket Database\studentMarket\djangoPortfolio\studentMarketApi\studentMarketApi" />
+      <recent name="C:\Users\user-pc\Documents\MTN App Development\studentMarket\Student MArket Database\studentMarket\djangoPortfolio\studentMarketApi" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="76ec0818-1605-410e-a161-92346a1c6c4d" name="Changes" comment="" />
+      <created>1628409428531</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1628409428531</updated>
+      <workItem from="1628409429766" duration="23984000" />
+      <workItem from="1628443700842" duration="954000" />
+      <workItem from="1628444933381" duration="3818000" />
+      <workItem from="1628505627510" duration="6186000" />
+      <workItem from="1628589396780" duration="1328000" />
+      <workItem from="1628597061363" duration="14433000" />
+    </task>
+    <task id="LOCAL-00001" summary="fixed reference error for foreign key">
+      <created>1628412884132</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1628412884132</updated>
+    </task>
+    <task id="LOCAL-00002" summary="made migrations on table and fixed all errors in the models">
+      <created>1628416978716</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1628416978716</updated>
+    </task>
+    <task id="LOCAL-00003" summary="registered tables to admin">
+      <created>1628418818797</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1628418818797</updated>
+    </task>
+    <task id="LOCAL-00004" summary="add field prodrating to product and change quantity on order">
+      <created>1628420597691</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1628420597691</updated>
+    </task>
+    <task id="LOCAL-00005" summary="created routers for api with viewsets">
+      <created>1628422636564</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1628422636564</updated>
+    </task>
+    <task id="LOCAL-00006" summary="created order commands for running db remotely">
+      <created>1628425550304</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1628425550304</updated>
+    </task>
+    <task id="LOCAL-00007" summary="fixed tail problem">
+      <created>1628426048234</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1628426048234</updated>
+    </task>
+    <task id="LOCAL-00008" summary="added serializers for product and cart">
+      <created>1628507804565</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1628507804565</updated>
+    </task>
+    <task id="LOCAL-00009" summary="added serializers for product and cart">
+      <created>1628590710446</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1628590710446</updated>
+    </task>
+    <task id="LOCAL-00010" summary="adding cloudinary">
+      <created>1628607847948</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1628607847948</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/master" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="master" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="fixed reference error for foreign key" />
+    <MESSAGE value="made migrations on table and fixed all errors in the models" />
+    <MESSAGE value="registered tables to admin" />
+    <MESSAGE value="add field prodrating to product and change quantity on order" />
+    <MESSAGE value="created routers for api with viewsets" />
+    <MESSAGE value="created order commands for running db remotely" />
+    <MESSAGE value="fixed tail problem" />
+    <MESSAGE value="added serializers for product and cart" />
+    <MESSAGE value="adding cloudinary" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding cloudinary" />
+  </component>
+</project>
