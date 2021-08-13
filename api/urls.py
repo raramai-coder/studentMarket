@@ -18,7 +18,7 @@ router.register(r'tier', views.TierViewSet)
 router.register(r'review', views.ReviewViewSet)
 router.register(r'cart', views.CartViewSet)
 router.register(r'options', views.OptionsViewSet)
-router.register(r'productCategory', views.ProductInCategoryViewSet)
+#router.register(r'productCategory', views.ProductInCategoryViewSet)
 
 
 urlpatterns = [
