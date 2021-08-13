@@ -5,7 +5,7 @@ from api.models import User, Location, Category, Product, Saved, Store, Tier, Re
     Options
 
 
-class ProductSerializer(serializers.HyperlinkedModelSerializer):
+class ProductSerializer(serializers.ModelSerializer):
     class Meta:
         model = Product
         fields = (
@@ -13,61 +13,61 @@ class ProductSerializer(serializers.HyperlinkedModelSerializer):
             'prodName', 'prodPrice', 'prodRating', 'prodSaved')
 
 
-class UserSerializer(serializers.HyperlinkedModelSerializer):
+class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ('userID', 'locationID', 'userName', 'userEmail', 'userUniversity', 'userPassword')
 
 
-class LocationSerializer(serializers.HyperlinkedModelSerializer):
+class LocationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Location
         fields = ('locationID', 'longitude', 'latitude')
 
 
-class OrderSerializer(serializers.HyperlinkedModelSerializer):
+class OrderSerializer(serializers.ModelSerializer):
     class Meta:
         model = Order
         fields = ('orderID', 'orderNote', 'quantity', 'prodName', 'orderAmount', 'unitPrice', 'prodID', 'userID')
 
 
-class CategorySerializer(serializers.HyperlinkedModelSerializer):
+class CategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Category
         fields = ('categoryID', 'catName', 'catSumProducts')
 
 
-class SavedSerializer(serializers.HyperlinkedModelSerializer):
+class SavedSerializer(serializers.ModelSerializer):
     class Meta:
         model = Saved
         fields = ('savedID', 'prodID', 'userID', 'dateSaved')
 
 
-class StoreSerializer(serializers.HyperlinkedModelSerializer):
+class StoreSerializer(serializers.ModelSerializer):
     class Meta:
         model = Store
         fields = ('storeID', 'userID', 'storeName', 'storeDelivery')
 
 
-class TierSerializer(serializers.HyperlinkedModelSerializer):
+class TierSerializer(serializers.ModelSerializer):
     class Meta:
         model = Tier
         fields = ('tierID', 'prodID', 'tierName', 'tierDescription')
 
 
-class ReviewSerializer(serializers.HyperlinkedModelSerializer):
+class ReviewSerializer(serializers.ModelSerializer):
     class Meta:
         model = Review
         fields = ('reviewID', 'prodID', 'userID', 'reviewStars', 'reviewDescription')
 
 
-class CartSerializer(serializers.HyperlinkedModelSerializer):
+class CartSerializer(serializers.ModelSerializer):
     class Meta:
         model = Cart
         fields = ('cartID', 'userID', 'orderID', 'locationID', 'purchaseTotal', 'orderDate')
 
 
-class OptionsSerializer(serializers.HyperlinkedModelSerializer):
+class OptionsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Options
         fields = ('optionID', 'tierID', 'optionName', 'optionPrice')

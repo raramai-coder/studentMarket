@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="76ec0818-1605-410e-a161-92346a1c6c4d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/api/serializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/api/serializer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/api/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -147,7 +149,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628875177630</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="declard all the relevant filtersets">
+      <created>1628875563372</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1628875563372</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,6 +229,7 @@
     <MESSAGE value="added serializers for product and cart" />
     <MESSAGE value="adding cloudinary" />
     <MESSAGE value="made revisions to db tables, created new seriealizers and viewsets, autoincremented IDs" />
-    <option name="LAST_COMMIT_MESSAGE" value="made revisions to db tables, created new seriealizers and viewsets, autoincremented IDs" />
+    <MESSAGE value="declard all the relevant filtersets" />
+    <option name="LAST_COMMIT_MESSAGE" value="declard all the relevant filtersets" />
   </component>
 </project>
