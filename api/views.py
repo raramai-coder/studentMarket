@@ -54,6 +54,7 @@ class SavedViewSet(viewsets.ModelViewSet):
 class StoreViewSet(viewsets.ModelViewSet):
     queryset = Store.objects.all()
     serializer_class = StoreSerializer
+    filterset_fields = ['userID', 'storeName']
 
 
 class TierViewSet(viewsets.ModelViewSet):
