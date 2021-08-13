@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="76ec0818-1605-410e-a161-92346a1c6c4d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/api/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/api/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/api/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +140,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628632361583</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="made revisions to db tables, created new seriealizers and viewsets, autoincremented IDs">
+      <created>1628875177630</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1628875177630</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

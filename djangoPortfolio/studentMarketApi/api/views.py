@@ -50,6 +50,7 @@ class OrderViewSet(viewsets.ModelViewSet):
 class SavedViewSet(viewsets.ModelViewSet):
     queryset = Saved.objects.all()
     serializer_class = SavedSerializer
+    filterset_fields = ['userID']
 
 
 class StoreViewSet(viewsets.ModelViewSet):
@@ -71,6 +72,7 @@ class ReviewViewSet(viewsets.ModelViewSet):
 class CartViewSet(viewsets.ModelViewSet):
     queryset = Cart.objects.all()
     serializer_class = CartSerializer
+    filterset_fields = ['userID', 'orderID']
 
 
 class OptionsViewSet(viewsets.ModelViewSet):
