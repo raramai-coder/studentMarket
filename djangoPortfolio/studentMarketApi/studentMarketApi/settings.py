@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'cloudinary',
+    'django_filters',
 ]
 
 MIDDLEWARE = [
@@ -140,6 +141,10 @@ cloud_name="hb9ogjlea",
 api_key="953935929942593",
 api_secret="McqSMr6CXiQnTMZi6MPjFTDIpfw"
 )
+
+REST_FRAMEWORK = {
+    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend']
+}
 
 django_on_heroku.settings(locals())
 
