@@ -18,6 +18,7 @@ from api.models import User, Location, Category, Product, Saved, Store, Tier, Re
 class ProductViewSet(viewsets.ModelViewSet):
     queryset = Product.objects.all().order_by('prodRating')
     serializer_class = ProductSerializer
+    filterset_fields = ['userID', 'categoryID', 'prodLive']
 
 
 class LocationViewSet(viewsets.ModelViewSet):
@@ -25,10 +26,10 @@ class LocationViewSet(viewsets.ModelViewSet):
     serializer_class = LocationSerializer
 
 
-class ProductInCategoryViewSet(viewsets.ModelViewSet):
-    queryset = Product.objects.all()
-    serializer_class = ProductSerializer
-    filterset_fields = ['userID', 'categoryID', 'prodLive']
+#class ProductInCategoryViewSet(viewsets.ModelViewSet):
+#    queryset = Product.objects.all()
+#    serializer_class = ProductSerializer
+#    filterset_fields = ['userID', 'categoryID', 'prodLive']
 
 
 class CategoryViewSet(viewsets.ModelViewSet):

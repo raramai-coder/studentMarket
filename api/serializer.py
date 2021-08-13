@@ -5,7 +5,7 @@ from api.models import User, Location, Category, Product, Saved, Store, Tier, Re
     Options
 
 
-class ProductSerializer(serializers.ModelSerializer):
+class ProductSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Product
         fields = (
