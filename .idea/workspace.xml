@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="76ec0818-1605-410e-a161-92346a1c6c4d" name="Changes" comment="adding cloudinary">
-      <change afterPath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/api/migrations/0005_auto_20210810_2319.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/api/migrations/0006_auto_20210810_2338.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/api/migrations/0007_alter_location_locationid.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/api/migrations/0008_auto_20210810_2344.py" afterDir="false" />
+    <list default="true" id="76ec0818-1605-410e-a161-92346a1c6c4d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/api/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/api/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/api/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/api/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/api/serializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/api/serializer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/api/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/api/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/studentMarketApi/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/studentMarketApi/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +61,12 @@
       <workItem from="1628444933381" duration="3818000" />
       <workItem from="1628505627510" duration="6186000" />
       <workItem from="1628589396780" duration="1328000" />
-      <workItem from="1628597061363" duration="14433000" />
+      <workItem from="1628597061363" duration="14564000" />
+      <workItem from="1628633966703" duration="368000" />
+      <workItem from="1628693682806" duration="1411000" />
+      <workItem from="1628695408332" duration="3280000" />
+      <workItem from="1628843255851" duration="1010000" />
+      <workItem from="1628857842549" duration="6153000" />
     </task>
     <task id="LOCAL-00001" summary="fixed reference error for foreign key">
       <created>1628412884132</created>
@@ -138,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628607847948</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="made revisions to db tables, created new seriealizers and viewsets, autoincremented IDs">
+      <created>1628632361583</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1628632361583</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,6 +217,7 @@
     <MESSAGE value="fixed tail problem" />
     <MESSAGE value="added serializers for product and cart" />
     <MESSAGE value="adding cloudinary" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding cloudinary" />
+    <MESSAGE value="made revisions to db tables, created new seriealizers and viewsets, autoincremented IDs" />
+    <option name="LAST_COMMIT_MESSAGE" value="made revisions to db tables, created new seriealizers and viewsets, autoincremented IDs" />
   </component>
 </project>
