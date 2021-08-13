@@ -60,11 +60,11 @@ class Product(models.Model):
     prodPicture = CloudinaryField("prodPicture", null=False, blank=False)
     prodLive = models.BooleanField(null=False)
     prodSaved = models.BooleanField(null=False)
+
     # servTime = models.DateTimeField(verbose_name="Saved on", auto_now_add=True, null=True, blank=True)
 
     def __str__(self):
         return self.prodName
-
 
 
 class Saved(models.Model):
@@ -94,18 +94,17 @@ class Store(models.Model):
         return self.storeName
 
 
-
 class Tier(models.Model):
     tierID = models.AutoField(auto_created=True, primary_key=True)
     prodID = models.ForeignKey(Product, on_delete=models.RESTRICT)
     # userID = models.ForeignKey(User, on_delete=models.RESTRICT)
     tierName = models.CharField(max_length=100, null=False, blank=False)
     tierDescription = models.CharField(max_length=250, null=True, blank=True)
+
     # tierPrice = models.DecimalField(max_digits=19, decimal_places=2, null=False, blank=False)
 
     def __str__(self):
         return self.tierName
-
 
 
 class Options(models.Model):
@@ -118,7 +117,6 @@ class Options(models.Model):
         return self.optionName
 
 
-
 class Review(models.Model):
     reviewID = models.AutoField(auto_created=True, primary_key=True)
     prodID = models.ForeignKey(Product, on_delete=models.RESTRICT)
@@ -127,12 +125,16 @@ class Review(models.Model):
     reviewDescription = models.CharField(max_length=250, null=True, blank=True)
 
 
+# class Location:
+#    pass
+
 # class Category:
 #    pass
 
 
 # class Location:
 #    pass
+# >>>>>>> 02f6c27fb4ac957489bd4c39cc4de39587fb568b
 
 
 class Order(models.Model):
