@@ -143,7 +143,7 @@ api_secret="McqSMr6CXiQnTMZi6MPjFTDIpfw"
 )
 
 REST_FRAMEWORK = {
-    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend']
+    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend ']
 }
 
 django_on_heroku.settings(locals())

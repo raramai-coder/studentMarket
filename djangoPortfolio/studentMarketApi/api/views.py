@@ -26,7 +26,7 @@ class LocationViewSet(viewsets.ModelViewSet):
     serializer_class = LocationSerializer
 
 
-#class ProductInCategoryViewSet(viewsets.ModelViewSet):
+# class ProductInCategoryViewSet(viewsets.ModelViewSet):
 #    queryset = Product.objects.all()
 #    serializer_class = ProductSerializer
 #    filterset_fields = ['userID', 'categoryID', 'prodLive']
@@ -46,6 +46,9 @@ class OrderViewSet(viewsets.ModelViewSet):
     queryset = Order.objects.all()
     serializer_class = OrderSerializer
     filterset_fields = ['userID']
+
+    def perform_create(self, serializer):
+        serializer.save(owner=self.request.user)
 
 
 class SavedViewSet(viewsets.ModelViewSet):
