@@ -19,6 +19,7 @@ import com.example.studentmarket.core.models.Store
 import com.example.studentmarket.core.api.APIService
 import com.example.studentmarket.core.models.Category
 import com.example.studentmarket.core.models.Product
+import com.example.studentmarket.core.models.Saved
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_saved.recycler_view_store_products
@@ -124,21 +125,22 @@ class search : Fragment() {
 
             override fun saveProduct(product: Product) {
                 //saved.user1.AddSave(product)
-                apiService.saveProduct(product).enqueue(object :
-                    Callback<Product> {    //calling the api service and telling to specifically call the query in the getProducts function, which is declared in the APIService class
+                val savedProduct= Saved(product.prodID,home.userID)
+                apiService.saveProduct(savedProduct).enqueue(object : Callback<Saved> {    //calling the api service and telling to specifically call the query in the getProducts function, which is declared in the APIService class
 
-                    override fun onResponse(call: Call<Product>, response: Response<Product>) {
+                    override fun onResponse(call: Call<Saved>, response: Response<Saved>) {
                         if (response.isSuccessful) {
                             Log.i(TAG, "products loaded from API $response")
 
 
-                            Snackbar.make(
-                                recycler_view_store_products,
-                                "Saved Product",
-                                Snackbar.LENGTH_LONG
-                            )
+                            Snackbar.make(recycler_view_store_products, "Saved Product", Snackbar.LENGTH_LONG)
                                 .setAction("Action", null)
                                 .show()
+
+                            /* Toast.makeText(this@ProductPage, "No Products to Show", Toast.LENGTH_SHORT).show()
+                             Snackbar.make(addToCart, "Failed to Bag", Snackbar.LENGTH_LONG)
+                                 .setAction("Action", null)
+                                 .show()*/
 
 
                         } else {
@@ -147,12 +149,8 @@ class search : Fragment() {
                         }
                     }
 
-                    override fun onFailure(call: Call<Product>?, t: Throwable) {
-                        Toast.makeText(
-                            activity,
-                            t.message ?: "Error Adding to Bag",
-                            Toast.LENGTH_SHORT
-                        ).show()
+                    override fun onFailure(call: Call<Saved>?, t: Throwable) {
+                        Toast.makeText(activity, t.message?:"Error Adding to Bag", Toast.LENGTH_SHORT).show()
                     }
                 })
             }

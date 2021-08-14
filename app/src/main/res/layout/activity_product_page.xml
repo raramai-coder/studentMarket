@@ -101,7 +101,7 @@
                 android:textSize="20sp" />
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/save_btn_ppg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/outline_bookmark_border_24"

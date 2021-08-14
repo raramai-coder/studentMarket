@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import co.za.mtn.academy.itsgotime.core.api.RetrofitClient
@@ -14,10 +15,12 @@ import com.example.studentmarket.core.api.APIService
 import com.example.studentmarket.core.extensions.toast
 import com.example.studentmarket.core.models.Order
 import com.example.studentmarket.core.models.Product
+import com.example.studentmarket.core.models.Saved
 import com.example.studentmarket.ui.home
 import com.google.android.material.snackbar.Snackbar
 import com.ms.square.android.expandabletextview.ExpandableTextView
 import kotlinx.android.synthetic.main.activity_product_page.*
+import kotlinx.android.synthetic.main.fragment_home.*
 //import okhttp3.Call
 import org.w3c.dom.Text
 import retrofit2.Call
@@ -64,6 +67,39 @@ class ProductPage : AppCompatActivity() {
         val productName: TextView = findViewById(R.id.product_name_txt_ppg)
         val productPrice : TextView = findViewById(R.id.product_price_txt_ppg)
         val productRating : TextView = findViewById(R.id.product_rating_txt_ppg)
+
+        val saveProduct = findViewById<Button>(R.id.save_btn_ppg)
+
+        saveProduct.setOnClickListener {
+            val savedProduct= Saved(product.prodID,home.userID)
+            apiService.saveProduct(savedProduct).enqueue(object : Callback<Saved> {    //calling the api service and telling to specifically call the query in the getProducts function, which is declared in the APIService class
+
+                override fun onResponse(call: Call<Saved>, response: Response<Saved>) {
+                    if (response.isSuccessful) {
+                        Log.i(TAG, "products loaded from API $response")
+
+
+                        Snackbar.make(productName, "Saved Product", Snackbar.LENGTH_LONG)
+                            .setAction("Action", null)
+                            .show()
+
+                        /* Toast.makeText(this@ProductPage, "No Products to Show", Toast.LENGTH_SHORT).show()
+                         Snackbar.make(addToCart, "Failed to Bag", Snackbar.LENGTH_LONG)
+                             .setAction("Action", null)
+                             .show()*/
+
+
+                    } else {
+                        Log.i(TAG, "error $response")
+                        //showErrorMessage(response.errorBody()!!)
+                    }
+                }
+
+                override fun onFailure(call: Call<Saved>?, t: Throwable) {
+                    Toast.makeText(this@ProductPage, t.message?:"Error Adding to Bag", Toast.LENGTH_SHORT).show()
+                }
+            })
+        }
 
 
         //productDescription.text = "Using the library is really simple, just look at the source code of the provided sample. (Look at the SampleTextListAdapter.java for the use within a ListView)W/libEGL: EGLNativeWindowType 0x790304c8d0 disconnect failed/OpenGLRenderer: endAllActiveAnimators on 0x78e5c69000 (RippleDrawable) with handle 0x78e5d9baaW/libEGL: EGLNativeWindowType 0x796def3750 disconnect failedW/Settings: Setting device_provisioned has moved from android.provider.Settings.Secure to android.provider.Settings.Global.V/HiTouch_HiTouchSensor: User setup is finishedV/AudioManager: querySoundEffectsEnabled.V/AudioManager: querySoundEffectsEnabled..V/AudioManager: querySoundEffectsEnabled...udioManager: querySoundEffectsEnabled..AudioManager: querySoundEffectsEnabled...udioManager: querySoundEffectsEnabled/AudioManager: querySoundEffectsEnabled...udioManager: querySoundEffectsEnabled...IInputConnectionWrapper: getExtractedText on inactive InputConnectiInputConnectionWrapper: getTextBeforeCursor on inactive InputConnectionibEGL: EGLNativeWindowType 0x796def34d0 disconnect failedActivityThread: Handle window ActivityRecord{f770ba3 token=android.os.BinderProxy@ff91635 {com.example.studentmarket/com.example.studentmarket.ProductPage}} visibility: falseZrHung.AppEyeUiProbe: not watching, wait.\nThe important thing to note is that the view Ids for TextView and ImageButton must be set to respectively for this library to work.Also, you can optionally set the following attributes in your layout xml file to customize the behavior of the ExpandableTextView."

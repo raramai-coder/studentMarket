@@ -45,5 +45,5 @@ interface APIService {
     fun addToBag(@Body order: Order): Call<Order>
 
     @POST("/saved/?format=json")
-    fun saveProduct(@Body product: Product): Call<Product>
+    fun saveProduct(@Body saved: Saved): Call<Saved>
 }

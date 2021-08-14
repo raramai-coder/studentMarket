@@ -19,10 +19,7 @@ import com.example.studentmarket.ProductPage
 import com.example.studentmarket.StorePage
 import com.example.studentmarket.adapters.CategoryAdapter
 import com.example.studentmarket.core.api.APIService
-import com.example.studentmarket.core.models.Category
-import com.example.studentmarket.core.models.Order
-import com.example.studentmarket.core.models.Product
-import com.example.studentmarket.core.models.Store
+import com.example.studentmarket.core.models.*
 import com.google.android.material.snackbar.Snackbar
 import retrofit2.Call
 import retrofit2.Callback
@@ -130,9 +127,10 @@ class home : Fragment() {
 
             override fun saveProduct(product: Product) {
                 //saved.user1.AddSave(product)
-                apiService.saveProduct(product).enqueue(object : Callback<Product> {    //calling the api service and telling to specifically call the query in the getProducts function, which is declared in the APIService class
+                val savedProduct= Saved(product.prodID,home.userID)
+                apiService.saveProduct(savedProduct).enqueue(object : Callback<Saved> {    //calling the api service and telling to specifically call the query in the getProducts function, which is declared in the APIService class
 
-                    override fun onResponse(call: Call<Product>, response: Response<Product>) {
+                    override fun onResponse(call: Call<Saved>, response: Response<Saved>) {
                         if (response.isSuccessful) {
                             Log.i(TAG, "products loaded from API $response")
 
@@ -153,7 +151,7 @@ class home : Fragment() {
                         }
                     }
 
-                    override fun onFailure(call: Call<Product>?, t: Throwable) {
+                    override fun onFailure(call: Call<Saved>?, t: Throwable) {
                         Toast.makeText(activity, t.message?:"Error Adding to Bag", Toast.LENGTH_SHORT).show()
                     }
                 })

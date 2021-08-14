@@ -13,11 +13,15 @@ import com.example.studentmarket.adapters.CardAdapter
 import com.example.studentmarket.core.api.APIService
 import com.example.studentmarket.core.models.Category
 import com.example.studentmarket.core.models.Product
+import com.example.studentmarket.core.models.Saved
 import com.example.studentmarket.core.models.Store
 import com.example.studentmarket.ui.home
+import com.example.studentmarket.ui.search
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_category_page.*
 import kotlinx.android.synthetic.main.fragment_home.*
+import kotlinx.android.synthetic.main.fragment_home.recycler_view_store_products
+import kotlinx.android.synthetic.main.fragment_saved.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -102,8 +106,35 @@ class CategoryPage : AppCompatActivity() {
 
             override fun viewStore(position: Int) {
                 val intent = Intent(this@CategoryPage, Store::class.java)
-                //intent.putExtra("product", products[position])
+                var bundle = Bundle()
+                bundle.putInt("userID", products[position].user)
+                intent.putExtra("userBundle", bundle)
                 startActivity(intent)
+            }
+
+            override fun saveProduct(product: Product) {
+                val savedProduct= Saved(product.prodID,home.userID)
+                apiService.saveProduct(savedProduct).enqueue(object : Callback<Saved> {    //calling the api service and telling to specifically call the query in the getProducts function, which is declared in the APIService class
+
+                    override fun onResponse(call: Call<Saved>, response: Response<Saved>) {
+                        if (response.isSuccessful) {
+                            Log.i(TAG, "products loaded from API $response")
+
+
+                            Snackbar.make(recycler_view_store_products, "Saved Product", Snackbar.LENGTH_LONG)
+                                .setAction("Action", null)
+                                .show()
+
+                        } else {
+                            Log.i(TAG, "error $response")
+                            //showErrorMessage(response.errorBody()!!)
+                        }
+                    }
+
+                    override fun onFailure(call: Call<Saved>?, t: Throwable) {
+                        Toast.makeText(this@CategoryPage, t.message?:"Error Adding to Bag", Toast.LENGTH_SHORT).show()
+                    }
+                })
             }
 
         })

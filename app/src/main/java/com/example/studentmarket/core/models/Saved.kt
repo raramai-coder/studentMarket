@@ -6,7 +6,7 @@ import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 class Saved (
-        @SerializedName("savedID") val savedID : Int,
+        //@SerializedName("savedID") val savedID : Int,
         @SerializedName("prodID") val prodID: Int,
         @SerializedName("userID") val userID: Int,
         //@SerializedName("dateSaved") val dateSaved: Time

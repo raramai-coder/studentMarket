@@ -65,8 +65,8 @@ class saved : Fragment() {
 //        recycler_view_categories.adapter = CategoryAdapter(getCategoryList())
         //fetchProduct(1)
         fetchSavedList(home.userID)
-        products.toList()
-        setupRecyclerView(products)
+        //products.toList()
+        //setupRecyclerView(products)
 
     }
 
@@ -86,6 +86,9 @@ class saved : Fragment() {
                         for (saved: Saved in savedProducts){
                             fetchProduct(saved.prodID)
                         }
+
+                        //setupRecyclerView(products)
+
                     }
 
                     /*products.toList()
@@ -96,9 +99,13 @@ class saved : Fragment() {
                     setupRecyclerView(products)
                     //}else
                         Toast.makeText(activity, "No Saved Products to Show", Toast.LENGTH_SHORT).show()*/
-                   // var savedProducts = listOf(products).toList()
+                   Log.i(TAG,"products befre transfrom sixze" +products.size.toString())
+
+                    //var savedProducts: List<Product> = products
                     //products.toMutableList()
-                    setupRecyclerView(products)
+                    //setupRecyclerView(products)
+
+                    Log.i(TAG,"got here")
 
                 }else{
                     Log.i(TAG, "error $response")
@@ -134,8 +141,9 @@ class saved : Fragment() {
                         //products[0].
 
 
-                        Log.i(TAG, "from list " +products[0].prodName)
+                        Log.i(TAG, "from list " +products.size.toString())
 
+                        setupRecyclerView(products)
                         //response.body()
                         /*response.body()?.let {
                             products = it
@@ -153,13 +161,17 @@ class saved : Fragment() {
                 }
             })
 
-
+        //setupRecyclerView(products)
 
     }
 
     private fun setupRecyclerView(products: List<Product>) {
         prodAdapter = CardAdapter(products)
         recycler_view_store_products.adapter = prodAdapter
+
+        Log.i(TAG, "products size " +products.size.toString())
+
+        Log.i(TAG,prodAdapter.itemCount.toString())
 
         prodAdapter.setOnButtonClickListener(object : CardAdapter.onProductClickListener{
             override fun viewProduct(position: Int) {
@@ -180,9 +192,10 @@ class saved : Fragment() {
 
             override fun saveProduct(product: Product) {
                 //saved.user1.AddSave(product)
-                apiService.saveProduct(product).enqueue(object : Callback<Product> {    //calling the api service and telling to specifically call the query in the getProducts function, which is declared in the APIService class
+                val savedProduct= Saved(product.prodID,home.userID)
+                apiService.saveProduct(savedProduct).enqueue(object : Callback<Saved> {    //calling the api service and telling to specifically call the query in the getProducts function, which is declared in the APIService class
 
-                    override fun onResponse(call: Call<Product>, response: Response<Product>) {
+                    override fun onResponse(call: Call<Saved>, response: Response<Saved>) {
                         if (response.isSuccessful) {
                             Log.i(TAG, "products loaded from API $response")
 
@@ -191,6 +204,11 @@ class saved : Fragment() {
                                 .setAction("Action", null)
                                 .show()
 
+                            /* Toast.makeText(this@ProductPage, "No Products to Show", Toast.LENGTH_SHORT).show()
+                             Snackbar.make(addToCart, "Failed to Bag", Snackbar.LENGTH_LONG)
+                                 .setAction("Action", null)
+                                 .show()*/
+
 
                         } else {
                             Log.i(TAG, "error $response")
@@ -198,16 +216,12 @@ class saved : Fragment() {
                         }
                     }
 
-                    override fun onFailure(call: Call<Product>?, t: Throwable) {
+                    override fun onFailure(call: Call<Saved>?, t: Throwable) {
                         Toast.makeText(activity, t.message?:"Error Adding to Bag", Toast.LENGTH_SHORT).show()
                     }
                 })
-            }
 
-
-        })
-
-    }
+    }         })
 
    //region old code
     /* private fun getSavedList(): List<Product> {
@@ -238,4 +252,4 @@ class saved : Fragment() {
     }*/
     //endregion
 
-}
+}}
