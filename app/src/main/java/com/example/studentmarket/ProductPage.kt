@@ -120,7 +120,7 @@ class ProductPage : AppCompatActivity() {
                     //Toast.makeText(this@ProductPage, response.body()!!.toString(), Toast.LENGTH_SHORT).show()
                    /* Toast.makeText(this@ProductPage, response.code()!!.toString(), Toast.LENGTH_SHORT).show()*/
 
-                        Snackbar.make(addToCart, response.toString(), Snackbar.LENGTH_LONG)
+                        Snackbar.make(addToCart, "Added to Bag", Snackbar.LENGTH_LONG)
                             .setAction("Action", null)
                             .show()
 
