@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="76ec0818-1605-410e-a161-92346a1c6c4d" name="Changes" comment="">
+    <list default="true" id="76ec0818-1605-410e-a161-92346a1c6c4d" name="Changes" comment="made all the serializers modelserializers">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/studentMarketApi.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/studentMarketApi.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/studentMarketApi/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoPortfolio/studentMarketApi/studentMarketApi/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,11 +19,11 @@
         <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/djangoPortfolio/studentMarketApi" />
     <option name="RESET_MODE" value="MIXED" />
   </component>
   <component name="ProjectId" id="1wR7DSpA6RYONeoFZqEBjlFgw8n" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -32,7 +36,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="full.screen.before.presentation.mode" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/djangoPortfolio/code" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/manage.py" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
@@ -42,6 +46,30 @@
       <recent name="C:\Users\user-pc\Documents\MTN App Development\studentMarket\Student MArket Database\studentMarket\djangoPortfolio\studentMarketApi\studentMarketApi" />
       <recent name="C:\Users\user-pc\Documents\MTN App Development\studentMarket\Student MArket Database\studentMarket\djangoPortfolio\studentMarketApi" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="runserver" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\user-pc\Documents\MTN App Development\database\itsgotime_api\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/manage.py" />
+      <option name="PARAMETERS" value="runserver" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -62,7 +90,8 @@
       <workItem from="1628695408332" duration="3280000" />
       <workItem from="1628843255851" duration="1010000" />
       <workItem from="1628857842549" duration="6153000" />
-      <workItem from="1628923580006" duration="3150000" />
+      <workItem from="1628923580006" duration="14062000" />
+      <workItem from="1628962391014" duration="3889000" />
     </task>
     <task id="LOCAL-00001" summary="fixed reference error for foreign key">
       <created>1628412884132</created>
@@ -238,5 +267,8 @@
     <MESSAGE value="declard all the relevant filtersets" />
     <MESSAGE value="made all the serializers modelserializers" />
     <option name="LAST_COMMIT_MESSAGE" value="made all the serializers modelserializers" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/settings_py$runserver.coverage" NAME="runserver Coverage Results" MODIFIED="1628930997767" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
