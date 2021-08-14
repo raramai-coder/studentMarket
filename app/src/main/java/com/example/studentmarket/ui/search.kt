@@ -23,6 +23,7 @@ import com.example.studentmarket.core.models.Saved
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_saved.recycler_view_store_products
+import kotlinx.android.synthetic.main.fragment_search.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -62,6 +63,9 @@ class search : Fragment() {
         viewModel = ViewModelProvider(this).get(SearchViewModel::class.java)
         // TODO: Use the ViewModel
 
+
+        val searchTerm = search_et_sr.text.toString()
+        Log.i(TAG,searchTerm)
         // Recycler_view_items' layout manager component is set to LinearLayoutManager instance. This instance of Main activity is context
         recycler_view_store_products.layoutManager = LinearLayoutManager(activity)
 //        recycler_view_categories.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
@@ -70,6 +74,36 @@ class search : Fragment() {
         //Recycler_view_items' adapter component is set to ContactAdapter. Contact list is sent using func
         //recycler_view_products.adapter = CardAdapter(getSearchList())
 //        recycler_view_categories.adapter = CategoryAdapter(getSearchCategoryList())
+        search_btn_sr.setOnClickListener {
+                /*if(searchTerm.isNotBlank()){
+                    searchProducts(searchTerm)
+                }*/
+            val searchTerm = search_et_sr.text.toString()
+            Log.i(TAG,searchTerm)
+            searchProducts(searchTerm)
+        }
+    }
+
+    private fun searchProducts(serchTerm : String){
+        apiService.search(serchTerm).enqueue(object : Callback<List<Product>>{
+            override fun onResponse(call: Call<List<Product>>, response: Response<List<Product>>) {
+                Log.i(TAG, "products loaded from API $response")
+
+                response.body()?.let {
+                    products = it
+                }
+
+                if (products.isNotEmpty())
+                    setupRecyclerView(products)
+                else
+                    Toast.makeText(activity, "No Products to Show", Toast.LENGTH_SHORT).show()
+            }
+
+            override fun onFailure(call: Call<List<Product>>, t: Throwable) {
+                Toast.makeText(activity, t.message?:"Error Fetching Results", Toast.LENGTH_SHORT).show()
+            }
+
+        })
     }
 
     private fun fetchProducts() {

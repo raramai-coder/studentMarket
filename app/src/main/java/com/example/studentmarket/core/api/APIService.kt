@@ -46,4 +46,9 @@ interface APIService {
 
     @POST("/saved/?format=json")
     fun saveProduct(@Body saved: Saved): Call<Saved>
+
+    @GET ("/product/")
+    fun search(
+        @Query("search") searchTerm: String
+    ): Call<List<Product>>
 }
