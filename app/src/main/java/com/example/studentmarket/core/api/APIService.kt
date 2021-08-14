@@ -24,7 +24,7 @@ interface APIService {
     @GET("/category/?format=json")
     fun getCategories(): Call<List<Category>>
 
-    @GET("products")
+    @GET("product")
     fun getSavedProducts(@Path("id") productID:Int): Call<List<Product>> //todo implement the save button get method
 
     @GET("product")
@@ -37,6 +37,6 @@ interface APIService {
         @Query("userID") userID: Int
     ) : Call<List<Store>>
 
-    @POST("order")
+    @POST("/order/?format=json")
     fun addToBag(@Body order: Order): Call<Order>
 }

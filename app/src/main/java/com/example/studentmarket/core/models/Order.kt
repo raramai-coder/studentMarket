@@ -12,7 +12,8 @@ import com.google.gson.annotations.SerializedName
 @Parcelize
 class Order (
     //var id: Int = 0, //added id
-    @SerializedName("quantity")  @Expose var quantity: Int,
+    @SerializedName("orderNote") var orderNote: String,
+    @SerializedName("quantity")  var quantity: Int,
     @SerializedName("prodName") val prodName:String,
     @SerializedName("orderAmount") var orderAmount: Int,
     @SerializedName("unitPrice")val unitPrice: Float,

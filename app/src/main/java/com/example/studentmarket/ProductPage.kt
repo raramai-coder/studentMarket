@@ -28,7 +28,7 @@ class ProductPage : AppCompatActivity() {
 
 
     companion object {
-        private const val TAG = "peoduct page"
+        private const val TAG = "product page"
     }
 
     private  val apiService: APIService by lazy { RetrofitClient.apiService }
@@ -73,12 +73,12 @@ class ProductPage : AppCompatActivity() {
 
         addToCart.setOnClickListener {
 
-            //addToBag(product, addToCart)
+            addToBag(product, addToCart)
 
-            Snackbar.make(addToCart, "Added to Bag", Snackbar.LENGTH_LONG)
+            /*Snackbar.make(addToCart, "Added to Bag", Snackbar.LENGTH_LONG)
                 .setAction("Action", null)
                 .show()
-
+*/
             /*if(added){
                 Snackbar.make(addToCart, "Added to Bag", Snackbar.LENGTH_LONG)
                     .setAction("Action", null)
@@ -102,33 +102,32 @@ class ProductPage : AppCompatActivity() {
     }
 
     private fun addToBag(product:Product, addToCart: View){
-        val productIDString = "https://studentmarketapp.herokuapp.com/product/" + product.prodID
-        val userIDString = "https://studentmarketapp.herokuapp.com/user/1"
-        val newOrder: Order = Order(1, product.prodName,1,product.prodPrice,product.prodID,product.user)
+
+        val newOrder: Order = Order("keep it nice",1, product.prodName,1,product.prodPrice,product.prodID,product.user)
 
         //Call<Order> call = apiService.addToBag(newOrder)
 
-        /*apiService.addToBag(newOrder).enqueue(object : Callback<Order> {    //calling the api service and telling to specifically call the query in the getProducts function, which is declared in the APIService class
+        apiService.addToBag(newOrder).enqueue(object : Callback<Order> {    //calling the api service and telling to specifically call the query in the getProducts function, which is declared in the APIService class
 
-            override fun onResponse(call: Call<Order>?, response: Response<Order>) {
+            override fun onResponse(call: Call<Order>, response: Response<Order>) {
                 if (response.isSuccessful) {
                     Log.i(TAG, "products loaded from API $response")
 
-                    *//*response.body()?.let {
+                    /*response.body()?.let {
                         products = it                               //find the products in the response and make them populate this list called products
-                    }*//*
+                    }*/
 
                     //Toast.makeText(this@ProductPage, response.body()!!.toString(), Toast.LENGTH_SHORT).show()
-                    Toast.makeText(this@ProductPage, response.code()!!.toString(), Toast.LENGTH_SHORT).show()
+                   /* Toast.makeText(this@ProductPage, response.code()!!.toString(), Toast.LENGTH_SHORT).show()*/
 
-                        Snackbar.make(addToCart, "Added to Bag", Snackbar.LENGTH_LONG)
+                        Snackbar.make(addToCart, response.toString(), Snackbar.LENGTH_LONG)
                             .setAction("Action", null)
                             .show()
 
-                        Toast.makeText(this@ProductPage, "No Products to Show", Toast.LENGTH_SHORT).show()
+                       /* Toast.makeText(this@ProductPage, "No Products to Show", Toast.LENGTH_SHORT).show()
                         Snackbar.make(addToCart, "Failed to Bag", Snackbar.LENGTH_LONG)
                             .setAction("Action", null)
-                            .show()
+                            .show()*/
 
 
                 } else {
@@ -138,9 +137,9 @@ class ProductPage : AppCompatActivity() {
             }
 
             override fun onFailure(call: Call<Order>?, t: Throwable) {
-                Toast.makeText(this@ProductPage, t.message?:"Error Fetching Results", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@ProductPage, t.message?:"Error Adding to Bag", Toast.LENGTH_SHORT).show()
             }
         })
-    }*/
+    }
 
-} }
+}
