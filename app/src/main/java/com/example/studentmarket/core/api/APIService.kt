@@ -1,9 +1,6 @@
 package com.example.studentmarket.core.api
 
-import com.example.studentmarket.core.models.Category
-import com.example.studentmarket.core.models.Order
-import com.example.studentmarket.core.models.Product
-import com.example.studentmarket.core.models.Store
+import com.example.studentmarket.core.models.*
 import okhttp3.RequestBody
 import okhttp3.ResponseBody
 import retrofit2.Call
@@ -24,8 +21,15 @@ interface APIService {
     @GET("/category/?format=json")
     fun getCategories(): Call<List<Category>>
 
-    @GET("product")
-    fun getSavedProducts(@Path("id") productID:Int): Call<List<Product>> //todo implement the save button get method
+    @GET("saved")
+    fun getSavedProducts(
+        @Query("userID") userID: Int
+    ): Call<List<Saved>>
+
+    @GET("/product/{id}/")
+    fun getProduct(
+        @Path("id") prodID: Int
+    ): Call<Product>
 
     @GET("product")
     fun getProductsInCategory(
@@ -39,4 +43,7 @@ interface APIService {
 
     @POST("/order/?format=json")
     fun addToBag(@Body order: Order): Call<Order>
+
+    @POST("/saved/?format=json")
+    fun saveProduct(@Body product: Product): Call<Product>
 }

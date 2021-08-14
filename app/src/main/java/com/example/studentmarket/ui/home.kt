@@ -20,8 +20,10 @@ import com.example.studentmarket.StorePage
 import com.example.studentmarket.adapters.CategoryAdapter
 import com.example.studentmarket.core.api.APIService
 import com.example.studentmarket.core.models.Category
+import com.example.studentmarket.core.models.Order
 import com.example.studentmarket.core.models.Product
 import com.example.studentmarket.core.models.Store
+import com.google.android.material.snackbar.Snackbar
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -126,9 +128,36 @@ class home : Fragment() {
                 startActivity(intent)
             }
 
-            /*override fun saveProduct(product: Product) {
-                saved.user1.AddSave(product)
-            }*/
+            override fun saveProduct(product: Product) {
+                //saved.user1.AddSave(product)
+                apiService.saveProduct(product).enqueue(object : Callback<Product> {    //calling the api service and telling to specifically call the query in the getProducts function, which is declared in the APIService class
+
+                    override fun onResponse(call: Call<Product>, response: Response<Product>) {
+                        if (response.isSuccessful) {
+                            Log.i(TAG, "products loaded from API $response")
+
+
+                            Snackbar.make(recycler_view_store_products, "Saved Product", Snackbar.LENGTH_LONG)
+                                .setAction("Action", null)
+                                .show()
+
+                            /* Toast.makeText(this@ProductPage, "No Products to Show", Toast.LENGTH_SHORT).show()
+                             Snackbar.make(addToCart, "Failed to Bag", Snackbar.LENGTH_LONG)
+                                 .setAction("Action", null)
+                                 .show()*/
+
+
+                        } else {
+                            Log.i(TAG, "error $response")
+                            //showErrorMessage(response.errorBody()!!)
+                        }
+                    }
+
+                    override fun onFailure(call: Call<Product>?, t: Throwable) {
+                        Toast.makeText(activity, t.message?:"Error Adding to Bag", Toast.LENGTH_SHORT).show()
+                    }
+                })
+            }
 
         })
 

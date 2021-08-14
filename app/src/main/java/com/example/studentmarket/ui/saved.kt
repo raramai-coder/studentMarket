@@ -19,7 +19,11 @@ import com.example.studentmarket.adapters.CardAdapter
 import com.example.studentmarket.classes.User
 import com.example.studentmarket.core.api.APIService
 import com.example.studentmarket.core.models.Product
+import com.example.studentmarket.core.models.Saved
+import com.google.android.material.snackbar.Snackbar
+import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_saved.*
+import kotlinx.android.synthetic.main.fragment_saved.recycler_view_store_products
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -37,7 +41,8 @@ class saved : Fragment() {
     private lateinit var viewModel: SavedViewModel
     private val apiService: APIService by lazy { RetrofitClient.apiService }
     private lateinit var prodAdapter: CardAdapter
-    private var products: List<Product> = mutableListOf()
+    private var products: MutableList<Product> = ArrayList()
+    private var savedProducts: List<Saved> = mutableListOf()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -58,32 +63,83 @@ class saved : Fragment() {
         //Recycler_view_items' adapter component is set to ContactAdapter. Contact list is sent using func
         //recycler_view_store_products.adapter = CardAdapter(getSavedList())
 //        recycler_view_categories.adapter = CategoryAdapter(getCategoryList())
-        fetchProducts()
+        //fetchProduct(1)
+        fetchSavedList(home.userID)
+        products.toList()
+        setupRecyclerView(products)
 
     }
 
-    private fun fetchProducts() {
+    private fun fetchSavedList(userID:Int){
 
-        //val iterator = (1..user1.savedItems.size)
+        apiService.getSavedProducts(userID).enqueue(object: Callback<List<Saved>>{
+            override fun onResponse(call: Call<List<Saved>>, response: Response<List<Saved>>) {
+                if (response.isSuccessful){
+                    Log.i(TAG, "saved products loaded from API $response")
 
-       /* for(product:Product in user1.savedItems){
+                    response.body()?.let {
+                        savedProducts = it
+                    }
 
-            val id = product.prodID*/
+                    if (savedProducts.isNotEmpty()){
 
-            apiService.getProducts().enqueue(object : Callback<List<Product>> {
+                        for (saved: Saved in savedProducts){
+                            fetchProduct(saved.prodID)
+                        }
+                    }
 
-                override fun onResponse(call: Call<List<Product>>?, response: Response<List<Product>>) {
+                    /*products.toList()
+                    Toast.makeText(activity, products[1].prodName, Toast.LENGTH_SHORT).show()
+
+                    if (products.isNotEmpty()) {//
+
+                    setupRecyclerView(products)
+                    //}else
+                        Toast.makeText(activity, "No Saved Products to Show", Toast.LENGTH_SHORT).show()*/
+                   // var savedProducts = listOf(products).toList()
+                    //products.toMutableList()
+                    setupRecyclerView(products)
+
+                }else{
+                    Log.i(TAG, "error $response")
+                }
+            }
+
+            override fun onFailure(call: Call<List<Saved>>, t: Throwable) {
+                Toast.makeText(activity, t.message?:"Error Fetching Results", Toast.LENGTH_SHORT).show()
+            }
+
+        })
+
+    }
+
+    private fun fetchProduct(prodID:Int) {
+
+            apiService.getProduct(prodID).enqueue(object : Callback<Product> {
+
+                override fun onResponse(call: Call<Product>?, response: Response<Product>) {
                     if (response.isSuccessful) {
                         Log.i(TAG, "products loaded from API $response")
 
-                        response.body()?.let {
-                            products = it
-                        }
+                        //val productsList = List<Product>()
+                        val currentProduct : Product = response.body()!!
+                        //Log.i(TAG, currentProduct.prodName)
+                        //products[1] = response.body()
+                        //products.add(response.body())
+                        //products.toMutableList().add(currentProduct)
+                       // products.plus(currentProduct)
+                        //products.plusElement(currentProduct)
+                        //.listIterator()
+                        products.add(currentProduct)
+                        //products[0].
 
-                        if (products.isNotEmpty())
-                            setupRecyclerView(products)
-                        else
-                            Toast.makeText(activity, "No Products to Show", Toast.LENGTH_SHORT).show()
+
+                        Log.i(TAG, "from list " +products[0].prodName)
+
+                        //response.body()
+                        /*response.body()?.let {
+                            products = it
+                        }*/
 
 
                     } else {
@@ -92,7 +148,7 @@ class saved : Fragment() {
                     }
                 }
 
-                override fun onFailure(call: Call<List<Product>>?, t: Throwable) {
+                override fun onFailure(call: Call<Product>?, t: Throwable) {
                     Toast.makeText(activity, t.message?:"Error Fetching Results", Toast.LENGTH_SHORT).show()
                 }
             })
@@ -116,35 +172,61 @@ class saved : Fragment() {
 
             override fun viewStore(position: Int) {
                 val intent = Intent(activity, StorePage::class.java)
-                //intent.putExtra("product", products[position])
+                var bundle = Bundle()
+                bundle.putInt("userID", products[position].user)
+                intent.putExtra("userBundle", bundle)
                 startActivity(intent)
             }
-/*
+
             override fun saveProduct(product: Product) {
-                user1.AddSave(product)
-            }*/
+                //saved.user1.AddSave(product)
+                apiService.saveProduct(product).enqueue(object : Callback<Product> {    //calling the api service and telling to specifically call the query in the getProducts function, which is declared in the APIService class
+
+                    override fun onResponse(call: Call<Product>, response: Response<Product>) {
+                        if (response.isSuccessful) {
+                            Log.i(TAG, "products loaded from API $response")
+
+
+                            Snackbar.make(recycler_view_store_products, "Saved Product", Snackbar.LENGTH_LONG)
+                                .setAction("Action", null)
+                                .show()
+
+
+                        } else {
+                            Log.i(TAG, "error $response")
+                            //showErrorMessage(response.errorBody()!!)
+                        }
+                    }
+
+                    override fun onFailure(call: Call<Product>?, t: Throwable) {
+                        Toast.makeText(activity, t.message?:"Error Adding to Bag", Toast.LENGTH_SHORT).show()
+                    }
+                })
+            }
+
 
         })
 
     }
 
-    private fun getSavedList(): List<Product> {
+   //region old code
+    /* private fun getSavedList(): List<Product> {
         val SavedList = user1.FetchSavedItems()
-        /*val itemCount = 5 // Find size of product data
+        *//*val itemCount = 5 // Find size of product data
         for (i in 1..itemCount){
             SavedList.add("$i")
 
-            *//** Shagan for Nicolle (?)
+            *//**//** Shagan for Nicolle (?)
              * The code for adding the product objects
              * Please initialize and add from the dB
-             *//*
-        }*/
+             *//**//*
+        }*//*
         return SavedList
     }
 
-    /** Not Important
+    *//** Not Important
      *
-     */
+     *//*
     private fun getSavedCategoryList(): ArrayList<String> {
         val savedCategoryList = ArrayList<String>()
         val itemCount = 10 // Find size of product data
@@ -153,6 +235,7 @@ class saved : Fragment() {
 
         }
         return savedCategoryList
-    }
+    }*/
+    //endregion
 
 }

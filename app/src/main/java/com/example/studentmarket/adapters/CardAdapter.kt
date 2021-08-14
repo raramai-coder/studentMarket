@@ -28,7 +28,7 @@ class CardAdapter( val products: List<Product>) :
     interface onProductClickListener{
        fun viewProduct(position: Int)
        fun viewStore(position: Int)
-       //fun saveProduct(product: Product)
+       fun saveProduct(product: Product)
    }
 
     //this function attaches the buttons to the listener returned when the viewholder is created
@@ -113,7 +113,6 @@ class CardAdapter( val products: List<Product>) :
             //set the cardvalues to the data received from the database
             productNameText.text = product.prodName
             priceText.text = "R" + product.prodPrice.toString() + "0"
-            //productImage.setImageDrawable(product.prodImage) TODO implement displaying images
             productRating.text = product.prodRating.toString()
 
             //setting the image of the product
@@ -139,9 +138,9 @@ class CardAdapter( val products: List<Product>) :
                 listener.viewStore(position)
             }
 
-            /*saveProduct.setOnClickListener{
+            saveProduct.setOnClickListener{
                 listener.saveProduct(product)
-            }*/
+            }
 
 
 

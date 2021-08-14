@@ -17,7 +17,10 @@ import com.example.studentmarket.R
 import com.example.studentmarket.StorePage
 import com.example.studentmarket.core.models.Store
 import com.example.studentmarket.core.api.APIService
+import com.example.studentmarket.core.models.Category
 import com.example.studentmarket.core.models.Product
+import com.google.android.material.snackbar.Snackbar
+import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_saved.recycler_view_store_products
 import retrofit2.Call
 import retrofit2.Callback
@@ -38,7 +41,7 @@ class search : Fragment() {
 
     companion object {
         fun newInstance() = search()
-        private const val TAG = ""
+        private const val TAG = "search fragment"
     }
 
     private lateinit var viewModel: SearchViewModel
@@ -102,7 +105,7 @@ class search : Fragment() {
         prodAdapter = CardAdapter(products)
         recycler_view_store_products.adapter = prodAdapter
 
-        prodAdapter.setOnButtonClickListener(object : CardAdapter.onProductClickListener{
+        prodAdapter.setOnButtonClickListener(object : CardAdapter.onProductClickListener {
             override fun viewProduct(position: Int) {
                 val intent = Intent(activity, ProductPage::class.java)
                 var bundle = Bundle()
@@ -113,47 +116,80 @@ class search : Fragment() {
 
             override fun viewStore(position: Int) {
                 val intent = Intent(activity, StorePage::class.java)
-                //intent.putExtra("product", products[position])
+                var bundle = Bundle()
+                bundle.putInt("userID", products[position].user)
+                intent.putExtra("userBundle", bundle)
                 startActivity(intent)
             }
 
-          /*  override fun saveProduct(product: Product) {
-                saved.user1.AddSave(product)
+            override fun saveProduct(product: Product) {
+                //saved.user1.AddSave(product)
+                apiService.saveProduct(product).enqueue(object :
+                    Callback<Product> {    //calling the api service and telling to specifically call the query in the getProducts function, which is declared in the APIService class
+
+                    override fun onResponse(call: Call<Product>, response: Response<Product>) {
+                        if (response.isSuccessful) {
+                            Log.i(TAG, "products loaded from API $response")
+
+
+                            Snackbar.make(
+                                recycler_view_store_products,
+                                "Saved Product",
+                                Snackbar.LENGTH_LONG
+                            )
+                                .setAction("Action", null)
+                                .show()
+
+
+                        } else {
+                            Log.i(TAG, "error $response")
+                            //showErrorMessage(response.errorBody()!!)
+                        }
+                    }
+
+                    override fun onFailure(call: Call<Product>?, t: Throwable) {
+                        Toast.makeText(
+                            activity,
+                            t.message ?: "Error Adding to Bag",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                })
             }
-*/
+
         })
 
-    }
 
-
-
-    //region old code
-    /*private fun getSearchList(): ArrayList<String> {
+        //region old code
+        /*private fun getSearchList(): ArrayList<String> {
         val SearchList = ArrayList<String>()
         val itemCount = 30 // Find size of product data
         for (i in 1..itemCount){
             SearchList.add("$i")
 
-            *//** Shagan for Nicolle (?)
-             * The code for adding the product objects
-             * Please initialize and add from the dB
-             *//*
+            */
+        /** Shagan for Nicolle (?)
+         * The code for adding the product objects
+         * Please initialize and add from the dB
+         *//*
         }
         return SearchList
     }
 
-    *//** Not Important
-     * Supposed to allow for filtering categories
-     *//*
+    */
+        /** Not Important
+         * Supposed to allow for filtering categories
+         *//*
     private fun getSavedCategoryList(): ArrayList<String> {
         val savedCategoryList = ArrayList<String>()
         val itemCount = 10 // Find size of product data
         for (i in 1..itemCount) {
             savedCategoryList.add("$i")
 
-            *//**
-             * Not IMPORTANT.
-             *//*
+            */
+        /**
+         * Not IMPORTANT.
+         *//*
         }
         return savedCategoryList
     }
@@ -166,6 +202,5 @@ class search : Fragment() {
 //            param2 = it.getString(ARG_PARAM2)
 //        }
 //    }*/
-    //endregion
-
-}
+        //endregion
+    }}
