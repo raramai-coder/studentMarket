@@ -1,5 +1,6 @@
 package com.example.studentmarket.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 //import android.telecom.Call
@@ -7,15 +8,18 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import co.za.mtn.academy.itsgotime.core.api.RetrofitClient
+import com.example.studentmarket.MapSliderActivity
 import com.example.studentmarket.R
 import com.example.studentmarket.adapters.OrderAdapter
 import com.example.studentmarket.core.api.APIService
 import com.example.studentmarket.core.models.Order
 import kotlinx.android.synthetic.main.fragment_saved.*
+//import kotlinx.android.synthetic.main.fragment_cart.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -64,8 +68,21 @@ class cart : Fragment() {
         //create a layout manager
         orderItemsRecyclerView.layoutManager = LinearLayoutManager(activity)
 
-        //fetch data from database
+        //fetch data from database |SHAGAN| TODO: throw exception for empty cart
         fetchOrders()
+
+        //region Map Slider
+        //TODO: Write logic to skip to map slider button AND set coordinates
+        val btnMapSlider = view.findViewById<Button>(R.id.button_cart_checkout)
+        btnMapSlider.setOnClickListener {
+            val intent = Intent(activity, MapSliderActivity::class.java)
+//            btn_map_slider.setTextColor("FFFFFF")
+            startActivity(intent)
+//            finish()
+        }
+        //endregion Map Slider
+
+        //endregion
 
     }
 

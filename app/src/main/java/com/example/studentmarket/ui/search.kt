@@ -138,6 +138,7 @@ class search : Fragment() {
 
     private fun setupRecyclerView(products: List<Product>) {
         prodAdapter = CardAdapter(products)
+
         recycler_view_store_products.adapter = prodAdapter
 
         prodAdapter.setOnButtonClickListener(object : CardAdapter.onProductClickListener {
