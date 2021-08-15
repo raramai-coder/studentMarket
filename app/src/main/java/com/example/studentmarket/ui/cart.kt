@@ -15,6 +15,7 @@ import com.example.studentmarket.R
 import com.example.studentmarket.adapters.OrderAdapter
 import com.example.studentmarket.core.api.APIService
 import com.example.studentmarket.core.models.Order
+import kotlinx.android.synthetic.main.fragment_cart.*
 import kotlinx.android.synthetic.main.fragment_saved.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -33,6 +34,7 @@ class cart : Fragment() {
 
     companion object {
         private const val TAG = ""
+        public var total: Float = 0f
     }
 
     private var orders: List<Order> = mutableListOf()
@@ -66,7 +68,13 @@ class cart : Fragment() {
 
         //fetch data from database
         fetchOrders()
+        for (order in orders){
+            var orderTotal:Float = order.orderAmount * order.unitPrice
+            //total += orderTotal
+            //Log.i(TAG, total.toString())
+        }
 
+        //cartTotal_txt_cart.text = total.toString() todo setup cart total
     }
 
 
@@ -76,14 +84,17 @@ class cart : Fragment() {
 
             override fun onResponse(call: Call<List<Order>>?, response: Response<List<Order>>) {
                 if (response.isSuccessful) {
-                    //Log.i(TAG, "facilitators loaded from API $response")
+                    Log.i(TAG, "facilitators loaded from API $response")
 
                     response.body()?.let {
                         orders = it
                     }
 
-                    if (orders.isNotEmpty())
-                    setupRecyclerView(orders)
+                    if (orders.isNotEmpty()) {
+                        setupRecyclerView(orders)
+
+
+                    }
                     else
                         Toast.makeText(activity, "No Items In Bag", Toast.LENGTH_SHORT).show()
                         //Log.i(TAG,"orders is empty")

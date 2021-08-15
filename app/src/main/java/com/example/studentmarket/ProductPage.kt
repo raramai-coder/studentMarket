@@ -139,7 +139,7 @@ class ProductPage : AppCompatActivity() {
 
     private fun addToBag(product:Product, addToCart: View){
 
-        val newOrder: Order = Order("keep it nice",1, product.prodName,1,product.prodPrice,product.prodID,product.user)
+        val newOrder: Order = Order("keep it nice",1, product.prodName,1,product.prodPrice,product.prodID,home.userID)
 
         //Call<Order> call = apiService.addToBag(newOrder)
 

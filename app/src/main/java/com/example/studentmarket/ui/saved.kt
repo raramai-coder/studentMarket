@@ -99,13 +99,13 @@ class saved : Fragment() {
                     setupRecyclerView(products)
                     //}else
                         Toast.makeText(activity, "No Saved Products to Show", Toast.LENGTH_SHORT).show()*/
-                   Log.i(TAG,"products befre transfrom sixze" +products.size.toString())
+                   //Log.i(TAG,"products befre transfrom sixze" +products.size.toString())
 
                     //var savedProducts: List<Product> = products
                     //products.toMutableList()
                     //setupRecyclerView(products)
 
-                    Log.i(TAG,"got here")
+                    //Log.i(TAG,"got here")
 
                 }else{
                     Log.i(TAG, "error $response")
@@ -141,7 +141,7 @@ class saved : Fragment() {
                         //products[0].
 
 
-                        Log.i(TAG, "from list " +products.size.toString())
+                        //Log.i(TAG, "from list " +products.size.toString())
 
                         setupRecyclerView(products)
                         //response.body()
@@ -169,9 +169,9 @@ class saved : Fragment() {
         prodAdapter = CardAdapter(products)
         recycler_view_store_products.adapter = prodAdapter
 
-        Log.i(TAG, "products size " +products.size.toString())
+        //Log.i(TAG, "products size " +products.size.toString())
 
-        Log.i(TAG,prodAdapter.itemCount.toString())
+        //Log.i(TAG,prodAdapter.itemCount.toString())
 
         prodAdapter.setOnButtonClickListener(object : CardAdapter.onProductClickListener{
             override fun viewProduct(position: Int) {
