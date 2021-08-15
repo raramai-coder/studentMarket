@@ -138,6 +138,11 @@
                 android:paddingHorizontal="5dp"
                 android:paddingVertical="10dp" />
 
+            <include
+                android:id="@+id/button_cart_checkout"
+                layout="@layout/fragment_cart_checkout_button" />
+
+
 
         </LinearLayout>
     </ScrollView>

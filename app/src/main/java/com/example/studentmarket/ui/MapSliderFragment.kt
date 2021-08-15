@@ -43,6 +43,7 @@ private fun getLocationList() : ArrayList<String> {
     return locationsList
 }
 
+// Fetches location meta data. security etc
 private fun getLocationMeta() : ArrayList<String>{
 
     val locationsMetaList = ArrayList<String>()
