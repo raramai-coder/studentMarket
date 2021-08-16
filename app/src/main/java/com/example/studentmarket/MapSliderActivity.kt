@@ -108,7 +108,7 @@ class MapSliderActivity : AppCompatActivity(), OnMapReadyCallback {
         //endregion Bottom Sheet
 
         //region Recycler Views
-        recycler_view_location_security.layoutManager = LinearLayoutManager(this)
+        /**recycler_view_location_security.layoutManager = LinearLayoutManager(this)
         recycler_view_location_crowd.layoutManager = LinearLayoutManager(this)
         recycler_view_cart_items.layoutManager = LinearLayoutManager(this)
         recycler_view_location_list.layoutManager = LinearLayoutManager(this)
@@ -122,7 +122,7 @@ class MapSliderActivity : AppCompatActivity(), OnMapReadyCallback {
         recycler_view_location_crowd.adapter = LocationMetaAdapter(getLocationCrowd())
         recycler_view_location_list.adapter = LocationSpotAdapter(getLocationList())
         recycler_view_location_schedule.adapter = LocationMetaAdapter(getLocationSchedule())
-        //endregion RecyclerViews
+        //endregion RecyclerViews **/
     }
     // [END maps_marker_get_map_async]
     // [END_EXCLUDE]

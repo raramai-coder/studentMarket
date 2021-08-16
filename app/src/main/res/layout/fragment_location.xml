@@ -21,7 +21,7 @@
                 android:id="@+id/button_bottom_sheet"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:layout_marginEnd="40dp"
+                android:layout_marginEnd="15dp"
                 android:layout_marginVertical="1dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -35,9 +35,10 @@
                 android:layout_marginTop="10dp"
                 android:gravity="start"
                 android:paddingStart="20dp"
-                android:text="Knockando Residence"
+                android:text="Delivery  &amp;  Payment"
                 android:textAlignment="gravity"
                 android:textSize="25sp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -46,102 +47,28 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingStart="20dp"
+                android:textSize="18sp"
                 android:layout_marginStart="20dp"
                 android:layout_marginVertical="20dp"
                 android:text="Security Presence"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textview_location_name" />
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycler_view_location_security"
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_security"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginVertical="10dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textview_location_security"
-                tools:itemCount="1"
-                tools:listitem="@layout/fragment_location_meta"
-                android:maxHeight="100dp"
-                android:minHeight="30dp"
-                android:paddingTop="1dp"
-                android:clipToPadding="false" />
-
-            <TextView
-                android:id="@+id/textview_location_crowd"
-                android:layout_width="wrap_content"
-                android:paddingStart="20dp"
-                android:layout_marginStart="20dp"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="20dp"
-                android:text="Crowd Presence"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/recycler_view_location_security" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycler_view_location_crowd"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="10dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textview_location_crowd"
-                tools:itemCount="1"
-                tools:listitem="@layout/fragment_location_meta"
-                android:clipToPadding="false"
-                android:maxHeight="100dp"
-                android:minHeight="30dp"
-                android:paddingTop="1dp" />
-
-
-            <Button
-                android:id="@+id/button_location_select"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:checkable="true"
                 android:layout_marginHorizontal="40dp"
-                android:layout_marginVertical="20dp"
-                android:text="Choose Spot And Pay"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/recycler_view_location_crowd" />
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/include_location_cart"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/button_location_select">
-                <include
-                    layout="@layout/fragment_cart"/>
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                android:paddingHorizontal="40dp"
+                android:textAlignment="center"
+                android:text="Wits Campus Security"
+                android:backgroundTint="#90EE90"
+                app:checkedIconTint="@color/primary_teal"
+                app:layout_constraintTop_toBottomOf="@+id/textview_location_security" />
 
             <TextView
-                android:id="@+id/textview_location_list"
-                android:layout_width="188dp"
-                android:layout_height="23dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginVertical="10dp"
-                android:paddingStart="20dp"
-                android:text="Spot"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/include_location_cart" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycler_view_location_list"
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:paddingTop="1dp"
-                android:maxHeight="100dp"
-                android:minHeight="30dp"
-                android:layout_marginVertical="10dp"
-                android:clipToPadding="false"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textview_location_list"
-                tools:itemCount="20"
-                tools:listitem="@layout/fragment_location_listitem" />
-
-            <TextView
-                android:id="@+id/textview_location_schedule"
+                android:id="@+id/textview_location_bus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="20dp"
@@ -149,21 +76,164 @@
                 android:paddingStart="20dp"
                 android:text="Bus Schedule"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/recycler_view_location_list" />
+                app:layout_constraintTop_toBottomOf="@+id/chip_security"
+                android:textSize="18sp"
+                />
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycler_view_location_schedule"
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_bus_schedule0"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:maxHeight="100dp"
-                android:minHeight="30dp"
-                android:paddingTop="1dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textview_location_schedule"
-                tools:itemCount="2"
-                tools:listitem="@layout/fragment_location_listitem"
-                android:clipToPadding="false" />
+                android:checkable="true"
+                android:layout_marginHorizontal="40dp"
+                android:paddingHorizontal="40dp"
+                android:textAlignment="center"
+                android:backgroundTint="#00CED1"
+                android:text="All Res  |  Hourly  |  06:20 - 18:00"
+                app:checkedIconTint="@color/primary_teal"
+                app:layout_constraintTop_toBottomOf="@+id/textview_location_bus" />
 
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_bus_schedule1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:layout_marginHorizontal="40dp"
+                android:paddingHorizontal="40dp"
+                android:textAlignment="center"
+                android:backgroundTint="#00CED1"
+                android:text="All Res Reverse  |  Hourly  |  06:20 - 18:00"
+                app:checkedIconTint="@color/primary_teal"
+                app:layout_constraintTop_toBottomOf="@+id/chip_bus_schedule0" />
+
+            <TextView
+                android:id="@+id/textview_location_list"
+                android:layout_width="188dp"
+                android:layout_height="23dp"
+                android:layout_marginVertical="20dp"
+                android:layout_marginStart="20dp"
+                android:paddingStart="20dp"
+                android:text="Delivery"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/chip_bus_schedule1"
+                android:textSize="18sp"
+                />
+
+<!--            Delivry Options Section-->
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/linearlayout_location_delivery_options"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="40dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textview_location_list" >
+                <com.google.android.material.chip.Chip
+                    android:textAlignment="center"
+                    android:id="@+id/deliverToBuyer_chip_rgs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Deliver to Buyer (Free)"
+                    android:checkable="true"
+                    app:chipIcon="@drawable/icon_map_marker"
+                    app:checkedIconTint="@color/primary_teal"/>
+
+                <com.google.android.material.chip.Chip
+                    android:textAlignment="center"
+                    android:id="@+id/buyerCanCollect_chip_rgs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Buyer can Collect (Free)"
+                    android:checkable="true"
+                    app:chipIcon="@drawable/icon_map_marker"
+                    app:checkedIconTint="@color/primary_teal"/>
+
+                <com.google.android.material.chip.Chip
+                    android:textAlignment="center"
+                    android:id="@+id/paxiStandard_chip_rgs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Paxi Standard Parcel (R59.95)"
+                    android:checkable="true"
+                    app:chipIcon="@drawable/icon_map_marker"
+                    app:checkedIconTint="@color/primary_teal"/>
+
+                <com.google.android.material.chip.Chip
+                    android:textAlignment="center"
+                    android:id="@+id/paxiLarge_chip_rgs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Paxi Large Parcel (R89.95)"
+                    android:checkable="true"
+                    app:chipIcon="@drawable/icon_map_marker"
+                    app:checkedIconTint="@color/primary_teal"/>
+
+
+                <com.google.android.material.chip.Chip
+                    android:textAlignment="center"
+                    android:id="@+id/amarex_chip_rgs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Aramex Standard Parcel (R99.99)"
+                    android:checkable="true"
+                    app:chipIcon="@drawable/icon_map_marker"
+                    app:checkedIconTint="@color/primary_teal"/>
+
+                <com.google.android.material.chip.Chip
+                    android:textAlignment="center"
+                    android:id="@+id/mainCampus_chip_rgs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Deliver to Wits Main Campus"
+                    android:checkable="true"
+                    app:chipIcon="@drawable/icon_map_marker"
+                    app:checkedIconTint="@color/primary_teal"/>
+
+                <com.google.android.material.chip.Chip
+                    android:textAlignment="center"
+                    android:id="@+id/junction_chip_rgs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Deliver to Wits Junction"
+                    android:checkable="true"
+                    app:chipIcon="@drawable/icon_map_marker"
+                    app:checkedIconTint="@color/primary_teal"/>
+
+                <com.google.android.material.chip.Chip
+                    android:textAlignment="center"
+                    android:id="@+id/deducation_chip_rgs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Deliver to Wits Education Campus"
+                    android:checkable="true"
+                    app:chipIcon="@drawable/icon_map_marker"
+                    app:checkedIconTint="@color/primary_teal"/>
+
+                <com.google.android.material.chip.Chip
+                    android:textAlignment="center"
+                    android:id="@+id/eoh_chip_rgs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Deliver to Wits EOH Residence"
+                    android:checkable="true"
+                    app:chipIcon="@drawable/icon_map_marker"
+                    app:checkedIconTint="@color/primary_teal"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+            <Button
+                android:id="@+id/button_cart_checkout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginVertical="20dp"
+                android:text="Done"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearlayout_location_delivery_options" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
