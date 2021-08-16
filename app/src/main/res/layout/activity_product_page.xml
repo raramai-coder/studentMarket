@@ -14,7 +14,12 @@
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
         android:src="@drawable/outline_shopping_bag_black_48"
-        android:clickable="true" />
+        android:clickable="true"
+        android:padding="20dp"
+        android:layout_margin="20dp"
+        android:backgroundTint="#66CDAA"
+        />
+
 
 
     <ScrollView
@@ -106,6 +111,7 @@
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/outline_bookmark_border_24"
                 android:text="Save"
+                android:padding="20dp"
                 android:drawableTint="@color/black"
                 android:textSize="15sp" />
 

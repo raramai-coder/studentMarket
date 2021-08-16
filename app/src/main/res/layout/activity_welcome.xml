@@ -6,8 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".Welcome">
 
-    TODO: add selected and deselected dots or change their colors
-
     <com.denzcoskun.imageslider.ImageSlider
         android:id="@+id/welcome_image_slider"
         android:layout_width="357dp"
@@ -70,8 +68,10 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="317dp"
+        android:layout_marginStart="149dp"
+        android:layout_marginEnd="168dp"
         android:text="Button" />
 
     <!--<Button
