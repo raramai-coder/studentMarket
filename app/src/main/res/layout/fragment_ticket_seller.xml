@@ -143,37 +143,22 @@
             </LinearLayout>
         </LinearLayout>
 
-        <!--        Store Categories RecyclerView Section-->
-<!--        <LinearLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:orientation="vertical">-->
-<!--            <TextView-->
-<!--                android:paddingHorizontal="26dp"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="Categories"-->
-<!--                android:textColor="@color/black"-->
-<!--                android:textSize="20sp"/>-->
-<!--            <androidx.recyclerview.widget.RecyclerView-->
-<!--                android:paddingHorizontal="26dp"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                tools:listitem="@layout/widget_category"-->
-<!--                android:orientation="horizontal"-->
-<!--                tools:itemCount="3"/>-->
-<!--        </LinearLayout>-->
-
         <!--        Store Product Recycler View Sectoin-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tickets"
+                android:textSize="28sp"
+                />
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler_view_store_products"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                tools:listitem="@layout/widget_product_card_store_seller"
+                tools:listitem="@layout/widget_ticket_card"
                 tools:itemCount="6"/>
         </LinearLayout>
 

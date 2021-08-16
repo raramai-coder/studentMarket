@@ -1,5 +1,6 @@
 package com.example.studentmarket
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -11,7 +12,7 @@ import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import com.google.android.material.bottomsheet.*
 import androidx.constraintlayout.widget.ConstraintLayout
-import kotlinx.android.synthetic.main.fragment_location.*
+import kotlinx.android.synthetic.main.fragment_location_post_order.*
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import co.za.mtn.academy.itsgotime.core.api.RetrofitClient.apiService
@@ -21,6 +22,7 @@ import com.example.studentmarket.adapters.OrderAdapter
 import com.example.studentmarket.core.models.Order
 import kotlinx.android.synthetic.main.fragment_cart.*
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.Toast
 import com.example.studentmarket.R
 import kotlinx.android.synthetic.main.fragment_home.*
@@ -44,8 +46,8 @@ import retrofit2.Response
  */
 // [START maps_marker_on_map_ready]
 
-var orders: List<Order> = mutableListOf()
-class MapSliderActivity : AppCompatActivity(), OnMapReadyCallback {
+class MapSliderActivity2 : AppCompatActivity(), OnMapReadyCallback {
+    var orders: List<Order> = mutableListOf()
     private lateinit var bottomSheetBehavior: BottomSheetBehavior<ConstraintLayout>
     private lateinit var storeID : com.example.studentmarket.classes.Store
     private lateinit var orderAdapter: OrderAdapter
@@ -57,7 +59,7 @@ class MapSliderActivity : AppCompatActivity(), OnMapReadyCallback {
 
         //region MapImplementation
         // Retrieve the content view that renders the map.
-        setContentView(R.layout.activity_map_slider)
+        setContentView(R.layout.activity_map_slider2)
 
         // Get the SupportMapFragment and request notification when the map is ready to be used.
         val mapFragment = supportFragmentManager.findFragmentById(R.id.map) as? SupportMapFragment
@@ -69,19 +71,17 @@ class MapSliderActivity : AppCompatActivity(), OnMapReadyCallback {
         bottomSheetBehavior.setHideable(true)
         bottomSheetBehavior.setPeekHeight(130)
         bottomSheetBehavior.setDraggable(false)
-        /*bottomSheetBehavior.addBottomSheetCallback(object: BottomSheetBehavior.BottomSheetCallback(){
+        /* bottomSheetBehavior.addBottomSheetCallback(object: BottomSheetBehavior.BottomSheetCallback(){
             override fun onSlide(bottomSheet: View, slideOffset: Float){
 
             }
-        })
-        //Func - Change show/hide text of button when state is changed.
-        override fun onStateChanged(bottomSheet: View, newState: Int){
-            button_bottom_sheet.text = when(newState){
-                BottomSheetBehavior.STATE_EXPANDED -> "Hide"
-                else -> "Show"
+            override fun onStateChanged(bottomSheet: View, newState: Int){
+                button_bottom_sheet.text = when(newState){
+                    BottomSheetBehavior.STATE_EXPANDED -> "Hide"
+                    else -> "Show"
+                }
             }
-        } */
-
+        }) */
 
         button_bottom_sheet.setOnClickListener{
             bottomSheetBehavior.state = if(bottomSheetBehavior.state == BottomSheetBehavior.STATE_EXPANDED)
@@ -92,21 +92,17 @@ class MapSliderActivity : AppCompatActivity(), OnMapReadyCallback {
         //endregion Bottom Sheet
 
         //region Recycler Views
-        recycler_view_location_security.layoutManager = LinearLayoutManager(this)
-        recycler_view_location_crowd.layoutManager = LinearLayoutManager(this)
         recycler_view_cart_items.layoutManager = LinearLayoutManager(this)
-        recycler_view_location_list.layoutManager = LinearLayoutManager(this)
         recycler_view_location_schedule.layoutManager = LinearLayoutManager(this)
 
         if (orders.isNotEmpty()){
             recycler_view_cart_items.adapter = OrderAdapter(orders)
         }
 
-        recycler_view_location_security.adapter = LocationMetaAdapter(getLocationMeta())
-        recycler_view_location_crowd.adapter = LocationMetaAdapter(getLocationMeta())
-        recycler_view_location_list.adapter = LocationSpotAdapter(getLocationList())
         recycler_view_location_schedule.adapter = LocationMetaAdapter(getLocationMeta())
         //endregion RecyclerViews
+
+
     }
     // [END maps_marker_get_map_async]
     // [END_EXCLUDE]
