@@ -32,7 +32,7 @@
             android:textSize="20sp" />
 
         <TextView
-            android:id="@+id/textview_cart_total"
+            android:id="@+id/cartTotal_txt_cart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="2"
@@ -110,7 +110,7 @@
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recycler_view_cart_items"
                     android:layout_width="match_parent"
-                    android:layout_height="165dp"
+                    android:layout_height="wrap_content"
                     tools:listitem="@layout/fragment_cartitem" />
             </LinearLayout>
 
@@ -146,4 +146,10 @@
 
         </LinearLayout>
     </ScrollView>
+
+    <Button
+        android:id="@+id/checkout_btn_cart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Checkout" />
 </LinearLayout>

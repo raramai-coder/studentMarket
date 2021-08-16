@@ -64,7 +64,7 @@ class search : Fragment() {
         // TODO: Use the ViewModel
 
 
-        val searchTerm = search_et_sr.text.toString()
+        val searchTerm = search_et_sr.text.toString() //Todo comment this pout but check if it still works
         Log.i(TAG,searchTerm)
         // Recycler_view_items' layout manager component is set to LinearLayoutManager instance. This instance of Main activity is context
         recycler_view_store_products.layoutManager = LinearLayoutManager(activity)
@@ -75,10 +75,7 @@ class search : Fragment() {
         //recycler_view_products.adapter = CardAdapter(getSearchList())
 //        recycler_view_categories.adapter = CategoryAdapter(getSearchCategoryList())
         search_btn_sr.setOnClickListener {
-                /*if(searchTerm.isNotBlank()){
-                    searchProducts(searchTerm)
-                }*/
-            val searchTerm = search_et_sr.text.toString()
+            val searchTerm = search_et_sr.text.toString() //Todo check if search term is not blank
             Log.i(TAG,searchTerm)
             searchProducts(searchTerm)
         }

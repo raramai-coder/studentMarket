@@ -6,31 +6,38 @@
         <entry key="..\:/Users/user-pc/StudioProjects/studentMarket/app/src/main/res/drawable/border.xml" value="0.21770833333333334" />
         <entry key="..\:/Users/user-pc/StudioProjects/studentMarket/app/src/main/res/drawable/edit_text_background.xml" value="0.21770833333333334" />
         <entry key="..\:/Users/user-pc/StudioProjects/studentMarket/app/src/main/res/drawable/stroke_color.xml" value="0.22135416666666666" />
+        <entry key="..\:/Users/user-pc/StudioProjects/studentMarket/app/src/main/res/layout/activity_add_product.xml" value="0.215625" />
         <entry key="..\:/Users/user-pc/StudioProjects/studentMarket/app/src/main/res/layout/activity_category_page.xml" value="0.22" />
         <entry key="..\:/Users/user-pc/StudioProjects/studentMarket/app/src/main/res/layout/activity_home.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/user-pc/StudioProjects/studentMarket/app/src/main/res/layout/activity_login.xml" value="0.14" />
         <entry key="..\:/Users/user-pc/StudioProjects/studentMarket/app/src/main/res/layout/activity_main.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/user-pc/StudioProjects/studentMarket/app/src/main/res/layout/activity_my_store_page.xml" value="0.33" />
         <entry key="..\:/Users/user-pc/StudioProjects/studentMarket/app/src/main/res/layout/activity_product_page.xml" value="0.25" />
         <entry key="..\:/Users/user-pc/StudioProjects/studentMarket/app/src/main/res/layout/activity_register.xml" value="0.25" />
         <entry key="..\:/Users/user-pc/StudioProjects/studentMarket/app/src/main/res/layout/activity_register_product.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/user-pc/StudioProjects/studentMarket/app/src/main/res/layout/activity_register_store.xml" value="0.25" />
         <entry key="..\:/Users/user-pc/StudioProjects/studentMarket/app/src/main/res/layout/activity_store.xml" value="0.33" />
         <entry key="..\:/Users/user-pc/StudioProjects/studentMarket/app/src/main/res/layout/activity_welcome.xml" value="0.16" />
         <entry key="..\:/Users/user-pc/StudioProjects/studentMarket/app/src/main/res/layout/content_login.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/user-pc/StudioProjects/studentMarket/app/src/main/res/layout/fragment_account.xml" value="0.33" />
         <entry key="..\:/Users/user-pc/StudioProjects/studentMarket/app/src/main/res/layout/fragment_cart.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/user-pc/StudioProjects/studentMarket/app/src/main/res/layout/fragment_cartitem.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/user-pc/StudioProjects/studentMarket/app/src/main/res/layout/fragment_home.xml" value="0.16" />
         <entry key="..\:/Users/user-pc/StudioProjects/studentMarket/app/src/main/res/layout/fragment_homes_fragment.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/user-pc/StudioProjects/studentMarket/app/src/main/res/layout/fragment_register_market_item.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/user-pc/StudioProjects/studentMarket/app/src/main/res/layout/fragment_saved.xml" value="0.1" />
         <entry key="..\:/Users/user-pc/StudioProjects/studentMarket/app/src/main/res/layout/fragment_search.xml" value="0.18" />
+        <entry key="..\:/Users/user-pc/StudioProjects/studentMarket/app/src/main/res/layout/fragment_store_seller.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/user-pc/StudioProjects/studentMarket/app/src/main/res/layout/order_item_in_cart.xml" value="0.35778985507246375" />
         <entry key="..\:/Users/user-pc/StudioProjects/studentMarket/app/src/main/res/layout/widget_category.xml" value="0.5" />
         <entry key="..\:/Users/user-pc/StudioProjects/studentMarket/app/src/main/res/layout/widget_product_card.xml" value="0.5" />
+        <entry key="..\:/Users/user-pc/StudioProjects/studentMarket/app/src/main/res/layout/widget_product_card_store_buyer.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/user-pc/StudioProjects/studentMarket/app/src/main/res/layout/widget_product_card_store_seller.xml" value="0.1287037037037037" />
         <entry key="..\:/Users/user-pc/StudioProjects/studentMarket/app/src/main/res/menu/navigation_bar.xml" value="0.20520833333333333" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="11" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

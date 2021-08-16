@@ -13,14 +13,13 @@ import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import co.za.mtn.academy.itsgotime.core.api.RetrofitClient
-import com.example.studentmarket.MapSliderActivity
+//import com.example.studentmarket.MapSliderActivity
 import com.example.studentmarket.MapSliderActivity2
 import com.example.studentmarket.R
 import com.example.studentmarket.adapters.OrderAdapter
 import com.example.studentmarket.core.api.APIService
 import com.example.studentmarket.core.models.Order
 import kotlinx.android.synthetic.main.fragment_saved.*
-//import kotlinx.android.synthetic.main.fragment_cart.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -38,6 +37,7 @@ class cart : Fragment() {
 
     companion object {
         private const val TAG = ""
+        public var total = 0f
     }
 
     private var orders: List<Order> = mutableListOf()
@@ -69,7 +69,7 @@ class cart : Fragment() {
         //create a layout manager
         orderItemsRecyclerView.layoutManager = LinearLayoutManager(activity)
 
-        //fetch data from database |SHAGAN| TODO: throw exception for empty cart
+        //fetch data from database
         fetchOrders()
 
         //region Map Slider Button

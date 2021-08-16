@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.view.LayoutInflater
 import android.widget.TextView
 import com.example.studentmarket.R
+import com.example.studentmarket.ui.cart
 
 
 class OrderAdapter(val order: List<Order>) : RecyclerView.Adapter<OrderAdapter.ViewHolder>(){
@@ -42,12 +43,15 @@ class OrderAdapter(val order: List<Order>) : RecyclerView.Adapter<OrderAdapter.V
             val nameAmountText = itemView.findViewById(R.id.textview_cartitem_name) as TextView
             val orderTotalText = itemView.findViewById(R.id.textview_cartitem_price) as TextView
 
-            val cartTotal = itemView.findViewById<TextView>(R.id.textview_cart_total)
+            //val cartTotal = itemView.findViewById<TextView>(R.id.textview_cart_total)
 
             var orderTotal:Float = order.orderAmount * order.unitPrice
 
             nameAmountText.text = order.orderAmount.toString()+ " x " + order.prodName
             orderTotalText.text = "R" + orderTotal.toString() +"0"
+
+            cart.total = cart.total + orderTotal
+            //cartTotal.text = cart.total.toString()
         }
     }
 

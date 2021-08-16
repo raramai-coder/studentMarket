@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".RegisterStore"
+    android:padding="15dp">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView61"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Store Details"
+                android:textSize="30sp" />
+
+
+            <EditText
+                android:id="@+id/editTextTextPersonName2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Name"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="Store Description or Tagline..."
+                android:inputType="textMultiLine" />
+
+            <View
+                android:id="@+id/divider4"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/textBar_teal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Delivery"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:text="Choose the delivery options your store will offer. Buyer pays the cost of delivery upon purchase." />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Deliver to Buyer (Free)"
+                    android:checkable="true"
+                    app:chipIcon="@drawable/icon_map_marker"
+                    app:checkedIconTint="@color/primary_teal"/>
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Buyer can Collect (Free)"
+                    android:checkable="true"
+                    app:chipIcon="@drawable/icon_map_marker"
+                    app:checkedIconTint="@color/primary_teal"/>
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Paxi Standard Parcel (R59.95)"
+                    android:checkable="true"
+                    app:chipIcon="@drawable/icon_map_marker"
+                    app:checkedIconTint="@color/primary_teal"/>
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Paxi Large Parcel (R89.95)"
+                    android:checkable="true"
+                    app:chipIcon="@drawable/icon_map_marker"
+                    app:checkedIconTint="@color/primary_teal"/>
+
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Aramex Standard Parcel (R99.99)"
+                    android:checkable="true"
+                    app:chipIcon="@drawable/icon_map_marker"
+                    app:checkedIconTint="@color/primary_teal"/>
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Deliver to Wits Main Campus"
+                    android:checkable="true"
+                    app:chipIcon="@drawable/icon_map_marker"
+                    app:checkedIconTint="@color/primary_teal"/>
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Deliver to Wits Junction"
+                    android:checkable="true"
+                    app:chipIcon="@drawable/icon_map_marker"
+                    app:checkedIconTint="@color/primary_teal"/>
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Deliver to Wits Education Campus"
+                    android:checkable="true"
+                    app:chipIcon="@drawable/icon_map_marker"
+                    app:checkedIconTint="@color/primary_teal"/>
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Deliver to Wits EOH Residence"
+                    android:checkable="true"
+                    app:chipIcon="@drawable/icon_map_marker"
+                    app:checkedIconTint="@color/primary_teal"/>
+
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider3"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/textBar_teal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginVertical="10dp">
+
+                <ImageButton
+                    android:id="@+id/imageButton2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/icon_add" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="Add Store Icon" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

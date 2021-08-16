@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Store">
+    android:orientation="horizontal"
+    tools:context=".MyStorePage">
+
     <LinearLayout
-        android:layout_width="409dp"
-        android:layout_height="729dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:paddingHorizontal="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -21,7 +23,7 @@
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:orientation="horizontal"
-            android:paddingTop="15dp">
+            android:paddingTop="5dp">
             <!--            Store Name Section-->
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -30,21 +32,21 @@
                 android:layout_weight="1">
 
 
-                <TextView
-                    android:id="@+id/textview_store_name"
+                <EditText
+                    android:id="@+id/storeName_txt_mspg"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:text="Store Name"
-                    android:paddingTop="10dp"
+                    android:paddingTop="5dp"
                     android:textSize="30sp"/>
 
 
-                <TextView
-                    android:id="@+id/texview_store_description"
-                    android:layout_width="150dp"
-                    android:paddingTop="10dp"
+                <EditText
+                    android:id="@+id/storeDescription_txt_mspg"
+                    android:layout_width="match_parent"
+                    android:paddingTop="5dp"
                     android:textSize="16sp"
-                    android:paddingStart="10dp"
+                    android:paddingStart="5dp"
                     android:layout_height="wrap_content"
                     android:textColor="@color/gray_faded"
                     android:text="Short description or tagline for the store" />
@@ -85,14 +87,14 @@
                     app:srcCompat="@drawable/icon_map_marker" />
 
                 <TextView
-                    android:id="@+id/textview_store_location_name"
+                    android:id="@+id/storeLocation_txt_mspg"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="Collection Location"
                     android:gravity="bottom"
                     android:paddingStart="3dp"
-                    android:textColor="@color/gray_faded"
-                    android:textSize="14sp" />
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
 
             </LinearLayout>
             <!--            Customers Meta Section-->
@@ -106,17 +108,18 @@
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:padding="2dp"
-                    app:srcCompat="@drawable/icon_eye" />
+                    app:srcCompat="@drawable/icon_eye"
+                    app:tint="@color/black"/>
 
                 <TextView
-                    android:id="@+id/textview_store_location_customers"
+                    android:id="@+id/customersServed_txt_mspg"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="Customers Served"
+                    android:text="Customers Served: 24"
                     android:gravity="bottom"
                     android:paddingStart="3dp"
-                    android:textColor="@color/gray_faded"
-                    android:textSize="14sp" />
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
             </LinearLayout>
             <!--            Rating Meta Section-->
             <LinearLayout
@@ -129,59 +132,44 @@
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:padding="2dp"
-                    app:srcCompat="@drawable/icon_star" />
+                    app:srcCompat="@drawable/icon_star"
+                    app:tint="@color/black"/>
 
                 <TextView
-                    android:id="@+id/textview_store_location_rating"
+                    android:id="@+id/storeAverageRating_txt_mspg"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="Average Rating"
+                    android:text="Average Rating : 4.5"
                     android:gravity="bottom"
                     android:paddingStart="3dp"
-                    android:textColor="@color/gray_faded"
-                    android:textSize="14sp" />
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
             </LinearLayout>
         </LinearLayout>
 
-        <!--        Store Categories RecyclerView Section-->
-<!--        <LinearLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:orientation="vertical">-->
-<!--            <TextView-->
-<!--                android:paddingHorizontal="26dp"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="Categories"-->
-<!--                android:textColor="@color/black"-->
-<!--                android:textSize="20sp"/>-->
-<!--            <androidx.recyclerview.widget.RecyclerView-->
-<!--                android:paddingHorizontal="26dp"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                tools:listitem="@layout/widget_category"-->
-<!--                android:orientation="horizontal"-->
-<!--                tools:itemCount="3"/>-->
-<!--        </LinearLayout>-->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/addProduct_btn_mspg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Product"
+            android:backgroundTint="@color/primary_teal"
+            android:alpha="75"/>
 
-        <!--        Store Product Recycler View Sectoin-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Products"
+                android:textSize="28sp"/>
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycler_view_store_products"
+                android:id="@+id/products_rv_mspg"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 tools:listitem="@layout/widget_product_card_store_seller"
                 tools:itemCount="6"/>
         </LinearLayout>
-
-    </LinearLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-
-
+</LinearLayout>
+</LinearLayout>

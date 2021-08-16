@@ -1,14 +1,18 @@
 package com.example.studentmarket.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.*
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.studentmarket.CategoryPage
+import com.example.studentmarket.MyStorePage
 import com.example.studentmarket.R
 import com.example.studentmarket.adapters.CardAdapter
 import com.example.studentmarket.adapters.ProductStoreSellerAdapter
+import kotlinx.android.synthetic.main.fragment_account.*
 import kotlinx.android.synthetic.main.fragment_store_seller.*
 
 
@@ -18,7 +22,7 @@ class account : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setHasOptionsMenu(true)
+
     }
 
     override fun onCreateView(
@@ -26,24 +30,39 @@ class account : Fragment() {
             savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_store_seller, container, false)
+        return inflater.inflate(R.layout.fragment_account, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        viewModel = ViewModelProvider(this).get(SavedViewModel::class.java)
+        myStore_cv_acn.setOnClickListener {
+            getStore(6)
+
+            val intent = Intent(activity, MyStorePage::class.java)
+            //var bundle = Bundle()
+            //bundle.putParcelable("category", categories[position])
+            //intent.putExtra("categoryBundle", bundle)
+            startActivity(intent)
+        }
+
+    //region old code
+    /* viewModel = ViewModelProvider(this).get(SavedViewModel::class.java)
 
         recycler_view_store_products.layoutManager = LinearLayoutManager(activity)
 
 //        var product_list = getProductList()
-        recycler_view_store_products.adapter = ProductStoreSellerAdapter(getProductList())
+        recycler_view_store_products.adapter = ProductStoreSellerAdapter(getProductList())*/
+    //endregion
+    }
+
+    private fun getStore(userID: Int){
 
     }
 
 
     //region Top Bar Menu
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+   /* override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.navigation_top_bar, menu)
         super.onCreateOptionsMenu(menu, inflater)
     }
@@ -58,13 +77,13 @@ class account : Fragment() {
         }
 
         return super.onOptionsItemSelected(item)
-    }
+    }*/
     //endregion Top Bar Menu
 
 }
 
 //region RecyclerView Functions
-private fun getCategoryList() : ArrayList<Int> {
+/*private fun getCategoryList() : ArrayList<Int> {
     val categoryList = ArrayList<Int>()
     val itemCount = 3
 
@@ -72,13 +91,14 @@ private fun getCategoryList() : ArrayList<Int> {
         categoryList.add(i)
     }
     return categoryList
-}
+}*/
 
 //private fun getProductList() : ArrayList<Int>{
 //
 //}
 
 
+/*
 private fun getProductList() : ArrayList<ArrayList<String>>{
 
     var arrayOne = arrayListOf<String>("image/upload/33978045._SX318__xallxf", "Elementary Linear Algebra","900","4.6","Save")
@@ -98,5 +118,6 @@ private fun getProductList() : ArrayList<ArrayList<String>>{
 
     return productList
 }
+*/
 
 //endregion RecyclerView Functions

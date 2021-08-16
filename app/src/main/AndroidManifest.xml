@@ -13,6 +13,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.StudentMarket">
         <activity
+            android:name=".RegisterStore"
+            android:exported="true" />
+        <activity
+            android:name=".AddProduct"
+            android:exported="true" />
+        <activity
+            android:name=".MyStorePage"
+            android:exported="true" />
+        <activity
             android:name=".CategoryPage"
             android:exported="true" />
         <activity

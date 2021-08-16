@@ -105,7 +105,7 @@ class CategoryPage : AppCompatActivity() {
             }
 
             override fun viewStore(position: Int) {
-                val intent = Intent(this@CategoryPage, Store::class.java)
+                val intent = Intent(this@CategoryPage, StorePage::class.java)
                 var bundle = Bundle()
                 bundle.putInt("userID", products[position].user)
                 intent.putExtra("userBundle", bundle)
