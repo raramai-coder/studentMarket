@@ -72,56 +72,83 @@
                     android:id="@+id/chip4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Deliver to Buyer (Free)" />
+                    android:text="Deliver to Buyer (Free)"
+                    android:checkable="true"
+                    app:chipIcon="@drawable/icon_map_marker"
+                    app:checkedIconTint="@color/primary_teal"/>
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chip5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Buyer can Collect (Free)" />
+                    android:text="Buyer can Collect (Free)"
+                    android:checkable="true"
+                    app:chipIcon="@drawable/icon_map_marker"
+                    app:checkedIconTint="@color/primary_teal"/>
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chip6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Paxi Standard Parcel (R59.95)" />
+                    android:text="Paxi Standard Parcel (R59.95)"
+                    android:checkable="true"
+                    app:chipIcon="@drawable/icon_map_marker"
+                    app:checkedIconTint="@color/primary_teal"/>
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chip7"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Paxi Large Parcel (R89.95)" />
+                    android:text="Paxi Large Parcel (R89.95)"
+                    android:checkable="true"
+                    app:chipIcon="@drawable/icon_map_marker"
+                    app:checkedIconTint="@color/primary_teal"/>
 
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chip8"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Aramex Standard Parcel (R99.99)" />
+                    android:text="Aramex Standard Parcel (R99.99)"
+                    android:checkable="true"
+                    app:chipIcon="@drawable/icon_map_marker"
+                    app:checkedIconTint="@color/primary_teal"/>
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chip9"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Deliver to Wits Main Campus" />
+                    android:text="Deliver to Wits Main Campus"
+                    android:checkable="true"
+                    app:chipIcon="@drawable/icon_map_marker"
+                    app:checkedIconTint="@color/primary_teal"/>
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chip10"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Deliver to Wits Junction" />
+                    android:text="Deliver to Wits Junction"
+                    android:checkable="true"
+                    app:chipIcon="@drawable/icon_map_marker"
+                    app:checkedIconTint="@color/primary_teal"/>
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chip11"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Deliver to Wits Education Campus" />
+                    android:text="Deliver to Wits Education Campus"
+                    android:checkable="true"
+                    app:chipIcon="@drawable/icon_map_marker"
+                    app:checkedIconTint="@color/primary_teal"/>
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chip15"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Deliver to Wits EOH Residence" />
+                    android:text="Deliver to Wits EOH Residence"
+                    android:checkable="true"
+                    app:chipIcon="@drawable/icon_map_marker"
+                    app:checkedIconTint="@color/primary_teal"/>
 
 
             </LinearLayout>
