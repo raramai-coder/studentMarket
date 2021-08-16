@@ -21,36 +21,74 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <Button
+            <ImageButton
                 android:id="@+id/button_bottom_sheet"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="Show"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginVertical="1dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/textview_location_name"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/icons8_down_button_tea_32" />
 
             <TextView
                 android:id="@+id/textview_location_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="20dp"
-                android:layout_marginTop="16dp"
-                android:text="- Amic Deck -"
+                android:layout_width="287dp"
+                android:layout_height="36dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="10dp"
+                android:gravity="start"
+                android:paddingStart="20dp"
+                android:text="Knockando Residence"
+                android:textAlignment="gravity"
+                android:textSize="25sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-
-            <include
-                android:id="@+id/button_cart_checkout"
-                layout="@layout/fragment_cart"
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/textview_estimated_time_heading"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
+                android:layout_marginStart="4dp"
+                android:paddingStart="20dp"
+                android:layout_marginVertical="10dp"
+                android:text="Estimated Arrival"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/recycler_view_location_schedule" />
+                app:layout_constraintTop_toBottomOf="@+id/textview_location_name" />
+
+            <TextView
+                android:id="@+id/textview_estimated_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="20dp"
+                android:text="14:37"
+                android:textSize="28sp"
+                android:layout_marginVertical="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textview_estimated_time_heading" />
+
+            <TextView
+                android:id="@+id/textview_location_driver_contact_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:paddingStart="20dp"
+                android:layout_marginVertical="10dp"
+                android:text="Seller's Contact Details"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textview_estimated_time" />
+
+            <TextView
+                android:id="@+id/textview_location_driver_contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="20dp"
+                android:layout_marginVertical="10dp"
+                android:text="082 082 0822"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textview_location_driver_contact_heading" />
 
             <TextView
                 android:id="@+id/textview_location_schedule"
@@ -74,53 +112,23 @@
                 android:maxHeight="100dp"
                 android:minHeight="30dp"
                 android:paddingTop="1dp"
+                android:layout_marginVertical="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textview_location_schedule"
                 tools:itemCount="2"
                 tools:listitem="@layout/fragment_location_listitem" />
 
-            <TextView
-                android:id="@+id/textview_estimated_time_heading"
-                android:layout_width="wrap_content"
+            <include
+                android:id="@+id/button_cart_checkout"
+                layout="@layout/fragment_cart"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:paddingStart="20dp"
-                android:text="Estimated Arrival"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textview_location_name" />
-
-            <TextView
-                android:id="@+id/textview_estimated_time"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingVertical="5dp"
-                android:paddingStart="20dp"
-                android:text="14:37"
-                android:textSize="28sp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textview_estimated_time_heading" />
+                app:layout_constraintTop_toBottomOf="@+id/recycler_view_location_schedule" />
 
-            <TextView
-                android:id="@+id/textview_location_driver_contact_heading"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:paddingStart="20dp"
-                android:text="Courier Contact Details"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textview_estimated_time" />
-
-            <TextView
-                android:id="@+id/textview_location_driver_contact"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingStart="20dp"
-                android:text="082 082 0822"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textview_location_driver_contact_heading" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

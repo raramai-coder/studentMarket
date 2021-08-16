@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import co.za.mtn.academy.itsgotime.core.api.RetrofitClient
 import com.example.studentmarket.MapSliderActivity
+import com.example.studentmarket.MapSliderActivity2
 import com.example.studentmarket.R
 import com.example.studentmarket.adapters.OrderAdapter
 import com.example.studentmarket.core.api.APIService
@@ -71,16 +72,16 @@ class cart : Fragment() {
         //fetch data from database |SHAGAN| TODO: throw exception for empty cart
         fetchOrders()
 
-        //region Map Slider
+        //region Map Slider Button
         //TODO: Write logic to skip to map slider button AND set coordinates
         val btnMapSlider = view.findViewById<Button>(R.id.button_cart_checkout)
         btnMapSlider.setOnClickListener {
-            val intent = Intent(activity, MapSliderActivity::class.java)
+            val intent = Intent(activity, MapSliderActivity2::class.java)
 //            btn_map_slider.setTextColor("FFFFFF")
             startActivity(intent)
 //            finish()
         }
-        //endregion Map Slider
+        //endregion Map Slider Button
 
         //endregion
 
