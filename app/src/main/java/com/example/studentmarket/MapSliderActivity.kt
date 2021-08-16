@@ -1,5 +1,6 @@
 package com.example.studentmarket
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -21,11 +22,13 @@ import com.example.studentmarket.adapters.OrderAdapter
 import com.example.studentmarket.core.models.Order
 import kotlinx.android.synthetic.main.fragment_cart.*
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.Toast
 import com.example.studentmarket.R
 import kotlinx.android.synthetic.main.fragment_home.*
 import com.example.studentmarket.adapters.CardAdapter
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
 import co.za.mtn.academy.itsgotime.core.api.RetrofitClient
 import com.example.studentmarket.CategoryPage
 import com.example.studentmarket.ProductPage
@@ -55,6 +58,7 @@ class MapSliderActivity : AppCompatActivity(), OnMapReadyCallback {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+
         //region MapImplementation
         // Retrieve the content view that renders the map.
         setContentView(R.layout.activity_map_slider)
@@ -63,6 +67,18 @@ class MapSliderActivity : AppCompatActivity(), OnMapReadyCallback {
         val mapFragment = supportFragmentManager.findFragmentById(R.id.map) as? SupportMapFragment
         mapFragment?.getMapAsync(this)
         //endregion MapImplementation
+
+
+        //region Checkout Payment Gateway button
+        //TODO: Write logic to skip to map slider button AND set coordinates
+        val btnMapSlider = findViewById<Button>(R.id.button_cart_checkout)
+        btnMapSlider.setOnClickListener {
+            val intent = Intent(this, PaymentGateway1::class.java)
+//            btn_map_slider.setTextColor("FFFFFF")
+            startActivity(intent)
+//            finish()
+        }
+        //endregion Checkout Payment Gateway Button
 
         //region Bottom Sheet
         bottomSheetBehavior = BottomSheetBehavior.from(constraintlayout_location)
@@ -103,9 +119,9 @@ class MapSliderActivity : AppCompatActivity(), OnMapReadyCallback {
         }
 
         recycler_view_location_security.adapter = LocationMetaAdapter(getLocationMeta())
-        recycler_view_location_crowd.adapter = LocationMetaAdapter(getLocationMeta())
+        recycler_view_location_crowd.adapter = LocationMetaAdapter(getLocationCrowd())
         recycler_view_location_list.adapter = LocationSpotAdapter(getLocationList())
-        recycler_view_location_schedule.adapter = LocationMetaAdapter(getLocationMeta())
+        recycler_view_location_schedule.adapter = LocationMetaAdapter(getLocationSchedule())
         //endregion RecyclerViews
     }
     // [END maps_marker_get_map_async]
@@ -148,7 +164,35 @@ private fun getLocationMeta() : ArrayList<String>{
     }
     return locationsMetaList
 }
-private fun getCart(){
+private fun getLocationCrowd() : ArrayList<String>{
+
+    val locationsMetaList = ArrayList<String>()
+    val itemCount = 1
+
+    for (i in 1..itemCount){
+        locationsMetaList.add("$i")
+    }
+    return locationsMetaList
+}
+private fun getLocationSchedule() : ArrayList<String>{
+
+    val locationsMetaList = ArrayList<String>()
+    val itemCount = 1
+
+    for (i in 1..itemCount){
+        locationsMetaList.add("$i")
+    }
+    return locationsMetaList
+}
+private fun getCart() : ArrayList<String>{
+
+    val locationsMetaList = ArrayList<String>()
+    val itemCount = 1
+
+    for (i in 1..itemCount){
+        locationsMetaList.add("$i")
+    }
+    return locationsMetaList
 }
 
 //endregion RecyclerView Functions

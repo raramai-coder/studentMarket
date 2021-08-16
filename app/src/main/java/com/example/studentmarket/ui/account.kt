@@ -13,7 +13,7 @@ import com.example.studentmarket.R
 import com.example.studentmarket.adapters.CardAdapter
 import com.example.studentmarket.adapters.ProductStoreSellerAdapter
 import kotlinx.android.synthetic.main.fragment_account.*
-import kotlinx.android.synthetic.main.fragment_store_seller.*
+import kotlinx.android.synthetic.main.fragment_ticket_seller.*
 
 
 class account : Fragment() {

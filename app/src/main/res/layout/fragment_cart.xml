@@ -110,7 +110,8 @@
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recycler_view_cart_items"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="220dp"
+                    tools:itemCount="30"
                     tools:listitem="@layout/fragment_cartitem" />
             </LinearLayout>
 
@@ -147,9 +148,9 @@
         </LinearLayout>
     </ScrollView>
 
-    <Button
-        android:id="@+id/checkout_btn_cart"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Checkout" />
+<!--    <Button-->
+<!--        android:id="@+id/checkout_btn_cart"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Checkout" />-->
 </LinearLayout>

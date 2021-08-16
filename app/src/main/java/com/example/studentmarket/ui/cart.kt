@@ -13,6 +13,7 @@ import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import co.za.mtn.academy.itsgotime.core.api.RetrofitClient
+import com.example.studentmarket.MapSliderActivity
 //import com.example.studentmarket.MapSliderActivity
 import com.example.studentmarket.MapSliderActivity2
 import com.example.studentmarket.R
@@ -76,7 +77,7 @@ class cart : Fragment() {
         //TODO: Write logic to skip to map slider button AND set coordinates
         val btnMapSlider = view.findViewById<Button>(R.id.button_cart_checkout)
         btnMapSlider.setOnClickListener {
-            val intent = Intent(activity, MapSliderActivity2::class.java)
+            val intent = Intent(activity, MapSliderActivity::class.java)
 //            btn_map_slider.setTextColor("FFFFFF")
             startActivity(intent)
 //            finish()

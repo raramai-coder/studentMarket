@@ -120,7 +120,6 @@
                 tools:listitem="@layout/fragment_location_listitem" />
 
             <include
-                android:id="@+id/button_cart_checkout"
                 layout="@layout/fragment_cart"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

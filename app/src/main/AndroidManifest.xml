@@ -48,6 +48,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".PaymentGateway1" />
+        <activity android:name=".PaymentGateway2" />
         <activity android:name=".MapSliderActivity" />
         <activity android:name=".MapSliderActivity2" />
         <activity android:name=".MainActivity" />

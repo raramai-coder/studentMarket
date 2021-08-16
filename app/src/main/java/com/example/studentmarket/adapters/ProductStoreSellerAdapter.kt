@@ -7,7 +7,7 @@ import android.webkit.WebSettings
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.studentmarket.R
-import kotlinx.android.synthetic.main.fragment_store_seller.view.*
+import kotlinx.android.synthetic.main.fragment_ticket_seller.view.*
 import kotlinx.android.synthetic.main.widget_product_card_store_seller.view.*
 
 class ProductStoreSellerAdapter(val items: ArrayList<ArrayList<String>>) :

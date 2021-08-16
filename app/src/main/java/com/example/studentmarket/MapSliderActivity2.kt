@@ -65,6 +65,18 @@ class MapSliderActivity2 : AppCompatActivity(), OnMapReadyCallback {
         val mapFragment = supportFragmentManager.findFragmentById(R.id.map) as? SupportMapFragment
         mapFragment?.getMapAsync(this)
         //endregion MapImplementation
+        //region Checkout Back To Home Button
+        //TODO: Write logic to skip to map slider button AND set coordinates
+        val btnMapSlider = findViewById<Button>(R.id.button_cart_checkout)
+        btnMapSlider.text = "DONE"
+        btnMapSlider.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+//            btn_map_slider.setTextColor("FFFFFF")
+            startActivity(intent)
+            finish()
+        }
+        //endregion Checkout Back To Home Button
+
 
         //region Bottom Sheet
         bottomSheetBehavior = BottomSheetBehavior.from(constraintlayout_location)
@@ -126,7 +138,7 @@ class MapSliderActivity2 : AppCompatActivity(), OnMapReadyCallback {
 //region RecyclerView Functions
 private fun getLocationList() : ArrayList<String> {
     val locationsList = ArrayList<String>()
-    val itemCount = 9
+    val itemCount = 4
 
     for (i in 1..itemCount){
         locationsList.add("$i")
