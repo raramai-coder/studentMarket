@@ -82,6 +82,11 @@ interface APIService {
     @POST("/store/?format=json")
     fun registerStore(@Body store: Store): Call<Store>
 
+    @GET("product")  //this is a get query, which essentially says:"get whatever is at this url"
+    fun getStoreProducts(
+        @Query("userID") userID: Int
+    ) : Call<List<Product>>
+
     /*@POST("/store/")
     fun registerStore(
         @Field("userID") userID: Int,

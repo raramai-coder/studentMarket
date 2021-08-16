@@ -173,6 +173,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/storeproduct_rv_spg"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 tools:listitem="@layout/widget_product_card_store_buyer"

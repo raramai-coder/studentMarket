@@ -5,12 +5,17 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageView
 import kotlinx.android.synthetic.main.activity_add_product.*
 import java.net.URI
 
 class AddProduct : AppCompatActivity() {
 
     lateinit var imageURI: Uri
+    private val REQUEST_CODE = 100
+    private val REQUEST_CODE_VIDEO = 101
+
+    private lateinit var imageView: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,7 +23,7 @@ class AddProduct : AppCompatActivity() {
         supportActionBar?.hide()
 
         addImage1_btn_ap.setOnClickListener {
-            selectImage()
+            this.selectImage()
         }
 
         addImage2_btn_ap.setOnClickListener {
@@ -43,7 +48,7 @@ class AddProduct : AppCompatActivity() {
 
         if(requestCode == 100 && resultCode == RESULT_OK){
             imageURI = data?.data!!
-            uploadImage()
+            //uploadImage()
         }
     }
 

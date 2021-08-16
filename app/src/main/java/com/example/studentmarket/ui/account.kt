@@ -7,10 +7,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.studentmarket.CategoryPage
-import com.example.studentmarket.MyStorePage
-import com.example.studentmarket.R
-import com.example.studentmarket.RegisterStore
+import com.example.studentmarket.*
 import com.example.studentmarket.adapters.CardAdapter
 import com.example.studentmarket.adapters.ProductStoreSellerAdapter
 import kotlinx.android.synthetic.main.fragment_account.*
@@ -41,6 +38,14 @@ class account : Fragment() {
             //getStore(6)
 
             val intent = Intent(activity, RegisterStore::class.java)
+            //var bundle = Bundle()
+            //bundle.putParcelable("category", categories[position])
+            //intent.putExtra("categoryBundle", bundle)
+            startActivity(intent)
+        }
+
+        myOrders_cv_acn.setOnClickListener {
+            val intent = Intent(activity, AddProduct::class.java)
             //var bundle = Bundle()
             //bundle.putParcelable("category", categories[position])
             //intent.putExtra("categoryBundle", bundle)

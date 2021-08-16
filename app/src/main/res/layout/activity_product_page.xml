@@ -14,6 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
         android:src="@drawable/outline_shopping_bag_black_48"
+        android:backgroundTint="@color/primary_teal"
         android:clickable="true" />
 
 
@@ -105,8 +106,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/outline_bookmark_border_24"
-                android:text="Save"
                 android:drawableTint="@color/black"
+                android:text="Save"
                 android:textSize="15sp" />
 
         </LinearLayout>

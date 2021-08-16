@@ -76,8 +76,6 @@ class Welcome : AppCompatActivity() {
         //endregion Map Slider
         //endregion
 
-        button.setOnClickListener {
-
-        }
+        
     }
 }

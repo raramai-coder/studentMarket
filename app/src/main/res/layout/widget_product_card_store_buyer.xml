@@ -36,7 +36,7 @@
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:id="@+id/image_view_product_image"
+                        android:id="@+id/image_view_product_image_spg"
                         android:layout_width="360dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -50,17 +50,17 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/text_view_product_name"
+                            android:id="@+id/text_view_product_name_spg"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textSize="20sp"
-                            android:paddingVertical="10dp"
-                            android:textAlignment="textStart"
                             android:layout_marginTop="10dp"
-                            android:text="Product Name" />
+                            android:paddingVertical="10dp"
+                            android:text="Product Name"
+                            android:textAlignment="textStart"
+                            android:textSize="20sp" />
 
                         <TextView
-                            android:id="@+id/text_view_product_price"
+                            android:id="@+id/text_view_product_price_spg"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="R 49.99"
@@ -85,7 +85,7 @@
                         />
 
                     <TextView
-                        android:id="@+id/text_view_rating"
+                        android:id="@+id/text_view_rating_spg"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -110,16 +110,19 @@
                         android:text="1.3 km"
                         android:textSize="15sp" />-->
 
-                    <ImageView
-                        android:id="@+id/image_view_saved"
+                    <ImageButton
+                        android:id="@+id/button_saved_spg"
+                        style="@style/imageButtonStyle"
                         android:layout_width="12dp"
                         android:layout_height="25dp"
-                        android:layout_weight="1"
                         android:layout_gravity="bottom"
-                        app:srcCompat="@drawable/outline_bookmark_border_black_48" />
+                        android:layout_weight="1"
+                        android:background="@color/transparent"
+                        app:srcCompat="@drawable/outline_bookmark_border_24"
+                        app:tint="@color/black" />
 
                     <TextView
-                        android:id="@+id/text_view_saved"
+                        android:id="@+id/text_view_saved_spg"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -137,20 +140,20 @@
                     android:orientation="horizontal">
 
                     <Button
-                        android:id="@+id/button2"
+                        android:id="@+id/button2_spg"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Add to bag" />
 
                     <Button
-                        android:id="@+id/button_view_product"
+                        android:id="@+id/button_view_product_spg"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:textSize="15sp"
                         android:layout_marginLeft="7dp"
-                        android:text="View Product" />
+                        android:layout_weight="1"
+                        android:text="View Product"
+                        android:textSize="15sp" />
 
                 </LinearLayout>
 
