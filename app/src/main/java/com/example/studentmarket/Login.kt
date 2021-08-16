@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.Toast
-import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import co.za.mtn.academy.itsgotime.core.api.RetrofitClient
@@ -26,7 +25,7 @@ class Login : AppCompatActivity() {
     }
 
     private  val apiService: APIService by lazy { RetrofitClient.apiService }
-    private var usersRetruned : List<User> = mutableListOf()
+    private var usersReturned : List<User> = mutableListOf()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,11 +43,6 @@ class Login : AppCompatActivity() {
             val inputEmail = email_et_lg.text.toString()
             val inputPassword= password_et_lg.text.toString()
             LoginUser(inputEmail,inputPassword)
-            //Log.i(TAG,"inputEmail + inputPassword")
-            Log.i(TAG,inputEmail + " " + inputPassword)
-
-            //val intent = Intent(this,MainActivity::class.java)
-            //startActivity(intent)
         }
         //endregion
 
@@ -73,11 +67,11 @@ class Login : AppCompatActivity() {
                     Log.i(TAG, "user loaded from API $response")
 
                     response.body()?.let {
-                        usersRetruned = it                              //find the products in the response and make them populate this list called products
+                        usersReturned = it                              //find the products in the response and make them populate this list called products
                     }
 
 
-                    if(usersRetruned.isNullOrEmpty()){
+                    if(usersReturned.isNullOrEmpty()){
 
                         Snackbar.make(login_btn_lg, "Incorrect Credentials entered", Snackbar.LENGTH_LONG)
                             .setAction("Action", null)
@@ -86,7 +80,7 @@ class Login : AppCompatActivity() {
                         password_et_lg.text.clear()
 
                     }else{
-                        currentUser = usersRetruned[0]
+                        currentUser = usersReturned[0]
                         home.userID = currentUser.userID
                         val intent = Intent(this@Login,MainActivity::class.java)
                         startActivity(intent)

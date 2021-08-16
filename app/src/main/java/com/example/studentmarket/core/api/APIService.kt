@@ -1,6 +1,7 @@
 package com.example.studentmarket.core.api
 
 import com.example.studentmarket.core.models.*
+import com.google.gson.annotations.SerializedName
 import okhttp3.RequestBody
 import okhttp3.ResponseBody
 import retrofit2.Call
@@ -68,4 +69,8 @@ interface APIService {
         @Query("userEmail") userEmail: String,
         @Query("userPassword") userPassword: String
     ): Call<List<User>>
+
+    //this registers a specific user to the db
+    @POST("/user/?format=json")
+    fun registerUser( @Body user:User):Call<User>
 }

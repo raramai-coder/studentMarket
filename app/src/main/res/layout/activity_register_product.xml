@@ -33,7 +33,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <CheckBox
-        android:id="@+id/checkbox_terms_conditions"
+        android:id="@+id/TermsCondition_checkBox_rg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
@@ -41,7 +41,7 @@
         tools:layout_editor_absoluteY="516dp" />
 
     <CheckBox
-        android:id="@+id/checkbox_privacy_policy"
+        android:id="@+id/privacyPolicy_checkBox_rg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
@@ -54,7 +54,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/hyperlink_terms_conditions"
-        app:layout_constraintStart_toEndOf="@+id/checkbox_terms_conditions"
+        app:layout_constraintStart_toEndOf="@+id/TermsCondition_checkBox_rg"
         tools:layout_editor_absoluteY="529dp" />
 
     <TextView
@@ -65,7 +65,7 @@
         android:layout_marginBottom="53dp"
         android:text="@string/hyperlink_privacy_policy"
         app:layout_constraintBottom_toTopOf="@+id/register_btn_rg"
-        app:layout_constraintStart_toEndOf="@+id/checkbox_privacy_policy"
+        app:layout_constraintStart_toEndOf="@+id/privacyPolicy_checkBox_rg"
         app:layout_constraintTop_toTopOf="@+id/textview_terms_conditions" />
 
     <Spinner

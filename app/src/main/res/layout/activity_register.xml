@@ -58,19 +58,19 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <EditText
-        android:id="@+id/phone_et_rg"
+        android:id="@+id/university_et_rg"
         android:layout_width="356dp"
         android:layout_height="57dp"
         android:ems="10"
-        android:hint="Phone Number"
-        android:inputType="phone"
+        android:hint="University"
+        android:inputType="text"
         app:layout_constraintBottom_toTopOf="@+id/password_et_rg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/email_et_rg" />
 
     <CheckBox
-        android:id="@+id/checkbox_terms_conditions"
+        android:id="@+id/TermsCondition_checkBox_rg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
@@ -79,7 +79,7 @@
         app:layout_constraintTop_toTopOf="@+id/password_et_rg" />
 
     <CheckBox
-        android:id="@+id/checkbox_privacy_policy"
+        android:id="@+id/privacyPolicy_checkBox_rg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
@@ -96,7 +96,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="85dp"
         android:text="@string/hyperlink_terms_conditions"
-        app:layout_constraintStart_toEndOf="@+id/checkbox_terms_conditions"
+        app:layout_constraintStart_toEndOf="@+id/TermsCondition_checkBox_rg"
         app:layout_constraintTop_toTopOf="@+id/password_et_rg" />
 
     <TextView
@@ -107,7 +107,7 @@
         android:layout_marginBottom="53dp"
         android:text="@string/hyperlink_privacy_policy"
         app:layout_constraintBottom_toTopOf="@+id/register_btn_rg"
-        app:layout_constraintStart_toEndOf="@+id/checkbox_privacy_policy"
+        app:layout_constraintStart_toEndOf="@+id/privacyPolicy_checkBox_rg"
         app:layout_constraintTop_toTopOf="@+id/textview_terms_conditions" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
