@@ -31,6 +31,7 @@ class Register : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
+        supportActionBar?.hide()
 
         setUpHyperlink()
         //region Register Button
