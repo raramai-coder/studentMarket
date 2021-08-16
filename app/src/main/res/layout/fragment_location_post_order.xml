@@ -13,120 +13,113 @@
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="37dp"
-        tools:layout_editor_absoluteY="0dp">
+        android:layout_height="match_parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <ImageButton
                 android:id="@+id/button_bottom_sheet"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:layout_marginEnd="40dp"
                 android:layout_marginVertical="1dp"
+                android:layout_marginEnd="40dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/icons8_down_button_tea_32" />
+
 
             <TextView
                 android:id="@+id/textview_location_name"
                 android:layout_width="287dp"
                 android:layout_height="36dp"
                 android:layout_marginHorizontal="20dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="12dp"
                 android:gravity="start"
-                android:paddingStart="20dp"
-                android:text="Knockando Residence"
+                android:paddingStart="10dp"
+                android:text="Delivery  &amp;  Payment"
                 android:textAlignment="gravity"
                 android:textSize="25sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textview_estimated_time_heading"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:paddingStart="20dp"
-                android:layout_marginVertical="10dp"
-                android:text="Estimated Arrival"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textview_location_name" />
-
-            <TextView
-                android:id="@+id/textview_estimated_time"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingStart="20dp"
-                android:text="14:37"
-                android:textSize="28sp"
-                android:layout_marginVertical="10dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textview_estimated_time_heading" />
-
-            <TextView
                 android:id="@+id/textview_location_driver_contact_heading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:paddingStart="20dp"
                 android:layout_marginVertical="10dp"
+                android:layout_marginStart="20dp"
+                android:paddingStart="20dp"
                 android:text="Seller's Contact Details"
+                android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textview_estimated_time" />
+                app:layout_constraintTop_toBottomOf="@+id/textview_location_name" />
 
             <TextView
                 android:id="@+id/textview_location_driver_contact"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingStart="20dp"
                 android:layout_marginVertical="10dp"
+                android:paddingStart="20dp"
                 android:text="082 082 0822"
+                android:textSize="25sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textview_location_driver_contact_heading" />
 
+
             <TextView
-                android:id="@+id/textview_location_schedule"
+                android:id="@+id/textview_location_bus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginVertical="20dp"
-                android:layout_marginStart="4dp"
-                android:gravity="start"
+                android:layout_marginVertical="10dp"
+                android:layout_marginStart="20dp"
                 android:paddingStart="20dp"
                 android:text="Bus Schedule"
-                android:textAlignment="gravity"
+                android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/textview_location_driver_contact" />
+                app:layout_constraintTop_toBottomOf="@+id/textview_location_driver_contact" />
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycler_view_location_schedule"
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_bus_schedule0"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:flow_horizontalAlign="center"
-                android:clipToPadding="false"
-                android:maxHeight="100dp"
-                android:minHeight="30dp"
-                android:paddingTop="1dp"
+                android:layout_marginHorizontal="40dp"
+                android:backgroundTint="#00CED1"
+                android:checkable="true"
+                android:paddingHorizontal="40dp"
+                android:layout_marginVertical="5dp"
+                android:text="All Res  |  Hourly  |  06:20 - 18:00"
+                android:textAlignment="center"
+                app:checkedIconTint="@color/primary_teal"
+                app:layout_constraintTop_toBottomOf="@+id/textview_location_bus" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_bus_schedule1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="40dp"
+                android:backgroundTint="#00CED1"
+                android:checkable="true"
+                android:paddingHorizontal="40dp"
+                android:text="All Res Reverse  |  Hourly  |  06:20 - 18:00"
+                android:textAlignment="center"
+                app:checkedIconTint="@color/primary_teal"
+                app:layout_constraintTop_toBottomOf="@+id/chip_bus_schedule0" />
+
+            <Button
+                android:id="@+id/button_cart_checkout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginVertical="10dp"
+                android:paddingStart="20dp"
+                android:text="Done"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textview_location_schedule"
-                tools:itemCount="2"
-                tools:listitem="@layout/fragment_location_listitem" />
+                app:layout_constraintTop_toBottomOf="@+id/chip_bus_schedule1" />
 
-            <include
-                layout="@layout/fragment_cart"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/recycler_view_location_schedule" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
