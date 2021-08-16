@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import com.denzcoskun.imageslider.ImageSlider
 import com.denzcoskun.imageslider.models.SlideModel
+import kotlinx.android.synthetic.main.activity_welcome.*
 
 class Welcome : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -74,5 +75,9 @@ class Welcome : AppCompatActivity() {
         }*/
         //endregion Map Slider
         //endregion
+
+        button.setOnClickListener {
+
+        }
     }
 }

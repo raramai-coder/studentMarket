@@ -9,6 +9,13 @@
     android:padding="15dp">
 
 
+    <TextView
+        android:id="@+id/textView61"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Store Details"
+        android:textSize="30sp" />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -18,24 +25,17 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
-            <TextView
-                android:id="@+id/textView61"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Store Details"
-                android:textSize="30sp" />
-
-
             <EditText
-                android:id="@+id/editTextTextPersonName2"
+                android:id="@+id/storeName_et_rgs"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="Name"
-                android:inputType="textPersonName" />
+                android:hint="Store Name"
+                android:minHeight="25dp"
+                android:inputType="text" />
 
             <EditText
-                android:id="@+id/editTextTextMultiLine"
+                android:id="@+id/storeDescription_etM_rgs"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -69,7 +69,7 @@
                     android:text="Choose the delivery options your store will offer. Buyer pays the cost of delivery upon purchase." />
 
                 <com.google.android.material.chip.Chip
-                    android:id="@+id/chip4"
+                    android:id="@+id/deliverToBuyer_chip_rgs"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Deliver to Buyer (Free)"
@@ -78,7 +78,7 @@
                     app:checkedIconTint="@color/primary_teal"/>
 
                 <com.google.android.material.chip.Chip
-                    android:id="@+id/chip5"
+                    android:id="@+id/buyerCanCollect_chip_rgs"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Buyer can Collect (Free)"
@@ -87,7 +87,7 @@
                     app:checkedIconTint="@color/primary_teal"/>
 
                 <com.google.android.material.chip.Chip
-                    android:id="@+id/chip6"
+                    android:id="@+id/paxiStandard_chip_rgs"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Paxi Standard Parcel (R59.95)"
@@ -96,7 +96,7 @@
                     app:checkedIconTint="@color/primary_teal"/>
 
                 <com.google.android.material.chip.Chip
-                    android:id="@+id/chip7"
+                    android:id="@+id/paxiLarge_chip_rgs"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Paxi Large Parcel (R89.95)"
@@ -106,7 +106,7 @@
 
 
                 <com.google.android.material.chip.Chip
-                    android:id="@+id/chip8"
+                    android:id="@+id/amarex_chip_rgs"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Aramex Standard Parcel (R99.99)"
@@ -115,7 +115,7 @@
                     app:checkedIconTint="@color/primary_teal"/>
 
                 <com.google.android.material.chip.Chip
-                    android:id="@+id/chip9"
+                    android:id="@+id/mainCampus_chip_rgs"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Deliver to Wits Main Campus"
@@ -124,7 +124,7 @@
                     app:checkedIconTint="@color/primary_teal"/>
 
                 <com.google.android.material.chip.Chip
-                    android:id="@+id/chip10"
+                    android:id="@+id/junction_chip_rgs"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Deliver to Wits Junction"
@@ -133,7 +133,7 @@
                     app:checkedIconTint="@color/primary_teal"/>
 
                 <com.google.android.material.chip.Chip
-                    android:id="@+id/chip11"
+                    android:id="@+id/deducation_chip_rgs"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Deliver to Wits Education Campus"
@@ -142,7 +142,7 @@
                     app:checkedIconTint="@color/primary_teal"/>
 
                 <com.google.android.material.chip.Chip
-                    android:id="@+id/chip15"
+                    android:id="@+id/eoh_chip_rgs"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Deliver to Wits EOH Residence"
@@ -159,14 +159,14 @@
                 android:layout_height="3dp"
                 android:background="@color/textBar_teal" />
 
-            <LinearLayout
+           <!-- <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
                 android:layout_marginVertical="10dp">
 
                 <ImageButton
-                    android:id="@+id/imageButton2"
+                    android:id="@+id/addStoreImage_btn_rgs"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:srcCompat="@drawable/icon_add" />
@@ -178,7 +178,14 @@
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"
                     android:text="Add Store Icon" />
-            </LinearLayout>
+            </LinearLayout>-->
+
+            <Button
+                android:id="@+id/registerStore_btn_rgs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Register Store" />
         </LinearLayout>
     </ScrollView>
 
