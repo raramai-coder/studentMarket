@@ -8,5 +8,11 @@ import kotlinx.android.parcel.Parcelize
 class Store (
     @SerializedName("userID") val userID:Int,
     @SerializedName("storeName") val storeName: String,
-    @SerializedName("storeDelivery") val storeDelivery:String
-        ): Parcelable
+    @SerializedName("storeDelivery") val storeDelivery: IntArray,
+    @SerializedName("storePicture")  val storePicture:String?,
+    @SerializedName("storeRating") var storeRating: Float,
+    @SerializedName("customersServed") var customersServed:Int,
+    @SerializedName("storeCategories") var storeCategories: IntArray?,
+    @SerializedName("storeDescription") var storeDescription: String,
+
+): Parcelable

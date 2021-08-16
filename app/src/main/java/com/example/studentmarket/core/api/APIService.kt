@@ -73,4 +73,26 @@ interface APIService {
     //this registers a specific user to the db
     @POST("/user/?format=json")
     fun registerUser( @Body user:User):Call<User>
+
+    //this registers a product to the db
+    @POST("/user/?format=json")
+    fun addProduct( @Body product:Product):Call<Product>
+
+    //registers a new store to the db for the user
+    @POST("/store/?format=json")
+    fun registerStore(@Body store: Store): Call<Store>
+
+    /*@POST("/store/")
+    fun registerStore(
+        @Field("userID") userID: Int,
+        @Field("storeName") storeName: String,
+        @Field("storeDelivery[]") items: List<Integer>,
+        @Field("storeRating") storeRating: Float,
+    ): Call<Store>*/
+
+   /* @Multipart
+    @POST("upload")
+    fun registerStoreImage(
+        @Part("storeImage") MultipartBody.Part photo
+    )*/
 }
