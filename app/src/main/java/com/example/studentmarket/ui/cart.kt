@@ -33,6 +33,7 @@ class cart : Fragment() {
 
     companion object {
         private const val TAG = ""
+        public var total = 0f
     }
 
     private var orders: List<Order> = mutableListOf()

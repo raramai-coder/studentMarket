@@ -36,7 +36,7 @@ class home : Fragment() {
     companion object {
         fun newInstance() = home()
         private const val TAG = ""
-        public val userID = 2
+        public var userID = 2
     }
 
 
