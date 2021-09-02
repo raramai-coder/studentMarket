@@ -1,6 +1,6 @@
 
 #SNSN
-#Team Members: Shagan Plaatjies, Nicolle Charuma, Raramainashe Wadaya
+
 
 #App Name: Student Market
 
