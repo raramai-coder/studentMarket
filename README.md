@@ -1,10 +1,11 @@
 
-#SNSN
+# SNSN
 
 
-#App Name: Student Market
+# App Name: Student Market
 
-#About: Student Market is a virtual market place that enables university students to post any products and services that they sell to their peers. 
+# About:
+Student Market is a virtual market place that enables university students to post any products and services that they sell to their peers. 
 Our platform can be accessed by other university students within their vicinity and even around universities nationwide, depending on the range that their product or service can reach. Students can use the app as both a buyer and a seller. 
 
 Many students are now business oriented and venture into self employment while studying to make a steady income. An income that can provide for their basic needs and potentially pay off their student fees and debts. They often deploy business solutions that target their fellow students by providing them with goods and services that appeal to their needs and wants, suitable for the student budget. 
